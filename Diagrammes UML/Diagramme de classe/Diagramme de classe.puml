@@ -1,0 +1,49 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+title Diagramme de classe PATO
+
+class Map{
+    longueur : Integer
+    largeur : Integer
+}
+
+class Robot{
+}
+
+class Obstacle{
+}
+
+class Forme{
+    longueur : Integer
+    largeur : Integer
+}
+
+class Coordonnees{
+    x : Integer
+    y : Integer
+}
+
+class Position{
+    direction : Integer
+}
+class Mouvement{
+    tourner(angle)
+    avancer(distance)
+}
+class Trajectoire{
+}
+
+Coordonnees "0..*" - "0..*" Position : Possède <
+Robot "1" - "1" Position
+Robot - Obstacle : Créé >
+Robot - Map : Créé >
+Obstacle "0..*" - "1" Map
+Forme - Obstacle
+Forme - Coordonnees
+Coordonnees "1" - "1" Mouvement : arrivée <
+Coordonnees "1" - "1" Mouvement : départ <
+Trajectoire "1" - "1..n" Mouvement
+Trajectoire - Robot
+
+@enduml

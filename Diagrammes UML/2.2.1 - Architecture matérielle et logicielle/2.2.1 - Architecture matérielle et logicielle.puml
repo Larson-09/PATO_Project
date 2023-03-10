@@ -1,5 +1,5 @@
 @startuml
-title Diagramme de déploiement PATO
+title 2.2.1 - Architecture matérielle et logicielle
 skinparam shadowing false
 skinparam monochrome reverse
 scale 1280*900
