@@ -6,8 +6,8 @@ scale 1280*900
 node Robot
 node Phone
 Robot -r- Phone : Wifi
-[Soft C] ..> [E_Lib MrPIZ] : <<deploy>>
-[Soft C] ..> Robot : <<deploy>>
+[MARCO C] ..> [E_Lib MrPIZ] : <<deploy>>
+[MARCO C] ..> Robot : <<deploy>>
 [E_Lib MrPIZ] ..> Robot : <<deploy>>
-[App Android] ..> Phone : <<deploy>>
+[MARCO Android] ..> Phone : <<deploy>>
 @enduml
