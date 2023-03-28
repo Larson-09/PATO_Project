@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+title CU Stratégique : Évaluer les algorithmes d’exploration cartographique
+skinparam shadowing false
+
+
+
+User as User
+Robot as Robot
+
+User -right- (Évaluer les algorithmes d’exploration cartographique)
+Robot -left- (Évaluer les algorithmes d’exploration cartographique)
+(Évaluer les algorithmes d’exploration cartographique) -.> (Initialiser le système MARCO) : include
+(Évaluer les algorithmes d’exploration cartographique) -.> (Sélectionner un algorithme d’exploration) : include
+(Évaluer les algorithmes d’exploration cartographique) -.> (Lancer une exploration) : include
+
+@enduml
