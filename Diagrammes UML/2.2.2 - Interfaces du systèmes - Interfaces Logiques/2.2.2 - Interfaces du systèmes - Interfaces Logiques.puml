@@ -1,7 +1,5 @@
 @startuml
 title 2.2.2 - Interfaces du systèmes - Interfaces Logiques
-skinparam shadowing false
-skinparam monochrome reverse
 scale 1024*768
 actor User as U
 actor E_Robot as P

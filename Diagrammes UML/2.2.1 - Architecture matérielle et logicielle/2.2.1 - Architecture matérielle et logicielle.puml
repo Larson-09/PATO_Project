@@ -1,7 +1,5 @@
 @startuml
 title 2.2.1 - Architecture matérielle et logicielle
-skinparam shadowing false
-skinparam monochrome reverse
 scale 1280*900
 node Robot
 node Phone
