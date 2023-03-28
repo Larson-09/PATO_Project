@@ -1,13 +1,11 @@
 @startuml
 title 2.2.1 - Architecture matérielle et logicielle
-skinparam shadowing false
-skinparam monochrome reverse
 scale 1280*900
-node E_Robot
-node E_Phone
-E_Robot -r- E_Phone : Wifi
-[Soft C] ..> [E_Lib MrPIZ] : <<deploy>>
-[Soft C] ..> E_Robot : <<deploy>>
-[E_Lib MrPIZ] ..> E_Robot : <<deploy>>
-[App Android] ..> E_Phone : <<deploy>>
+node ROBOT
+node PHONE
+ROBOT-r- PHONE: Wifi
+[M_EMB] ..> [E_Lib_MrPIZ] 
+[M_EMB] ..> ROBOT: <<deploy>>
+[E_Lib_MrPIZ] ..> ROBOT: <<deploy>>
+[M_CTRL] ..> PHONE: <<deploy>>
 @enduml
