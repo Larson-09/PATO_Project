@@ -1,11 +1,11 @@
 @startuml
 title 2.2.1 - Architecture matérielle et logicielle
 scale 1280*900
-node Robot
-node Phone
-Robot -r- Phone : Wifi
-[MARCO C] ..> [E_Lib MrPIZ] : <<deploy>>
-[MARCO C] ..> Robot : <<deploy>>
-[E_Lib MrPIZ] ..> Robot : <<deploy>>
-[MARCO Android] ..> Phone : <<deploy>>
+node ROBOT
+node PHONE
+ROBOT-r- PHONE: Wifi
+[M_EMB] ..> [E_Lib_MrPIZ] 
+[M_EMB] ..> ROBOT: <<deploy>>
+[E_Lib_MrPIZ] ..> ROBOT: <<deploy>>
+[M_CTRL] ..> PHONE: <<deploy>>
 @enduml
