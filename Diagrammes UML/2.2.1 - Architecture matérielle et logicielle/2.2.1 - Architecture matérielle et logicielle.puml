@@ -4,7 +4,7 @@ scale 1280*900
 node ROBOT
 node PHONE
 ROBOT-r- PHONE: Wifi
-[M_EMB] ..> [E_Lib_MrPIZ] 
+[M_EMB] ..> [E_Lib_MrPIZ] :<<call>>
 [M_EMB] ..> ROBOT: <<deploy>>
 [E_Lib_MrPIZ] ..> ROBOT: <<deploy>>
 [M_CTRL] ..> PHONE: <<deploy>>
