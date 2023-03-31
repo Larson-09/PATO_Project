@@ -1,27 +1,23 @@
 @startuml
-title 3.1.3 Diagramme IHM
+[*] --> Ecran
+state Ecran {
+    state "NonConnecté" as NonConnecté
+    state "EP" as EP
+    state "Verrouillé" as Verrouillé
+    state "SelectionExplo" as SelectionExplo
 
-(*)--> "Ecran_Vérouillé"
--->[déverouiller()] "Etat_H"
+    state c <<choice>>
 
-(*)--> "Etat_H"
+    [*] --> NonConnecté
+    NonConnecté --> c : SeConnecter()
 
-"Etat_H"-->[modeH()] "Ecran_Mode_Automatique"
-"Etat_H"-->[modeH()] "Ecran_Mode_Manuel"
+    c --> NonConnecté : [Connection Perdue]
+    c --> EP
+    c --> Verrouillé : [robotVerrouillé]
+    EP --> SelectionExplo : AppuieLancerExplo()
+    SelectionExplo --> EP : LancerExplo()
+}
 
-"Ecran_Mode_Automatique"-->[batterieFaible()] "Popup_Batterie_Faible"
-"Ecran_Mode_Automatique"-->[perteSignal()] "Popup_Perte_Signal"
-
-"Ecran_Mode_Manuel"-->[batterieFaible()] "Popup_Batterie_Faible"
-"Ecran_Mode_Manuel"-->[perteSignal()] "Popup_Perte_Signal"
-
-"Popup_Perte_Signal" --> [after]"Etat_H"
-"Popup_Batterie_Faible" --> [after]"Etat_H"
-
-
-
-
-
-
+Ecran --> [*] : quitter()
 
 @enduml

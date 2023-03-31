@@ -1,20 +1,23 @@
 @startuml
-title 3.1.3 Diagramme IHM
+[*] --> Screen
+state Screen {
+    state "NotConnected" as NotConnected
+    state "MainScreen" as MainScreen
+    state "Locked" as Locked
+    state "ExploSelection" as ExploSelection
 
-start
-while (isLocked())
-if () then (yes)
-  :LockedScreen;
-else(no)
-endif
-while (getOldMode)
-if()then (manual)
-  :ManualScreen;
-  :PushButton;
-else (auto)
-  :AutoScreen;
-endif
-:PushModeButton;
-endwhile
-endwhile
+    state c <<choice>>
+
+    [*] --> NotConnected
+    NotConnected --> c : Connection()
+
+    c --> NotConnected : [Connection Lost]
+    c --> MainScreen
+    c --> Locked : [robotLocked]
+    MainScreen --> ExploSelection : OnClickLaunchExplo()
+    ExploSelection --> MainScreen : LaunchExplo()
+}
+
+Screen --> [*] : Quit()
+
 @enduml
