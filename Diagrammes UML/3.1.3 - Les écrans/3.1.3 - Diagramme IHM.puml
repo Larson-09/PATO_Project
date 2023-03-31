@@ -1,0 +1,27 @@
+@startuml
+title 3.1.3 Diagramme IHM
+
+(*)--> "Ecran_Vérouillé"
+-->[déverouiller()] "Etat_H"
+
+(*)--> "Etat_H"
+
+"Etat_H"-->[modeH()] "Ecran_Mode_Automatique"
+"Etat_H"-->[modeH()] "Ecran_Mode_Manuel"
+
+"Ecran_Mode_Automatique"-->[batterieFaible()] "Popup_Batterie_Faible"
+"Ecran_Mode_Automatique"-->[perteSignal()] "Popup_Perte_Signal"
+
+"Ecran_Mode_Manuel"-->[batterieFaible()] "Popup_Batterie_Faible"
+"Ecran_Mode_Manuel"-->[perteSignal()] "Popup_Perte_Signal"
+
+"Popup_Perte_Signal" --> [after]"Etat_H"
+"Popup_Batterie_Faible" --> [after]"Etat_H"
+
+
+
+
+
+
+
+@enduml

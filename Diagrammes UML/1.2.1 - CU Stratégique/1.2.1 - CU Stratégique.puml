@@ -1,0 +1,12 @@
+@startuml
+title 1.2.1 CU Stratégique
+
+
+User as User
+Robot as Robot
+
+User -right- (Evaluer les algorithmes d'exploration cartographique)
+
+Robot -left- (Evaluer les algorithmes d'exploration cartographique)
+
+@enduml
