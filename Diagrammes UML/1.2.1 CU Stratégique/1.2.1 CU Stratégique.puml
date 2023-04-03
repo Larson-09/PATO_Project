@@ -6,13 +6,12 @@ skinparam shadowing false
 
 
 
-User as User
+Utilisateur as Utilisateur 
 Robot as Robot
 
-User -right- (Évaluer les algorithmes d’exploration cartographique)
+Utilisateur -right- (Évaluer les algorithmes d’exploration cartographique)
 Robot -left- (Évaluer les algorithmes d’exploration cartographique)
 (Évaluer les algorithmes d’exploration cartographique) -.> (Initialiser le système MARCO) : include
-(Évaluer les algorithmes d’exploration cartographique) -.> (Sélectionner un algorithme d’exploration) : include
 (Évaluer les algorithmes d’exploration cartographique) -.> (Lancer une exploration) : include
-
+(Évaluer les algorithmes d’exploration cartographique) -.> (Éteindre MARCO) : include
 @enduml
