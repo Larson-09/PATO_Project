@@ -1,4 +1,5 @@
 @startuml
+
 [*] --> Ecran
 state Ecran {
     state "EcranNonConnecté" as EcranNonConnecté
@@ -13,9 +14,9 @@ state Ecran {
 
     c --> EcranNonConnecté : [Connection Perdue]
     c --> EP
-    c --> EcranVerrouillé : [robotVerrouillé]
+    c --> EcranVerrouillé : [robotVerrouille]
     EcranVerrouillé --> EP: Verrouillage()
-   EP --> EcranVerrouillé :Déverrouillage()
+    EP --> EcranVerrouillé :Deverrouillage()
     EP --> SelectionExplo : LancerExplo()
     SelectionExplo --> EP : LancerExplo()
 }
