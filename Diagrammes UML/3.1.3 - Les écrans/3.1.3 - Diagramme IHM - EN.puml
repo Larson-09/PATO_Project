@@ -9,7 +9,7 @@ state Screen {
     state c <<choice>>
 
     [*] --> NotConnected
-    NotConnected --> c : Connection()
+    NotConnected -> c : Connection()
 
     c --> NotConnected : [Connection Lost]
     c --> MainScreen

@@ -2,7 +2,7 @@
 title 2.2.2 - Interfaces du systèmes - Interfaces Logiques
 scale 1024*768
 actor User as U
-actor E_Robot as P
+actor Robot as P
 
 rectangle "<u>SàE</u>" as S{
 }
