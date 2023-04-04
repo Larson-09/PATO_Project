@@ -1,19 +1,21 @@
 @startuml
 [*] --> Ecran
 state Ecran {
-    state "NonConnecté" as NonConnecté
+    state "EcranNonConnecté" as EcranNonConnecté
     state "EP" as EP
-    state "Verrouillé" as Verrouillé
+    state "EcranVerrouillé" as EcranVerrouillé
     state "SelectionExplo" as SelectionExplo
 
     state c <<choice>>
 
-    [*] --> NonConnecté
-    NonConnecté --> c : SeConnecter()
+    [*] --> EcranNonConnecté
+    EcranNonConnecté --> c : SeConnecter()
 
-    c --> NonConnecté : [Connection Perdue]
+    c --> EcranNonConnecté : [Connection Perdue]
     c --> EP
-    c --> Verrouillé : [robotVerrouillé]
+    c --> EcranVerrouillé : [robotVerrouillé]
+    EcranVerrouillé --> EP: Verrouillage()
+   EP --> EcranVerrouillé :Déverrouillage()
     EP --> SelectionExplo : AppuieLancerExplo()
     SelectionExplo --> EP : LancerExplo()
 }
