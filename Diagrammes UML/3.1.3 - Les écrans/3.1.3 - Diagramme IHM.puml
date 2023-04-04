@@ -1,6 +1,9 @@
 @startuml
 
 [*] --> Ecran
+note on link
+    Fait par demarrer()
+end note
 state Ecran {
     state "EcranNonConnecté" as EcranNonConnecté
     state "EP" as EP
@@ -17,8 +20,9 @@ state Ecran {
     c --> EcranVerrouillé : [robotVerrouille]
     EcranVerrouillé --> EP: Verrouillage()
     EP --> EcranVerrouillé :Deverrouillage()
-    EP --> SelectionExplo : LancerExplo()
-    SelectionExplo --> EP : LancerExplo()
+    EP --> SelectionExplo : SelectAlgo()
+    SelectionExplo --> EP : Valide()
+    SelectionExplo --> EP : Annule()
 }
 
 Ecran --> [*] : quitter()
