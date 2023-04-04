@@ -16,7 +16,7 @@ state Ecran {
     c --> EcranVerrouillé : [robotVerrouillé]
     EcranVerrouillé --> EP: Verrouillage()
    EP --> EcranVerrouillé :Déverrouillage()
-    EP --> SelectionExplo : AppuieLancerExplo()
+    EP --> SelectionExplo : LancerExplo()
     SelectionExplo --> EP : LancerExplo()
 }
 
