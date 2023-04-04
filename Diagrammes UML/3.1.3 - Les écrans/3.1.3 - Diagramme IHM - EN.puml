@@ -14,7 +14,7 @@ state Screen {
     c --> NotConnected : [Connection Lost]
     c --> MainScreen
     c --> Locked : [robotLocked]
-    MainScreen --> ExploSelection : OnClickLaunchExplo()
+    MainScreen --> ExploSelection : LaunchExplo()
     ExploSelection --> MainScreen : LaunchExplo()
 }
 
