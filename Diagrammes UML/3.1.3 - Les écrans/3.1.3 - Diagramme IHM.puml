@@ -9,6 +9,7 @@ state Ecran {
     state "EP" as EP
     state "EcranVerrouillé" as EcranVerrouillé
     state "SelectionExplo" as SelectionExplo
+     state "EcranOption" as EcranOption
 
     state c <<choice>>
 
@@ -23,6 +24,9 @@ state Ecran {
     EP --> SelectionExplo : SelectAlgo()
     SelectionExplo --> EP : Valide()
     SelectionExplo --> EP : Annule()
+    EP --> EcranOption :SelectOption()
+    EcranOption --> EP :Valide()
+    EcranOption --> EP :Annule()
 }
 
 Ecran --> [*] : quitter()
