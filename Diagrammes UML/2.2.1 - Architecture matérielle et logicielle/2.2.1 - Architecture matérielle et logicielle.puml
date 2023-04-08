@@ -1,11 +1,10 @@
 @startuml
-title 2.2.1 - Architecture matérielle et logicielle
 scale 1280*900
 node ROBOT
 node PHONE
 ROBOT-r- PHONE: Wifi
-[M_EMB] ..> [E_Lib_MrPIZ] :<<call>>
+[M_EMB] ..> [E_LIB_MRPIZ ] :<<call>>
 [M_EMB] ..> ROBOT: <<deploy>>
-[E_Lib_MrPIZ] ..> ROBOT: <<deploy>>
+[E_LIB_MRPIZ ] ..> ROBOT: <<deploy>>
 [M_CTRL] ..> PHONE: <<deploy>>
 @enduml
