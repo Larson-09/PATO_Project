@@ -1,8 +1,8 @@
 @startuml
 title 2.2.2 - Interfaces du systèmes - Interfaces Logiques
 scale 1024*768
-actor User as U
-actor E_Robot as P
+actor Utilisateur as U
+actor ROBOT as P
 
 rectangle "<u>SàE</u>" as S{
 }
@@ -10,7 +10,7 @@ rectangle "<u>E_Lib_MrPIZ</u>" as L{
 }
 
 
-U -right- S : start() <&arrow-right>\n set_explo_algorithm(algo) <&arrow-right>\n launch_auto_explo() <&arrow-right>\n take_manual_control() <&arrow-right>\n stop() <&arrow-right>\n \n<&arrow-left> display_batterry_lvl() \n <&arrow-left> display_map() \n
-S-right-L : init() <&arrow-right> \n close()<&arrow-right> \n control_led()<&arrow-right> \n get_sensors(): position<&arrow-right> \n init_position()<&arrow-right> \n reset_sensors()<&arrow-right> \n get_battery_level(): battery_level<&arrow-right> \n
-L-right-P : move(mvt) <&arrow-right> \n detect_obstacle() <&arrow-right> \n get_robot_position() <&arrow-right> \n
+U -right- S : demarrer() <&arrow-right>\n set_explo_algorithm(algo) <&arrow-right>\n lancer_explo() <&arrow-right>\n control_manuel() <&arrow-right>\n quitter() <&arrow-right>\n \n<&arrow-left> afficher_niveau_batterie() \n <&arrow-left> afficher_map() \n
+S-right-L : init() <&arrow-right> \n fermer()<&arrow-right> \n control_led()<&arrow-right> \n get_sensors(): position<&arrow-right> \n init_position()<&arrow-right> \n reset_sensors()<&arrow-right> \n recup_niveau_batterie(): niveau_batterie<&arrow-right> \n
+L-right-P : deplacer(mvt) <&arrow-right> \n detect_obstacle() <&arrow-right> \n recup_position_robot() <&arrow-right> \n
 @enduml

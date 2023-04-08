@@ -1,21 +1,27 @@
 @startuml
 [*] --> Screen
+note on link
+    Done by start()
+end note
 state Screen {
-    state "NotConnected" as NotConnected
+    state "NotConnectedScreen" as NotConnectedScreen
     state "MainScreen" as MainScreen
-    state "Locked" as Locked
+    state "LockedScreen" as LockedScreen
     state "ExploSelection" as ExploSelection
 
     state c <<choice>>
 
-    [*] --> NotConnected
-    NotConnected --> c : Connection()
+    [*] --> NotConnectedScreen
+    NotConnectedScreen -> c : Connection()
 
-    c --> NotConnected : [Connection Lost]
+    c --> NotConnectedScreen : [Connection Lost]
     c --> MainScreen
-    c --> Locked : [robotLocked]
-    MainScreen --> ExploSelection : OnClickLaunchExplo()
-    ExploSelection --> MainScreen : LaunchExplo()
+    c --> LockedScreen : [robotLocked]
+    LockedScreen --> MainScreen: Unlock()
+    MainScreen --> LockedScreen: Lock()
+    MainScreen --> ExploSelection : SelecAlgo()
+    ExploSelection --> MainScreen : Confirm()
+    ExploSelection --> MainScreen : Cancel()
 }
 
 Screen --> [*] : Quit()

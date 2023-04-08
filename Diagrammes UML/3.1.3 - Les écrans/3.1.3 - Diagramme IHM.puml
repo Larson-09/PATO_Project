@@ -1,23 +1,32 @@
 @startuml
 [*] --> Ecran
+note on link
+    Fait par demarrer()
+end note
 state Ecran {
-    state "NonConnecté" as NonConnecté
-    state "EP" as EP
-    state "Verrouillé" as Verrouillé
-    state "SelectionExplo" as SelectionExplo
+    state "EcranNonConnecté" as EcranNonConnecté
+    state "EcranPrincipal" as EcranPrincipal
+    state "EcranVerrouillé" as EcranVerrouillé
+    state "EcranSelectionExplo " as EcranSelectionExplo 
+     state "EcranOption" as EcranOption
 
     state c <<choice>>
 
-    [*] --> NonConnecté
-    NonConnecté --> c : SeConnecter()
+    [*] --> EcranNonConnecté
+    EcranNonConnecté --> c : SeConnecter()
 
-    c --> NonConnecté : [Connection Perdue]
-    c --> EP
-    c --> Verrouillé : [robotVerrouillé]
-    EP --> SelectionExplo : AppuieLancerExplo()
-    SelectionExplo --> EP : LancerExplo()
+    c --> EcranNonConnecté : [Connection Perdue]
+    c --> EcranPrincipal
+    c --> EcranVerrouillé : [robotVerrouille]
+    EcranVerrouillé --> EcranPrincipal: Verrouillage()
+    EcranPrincipal--> EcranVerrouillé :Deverrouillage()
+    EcranPrincipal--> EcranSelectionExplo : SelectAlgo()
+    EcranSelectionExplo --> EcranPrincipal: Valide()
+    EcranSelectionExplo --> EcranPrincipal: Annule()
+    EcranPrincipal--> EcranOption :SelectOption()
+    EcranOption --> EcranPrincipal:Valide()
+    EcranOption --> EcranPrincipal:Annule()
 }
 
 Ecran --> [*] : quitter()
-
 @enduml
