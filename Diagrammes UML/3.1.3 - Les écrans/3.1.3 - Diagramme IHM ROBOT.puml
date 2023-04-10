@@ -1,3 +1,14 @@
 @startuml
-[*] --> LED
+state "LED_Eteinte" as LED_Eteinte
+state "LED_Rouge" as LED_Rouge
+state "LED_Verte" as LED_Verte
+state "LED_Bleu" as LED_Bleu
+state c <<choice>>
+
+[*] --> LED_Eteinte
+LED_Eteinte --> c : control_led()
+c --> LED_Rouge
+c --> LED_Verte
+c --> LED_Bleu
+
 @enduml

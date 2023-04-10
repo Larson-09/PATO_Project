@@ -8,7 +8,7 @@ state Ecran {
     state "EcranPrincipal" as EcranPrincipal
     state "EcranVerrouillé" as EcranVerrouillé
     state "EcranSelectionExplo " as EcranSelectionExplo 
-     state "EcranOption" as EcranOption
+    state "EcranOption" as EcranOption
 
     state c <<choice>>
 
