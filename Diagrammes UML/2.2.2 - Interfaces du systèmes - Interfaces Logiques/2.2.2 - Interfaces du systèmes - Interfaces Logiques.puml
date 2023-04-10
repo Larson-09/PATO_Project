@@ -1,5 +1,5 @@
 @startuml
-title 2.2.2 - Interfaces du systèmes - Interfaces Logiques
+title 2.2.2 - Interfaces du systèmes
 scale 1024*768
 actor Utilisateur as U
 actor ROBOT as P
