@@ -7,8 +7,8 @@ state c <<choice>>
 
 [*] --> LED_Eteinte
 LED_Eteinte --> c : control_led()
-c --> LED_Rouge
-c --> LED_Verte
-c --> LED_Bleu
+c --> LED_Rouge : control_led_rouge()
+c --> LED_Verte : control_led_verte()
+c --> LED_Bleu : control_led_bleu()
 
 @enduml
