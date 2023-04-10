@@ -12,6 +12,8 @@ ROBOT as ROBOT
 Utilisateur -right- (Évaluer les algorithmes d’exploration cartographique)
 ROBOT -left- (Évaluer les algorithmes d’exploration cartographique)
 (Évaluer les algorithmes d’exploration cartographique) -.> (Initialiser MARCO) : include
+(Évaluer les algorithmes d’exploration cartographique) -.> (Déplacer manuellement le ROBOT) : include
 (Évaluer les algorithmes d’exploration cartographique) -.> (Lancer une exploration) : include
+(Lancer une exploration) -.> (Explorer) : include
 (Évaluer les algorithmes d’exploration cartographique) -.> (Éteindre MARCO) : include
 @enduml
