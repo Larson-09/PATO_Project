@@ -1,0 +1,292 @@
+<script>
+	const model =
+		{
+			name: "EXPLORATION_ALL",
+			objects: [
+				{
+					name: "USER",
+					isActor: true,
+					features: String.raw`
+					`,
+				},
+				{
+					name: "GUI_PHONE",
+					isActor: false,
+					features: String.raw`
+						display_connection_state()
+						display_map()
+						select_options()
+						send_explo_metrics(metrics)
+						send_status(status)
+						set_end_criteria(crit)
+						set_explo_algorithm(algo)
+						set_value_criteria(crit,value)
+						start_explo()
+						start_M_CTRL()
+						-display_screen(screenID)
+					`,
+				},
+				{
+					name: "ARCHIVIST",
+					isActor: false,
+					features: String.raw`
+						save_explo()
+					`,
+				},
+                {
+					name: "SYNC_PHONE",
+					isActor: false,
+					behavior: String.raw`
+					`,
+					features: String.raw`
+						confirm_connection()
+					`,
+				},
+                {
+					name: "SYNC_ROBOT",
+					isActor: false,
+					features: String.raw`
+						ask_connection()
+					`,
+				},
+                {
+					name: "UI_ROBOT",
+					isActor: false,
+					features: String.raw`
+						start_M_EMB()
+						stand_by()
+					`,
+				},
+                {
+					name: "DRIVER",
+					isActor: false,
+					features: String.raw`
+						set_end_criterias(crit,value)
+						set_explo_algorithm(algo)
+						-init_explo_metrics()
+						-dodge_obstacle()
+						-execute_move()
+						-lock_metrics()
+						-read_move()
+						-stop_move()
+						-update_explo_metrics()
+					`,
+				},
+                {
+					name: "RADAR",
+					isActor: false,
+					features: String.raw`
+						get_info():info
+					`,
+				},
+                {
+					name: "MAPPER",
+					isActor: false,
+					features: String.raw`
+						get_map():map
+					`,
+				},
+                {
+					name: "LOCATOR",
+					isActor: false,
+					features: String.raw`
+						set_start_location()
+						-set_pos()
+					`,
+				},
+				{
+					name: "ROBOT",
+					isActor: true,
+					features: String.raw`
+					`,
+				},
+			],
+			connectorByName: {
+				C1: {
+					ends: [
+						"USER",
+						"GUI_PHONE",
+					],
+					possibleMessages: {
+						forward: [
+							
+							"select_options",
+							"set_end_criteria(crit)",
+							"set_value_criteria(crit,value)",
+							"set_explo_algorithm(algo)",
+							"start_M_CTRL",
+							"start_explo",
+						],
+					},
+				},
+                C2: {
+					ends: [
+						"USER",
+						"UI_ROBOT",
+					],
+					possibleMessages: {
+						forward: [
+							"start_M_EMB",
+						],
+					},
+				},
+                C3: {
+					ends: [
+						"GUI_PHONE",
+						"ARCHIVIST",
+					],
+					possibleMessages: {
+						forward: [
+							"save_explo",
+						],
+					}
+				},
+                C4: {
+					ends: [
+						"GUI_PHONE",
+						"SYNC_PHONE",
+					],
+					possibleMessages: {
+						reverse: [
+							"display_connection_state",
+							"display_map",
+						],
+					},
+				},
+                C5: {
+					ends: [
+						"GUI_PHONE",
+						"MAPPER",
+					],
+					possibleMessages: {
+						forward: [
+							"get_map",
+						],
+					},
+				},
+                C6: {
+					ends: [
+						"SYNC_PHONE",
+						"SYNC_ROBOT",
+					],
+					possibleMessages: {
+						forward: [
+							"confirm_connection",
+						],
+						reverse: [
+							"ask_connection",
+						],
+					},
+				},
+                C7: {
+					ends: [
+						"SYNC_ROBOT",
+						"UI_ROBOT",
+					],
+					possibleMessages: {
+						forward: [
+							"stand_by",
+						],
+					},
+				},
+                C8: {
+					ends: [
+						"GUI_PHONE",
+						"DRIVER",
+					],
+					possibleMessages: {
+						forward: [
+							"set_end_criterias(crit,value)",
+							"set_explo_algorithm(algo)",
+						],
+						reverse: [
+							"send_explo_metrics(metrics)",
+							"send_status(status)",
+						],
+					},
+				},
+                C9: {
+					ends: [
+						"DRIVER",
+						"RADAR",
+					],
+				},
+                C10: {
+					ends: [
+						"RADAR",
+						"MAPPER",
+					],
+				},
+                C11: {
+					ends: [
+						"MAPPER",
+						"LOCATOR",
+					],
+				},
+                C12: {
+					ends: [
+						"DRIVER",
+						"ROBOT",
+					],
+				},
+                C13: {
+					ends: [
+						"RADAR",
+						"ROBOT",
+					],
+				},
+				C14: {
+					ends: [
+						"DRIVER",
+						"LOCATOR",
+					],
+					possibleMessages: {
+						forward: [
+							"set_start_location",
+						],
+					},
+				},
+				C15: {
+					ends: [
+						"SYNC_ROBOT",
+						"MAPPER",
+					],
+				},
+			},
+			settings: {
+				display: {
+					hideLinks: false,
+					hideClasses: false,
+					hideOperations: false,
+					hideMethods: false,
+					showPorts: false,
+					showEndNames: false,
+					hideStateMachines: true,
+					hideOuterSMBoxes: true,
+					showExplicitSM: false,
+					hideStates: false,
+					showPseudostateInvariants: false,
+					hideSets: false,
+					showTransitions: false,
+				},
+				semantics: {
+					fireInitialTransitions: true,
+					autoFireAfterChoice: true,
+					autoReceiveDisabled: false,
+					considerGuardsTrue: true,
+					checkEvents: false,
+					keepOneMessagePerTrigger: true,
+					enableEventPools: true,
+					matchFirst: true,
+					symbolicValues: false,
+					reactiveSystem: false,
+				},
+				interface: {
+				},
+			},
+		}
+	;
+	document.write(`
+		<iframe width="100%" height="100%" src='http://172.24.2.1/AnimUML.html#${encodeURIComponent(JSON.stringify(model)).replace(/'/g, '%27')}'></iframe>
+	`);
+</script>
