@@ -1,0 +1,225 @@
+<script>
+	const model =
+		{
+			name: "EXPLORATION",
+			objects: [
+				{
+					name: "USER",
+					isActor: true,
+					features: String.raw`
+					`,
+				},
+                {
+					name: "ROBOT",
+					isActor: true,
+					features: String.raw`
+					`,
+				},
+				{
+					name: "GUI_PHONE",
+					isActor: false,
+					features: String.raw`
+						start_M_CTRL()
+						display_connection_state()
+					`,
+				},
+                {
+					name: "UI_ROBOT",
+					isActor: false,
+					features: String.raw`
+						start_M_EMB()
+						stand_by()
+					`,
+				},
+                {
+					name: "SYNC_PHONE",
+					isActor: false,
+					behavior: String.raw`
+					`,
+					features: String.raw`
+						confirm_connection()
+					`,
+				},
+                {
+					name: "SYNC_ROBOT",
+					isActor: false,
+					features: String.raw`
+						ask_connection()
+					`,
+				},
+                {
+					name: "ARCHIVIST",
+					isActor: false,
+					features: String.raw`
+					`,
+				},
+                {
+					name: "DRIVER",
+					isActor: false,
+					features: String.raw`
+					`,
+				},
+                {
+					name: "RADAR",
+					isActor: false,
+					features: String.raw`
+					`,
+				},
+                {
+					name: "MAPPER",
+					isActor: false,
+					features: String.raw`
+					`,
+				},
+                {
+					name: "LOCATOR",
+					isActor: false,
+					features: String.raw`
+					`,
+				},
+			],
+			connectorByName: {
+				C1: {
+					ends: [
+						"USER",
+						"GUI_PHONE",
+					],
+					possibleMessages: {
+						forward: [
+							"start_M_CTRL",
+						],
+					},
+				},
+                C2: {
+					ends: [
+						"USER",
+						"UI_ROBOT",
+					],
+					possibleMessages: {
+						forward: [
+							"start_M_EMB",
+						],
+					},
+				},
+                C3: {
+					ends: [
+						"GUI_PHONE",
+						"ARCHIVIST",
+					],
+				},
+                C4: {
+					ends: [
+						"GUI_PHONE",
+						"SYNC_PHONE",
+					],
+					possibleMessages: {
+						reverse: [
+							"display_connection_state",
+						],
+					},
+				},
+                C5: {
+					ends: [
+						"GUI_PHONE",
+						"MAPPER",
+					],
+				},
+                C6: {
+					ends: [
+						"SYNC_PHONE",
+						"SYNC_ROBOT",
+					],
+					possibleMessages: {
+						forward: [
+							"confirm_connection",
+						],
+						reverse: [
+							"ask_connection",
+						],
+					},
+				},
+                C7: {
+					ends: [
+						"SYNC_ROBOT",
+						"UI_ROBOT",
+					],
+					possibleMessages: {
+						forward: [
+							"stand_by",
+						],
+					},
+				},
+                C8: {
+					ends: [
+						"GUI_PHONE",
+						"DRIVER",
+					],
+				},
+                C9: {
+					ends: [
+						"DRIVER",
+						"RADAR",
+					],
+				},
+                C10: {
+					ends: [
+						"RADAR",
+						"MAPPER",
+					],
+				},
+                C11: {
+					ends: [
+						"MAPPER",
+						"LOCATOR",
+					],
+				},
+                C12: {
+					ends: [
+						"DRIVER",
+						"ROBOT",
+					],
+				},
+                C13: {
+					ends: [
+						"RADAR",
+						"ROBOT",
+					],
+				},
+			},
+			settings: {
+				display: {
+					hideLinks: false,
+					hideClasses: false,
+					hideOperations: false,
+					hideMethods: false,
+					showPorts: false,
+					showEndNames: false,
+					hideStateMachines: true,
+					hideOuterSMBoxes: true,
+					showExplicitSM: false,
+					hideStates: false,
+					showPseudostateInvariants: false,
+					hideSets: false,
+					showTransitions: false,
+				},
+				semantics: {
+					fireInitialTransitions: true,
+					autoFireAfterChoice: true,
+					autoReceiveDisabled: false,
+					considerGuardsTrue: true,
+					checkEvents: false,
+					keepOneMessagePerTrigger: true,
+					enableEventPools: true,
+					matchFirst: true,
+					symbolicValues: false,
+					reactiveSystem: false,
+				},
+				interface: {
+				},
+			},
+		}
+	;
+	document.write(`
+		<iframe width="100%" height="100%" src='http://172.24.2.1/AnimUML.html#${encodeURIComponent(JSON.stringify(model)).replace(/'/g, '%27')}'></iframe>
+	`);
+</script>
