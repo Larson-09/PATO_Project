@@ -1,0 +1,189 @@
+<script>
+	const model =
+		{
+			name: "EXPLORATION",
+			objects: [
+				{
+					name: "USER",
+					isActor: true,
+					features: String.raw`
+					`,
+				},
+                {
+					name: "ROBOT",
+					isActor: true,
+					features: String.raw`
+					`,
+				},
+				{
+					name: "GUI PHONE",
+					isActor: false,
+					features: String.raw`
+					`,
+				},
+                {
+					name: "UI ROBOT",
+					isActor: false,
+					features: String.raw`
+					`,
+				},
+                {
+					name: "SYNC PHONE",
+					isActor: false,
+					features: String.raw`
+					`,
+				},
+                {
+					name: "SYNC ROBOT",
+					isActor: false,
+					features: String.raw`
+					`,
+				},
+                {
+					name: "ARCHIVIST",
+					isActor: false,
+					features: String.raw`
+					`,
+				},
+                {
+					name: "DRIVER",
+					isActor: false,
+					features: String.raw`
+					`,
+				},
+                {
+					name: "RADAR",
+					isActor: false,
+					features: String.raw`
+					`,
+				},
+                {
+					name: "MAPPER",
+					isActor: false,
+					features: String.raw`
+					`,
+				},
+                {
+					name: "LOCATOR",
+					isActor: false,
+					features: String.raw`
+					`,
+				},
+			],
+			connectorByName: {
+				C1: {
+					ends: [
+						"USER",
+						"GUI PHONE",
+					],
+				},
+                C2: {
+					ends: [
+						"USER",
+						"UI ROBOT",
+					],
+				},
+                C3: {
+					ends: [
+						"GUI PHONE",
+						"ARCHIVIST",
+					],
+				},
+                C4: {
+					ends: [
+						"GUI PHONE",
+						"SYNC PHONE",
+					],
+				},
+                C5: {
+					ends: [
+						"GUI PHONE",
+						"MAPPER",
+					],
+				},
+                C6: {
+					ends: [
+						"SYNC PHONE",
+						"SYNC ROBOT",
+					],
+				},
+                C7: {
+					ends: [
+						"SYNC ROBOT",
+						"UI ROBOT",
+					],
+				},
+                C8: {
+					ends: [
+						"GUI PHONE",
+						"DRIVER",
+					],
+				},
+                C9: {
+					ends: [
+						"DRIVER",
+						"RADAR",
+					],
+				},
+                C10: {
+					ends: [
+						"RADAR",
+						"MAPPER",
+					],
+				},
+                C11: {
+					ends: [
+						"MAPPER",
+						"LOCATOR",
+					],
+				},
+                C12: {
+					ends: [
+						"DRIVER",
+						"ROBOT",
+					],
+				},
+                C13: {
+					ends: [
+						"RADAR",
+						"ROBOT",
+					],
+				},
+			},
+			settings: {
+				display: {
+					hideLinks: false,
+					hideClasses: false,
+					hideOperations: false,
+					hideMethods: false,
+					showPorts: false,
+					showEndNames: false,
+					hideStateMachines: true,
+					hideOuterSMBoxes: true,
+					showExplicitSM: false,
+					hideStates: false,
+					showPseudostateInvariants: false,
+					hideSets: false,
+					showTransitions: false,
+				},
+				semantics: {
+					fireInitialTransitions: true,
+					autoFireAfterChoice: true,
+					autoReceiveDisabled: false,
+					considerGuardsTrue: true,
+					checkEvents: false,
+					keepOneMessagePerTrigger: true,
+					enableEventPools: true,
+					matchFirst: true,
+					symbolicValues: false,
+					reactiveSystem: false,
+				},
+				interface: {
+				},
+			},
+		}
+	;
+	document.write(`
+		<iframe width="100%" height="100%" src='http://172.24.2.1/AnimUML.html#${encodeURIComponent(JSON.stringify(model)).replace(/'/g, '%27')}'></iframe>
+	`);
+</script>

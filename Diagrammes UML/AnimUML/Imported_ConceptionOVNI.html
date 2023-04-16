@@ -1,0 +1,527 @@
+<script>
+	const model =
+		{
+			name: "Imported_ConceptionOVNI",
+			classes: String.raw`
+				enum BatteryLevel  {
+					FULLBATTERY
+					4BATTERY
+					MIDBATTERY
+					2BATTERY
+					LOWBATTERY
+					INSUFFICENTBATTERY
+				}
+				class Brain {
+					-powerReg : Watt	'' Consigne de régulation, valeur comprise entre 0 et 20 watt, par pas de 0,5 watt
+					-cdm : Ampere	'' Courant de décharge maximum qui ne doit pas être dépassé pour les batteries
+					-lang : Language	'' Définit la langue dans laquelle s'affiche l'interface
+					-err : Error
+					-myBattery : Battery
+					-mySpeaker : Speaker
+					-myHeater : Heater
+					-mySwitch : Switch
+					powerOn()	'' démarrage d'OVNI
+					startVap()	'' demande de vapotage
+					stopVap()	'' demande d'arrêt de vapotage
+					increasePower()	'' demande d'augmenter la consigne de régulation (incrément de 0,5 watt)
+					decreasePower()	'' demande de diminuer la consigne de régulation (décrément de 0,5 watt)
+					goToNextScreen()	'' demande pour passer à l'écran suivant
+					goToPreviousScreen()	'' demande pour passer à l'écran précédent
+				}
+				class Switch {
+					cpt : entier	'' compte le nombre d'appuis courts successifs en cours. C'est un entier dont la valeur est comprise entre 0 et 5.
+					switchPressed()
+					switchReleased()
+					reportWarning()
+					reportError()
+					reportHeating()
+					reportNotHeating()
+					reportOk()
+				}
+				class Joystick {
+					
+					rightPressed()
+					leftPressed()
+					upPressed()
+					downPressed()
+					clickPressed()
+				}
+				class Battery {
+					-cdm : Ampere
+					-level : BatteryLevel
+					-myMultimeter : Multimeter
+					initBattery()
+					checkBattery()
+					checkBatteryLevel()
+				}
+				class Heater {
+					-powerReg : Watt
+					-resistanceValue : Resistance
+					-myMultimeter : Multimeter
+					checkParameters()
+					verifyParameters()
+					startVap()
+					stopVap()
+					doVap()
+					calculateDutyCycle() : entier
+				}
+				class Speaker {
+					-powerReg : Watt	'' invariant : Valeur comprise entre 6 et 20 par pas de 0,5
+					-resistanceValue : Resistance
+					-batteryLevel : BatteryLevel
+					-screens : Box
+					-myInterpret : Interpret
+					-myLcd : Lcd
+					storeBatteryLevel(aLevelBatteryLevel)
+					storePowerReg(aPowerReg : Watt)
+					storeResistanceValue(aRValue : Ohm)
+					showScreen() {
+											    stringCopy(line1, translateBox(Screens[IDScreen][line][0]));
+											    while (box) {
+											        if (box.typeBox == TMSG) {
+											            getMsg(currentLine, box.msg);
+											            if(box.typeBox == TSYMB) {
+											                getMsg(currentLine, box.symb);
+											            } else if(box.typeBox == TVAL) {
+											                translateIndex(box.Id);
+											            }
+											        }
+											    }
+											    writeLine(line1);}
+					translateIndex()
+					initSpeaker(aPowerReg : Watt)
+				}
+				class Multimeter {
+					-resistanceValue : Ohm
+					-batteryVoltage : Volt
+					getBatteryVoltage()
+					calculateResistanceValue()
+				}
+				class Interpret {
+					-lang : Language	'' Langue actuelle de l'IHM.
+					-tabSymbol : TabSymbol	'' Tableau contenant les différentes traductions des symboles
+					-tabMessage : TabMessage	'' Tableau contenant les différentes traductions des messages suivant leur identifiant.
+					initInterpret(lang : Language)	'' indique dans quelle langue interpret doit travailler et traduire les messages et symboles.
+					getMsg(id : IdMsg) : Message	'' renvoit le message (chaîne de caractère) correspondant à Id dans la langue lang préalablement fixé par initInterpret().
+					getSymb(id : IdSymbole) : Symbole	'' renvoit le caractère correspondant au symbole dans la langue demandée
+				}
+				class Lcd {
+					
+					sendString()
+					setCursor()
+					scroll()
+				}
+				class Led {
+					
+					ledOn()
+					ledOff()
+				}
+				Joystick "1" --> "myBrains[1]" Brain
+				Switch "mySwitch[1]" -- "myBrains[1]" Brain
+				Brain "1 \n myBrains" -- "1 \n myHeater" Heater
+				Brain "1" --> "1 \n mySpeaker" Speaker
+				Brain "1" --> "1 \n myBattery" Battery
+				Speaker "1" --> "1 \n myInterpret" Interpret
+				Battery "1" --> "1 \n myMultimeter" Multimeter
+				Heater "1" --> "1 \n myMultimeter" Multimeter
+				Speaker "1" --> "1 \n myLcd" Lcd
+				Switch "1" --> "1 \n myLed" Led
+			`,
+			objects: [
+				{
+					name: "vapoteur",
+					isActor: true,
+				},
+				{
+					name: "E_Switch",
+					isActor: true,
+				},
+				{
+					name: "brain",
+					class: "Brain",
+					behavior: String.raw`
+						state "Locked" as Locked {
+						}
+						Locked : entry / showScreen(Locked)
+						state "Idle" as Idle {
+							state "Welcome" as Welcome {
+							}
+							Welcome : entry / showScreen(Welcome)
+							state "Regulation_Setting" as Regulation_Setting {
+							}
+							Regulation_Setting : entry / showScreen(PowerReg)
+							
+							[*] -> Welcome as "init2Welcome" :    / 
+							Welcome -> Regulation_Setting as "Welcome2Regulation_Setting" : goToNextScreen   / 
+							Regulation_Setting -> Welcome as "Regulation_Setting2Welcome" : goToNextScreen   / 
+							Regulation_Setting -> Welcome as "Regulation_Setting2Welcome_2" : goToPreviousScreen   / 
+						}
+						state "Waiting" as Waiting {
+						}
+						state "Starting" as Starting {
+						}
+						state "Lcd_Off_Locked" as Lcd_Off_Locked {
+						}
+						state "Lcd_Off" as Lcd_Off {
+						}
+						state "Battery_Level_Checking" as Battery_Level_Checking {
+						}
+						state "TODO" as TODO {
+						}
+						
+						[*] -> Waiting as "init2Waiting" :    / 
+						Waiting -> Starting as "Waiting2Starting" : powerOn   / initInterpret(Eng);\ninitSpeaker(powerReg);\ninitHeater(powerReg);\ninitBattery(cdm)
+						Starting -> Locked as "Starting2Locked" : after(TD)   / 
+						Locked -> Lcd_Off_Locked as "Locked2Lcd_Off_Locked" : after(TA_EE)   / lock()
+						Lcd_Off_Locked -> Locked as "Lcd_Off_Locked2Locked" : startVap   / 
+						Locked -> Idle as "Locked2Idle" : brainLock   / 
+						Idle -> Locked as "Idle2Locked" : brainLock   / 
+						Idle -> Lcd_Off as "Idle2Lcd_Off" : after(TA_EE)   / 
+						Lcd_Off -> Idle as "Lcd_Off2Idle" : joystickHasMoved()   / 
+						Lcd_Off -> Lcd_Off_Locked as "Lcd_Off2Lcd_Off_Locked" : after(TA_EV)   / heater.startVap()
+						Idle -> Battery_Level_Checking as "Idle2Battery_Level_Checking" : startVap()   / testBattery = checkBattery()
+						Battery_Level_Checking -> Idle as "Battery_Level_Checking2Idle" : stopVap()   / switchOffLed(); heater.stopVap()
+						TODO -> TODO as "TODO2TODO" :    /
+					`,
+				},
+				{
+					name: "switch",
+					class: "Switch",
+					behavior: String.raw`
+						state "Idle" as Idle {
+						}
+						state "Pressed" as Pressed {
+						}
+						state "Released" as Released {
+						}
+						state "LongPressed" as LongPressed {
+						}
+						
+						[*] -> Idle as "init2Idle" :    / 
+						Idle -> Pressed as "Idle2Pressed" : switchPressed   / cpt = 0
+						Pressed -> Released as "Pressed2Released" : switchReleased   / cpt++
+						Released -> Pressed as "Released2Pressed" : switchPressed   / 
+						Released -> Idle as "Released2Idle_2" :   [cpt == 5] / lock()
+						Released -> Idle as "Released2Idle_1" : after(400ms)   / 
+						Pressed -> LongPressed as "Pressed2LongPressed" : after(200ms)   / startVap()
+						LongPressed -> Idle as "LongPressed2Idle" : switchReleased   / stopVap()
+					`,
+				},
+				{
+					name: "joystick",
+					class: "Joystick",
+				},
+				{
+					name: "battery",
+					class: "Battery",
+				},
+				{
+					name: "heater",
+					class: "Heater",
+					behavior: String.raw`
+						state "VerifyParameters" as VerifyParameters {
+						}
+						VerifyParameters : entry / calculateResistanceValue();\nstoreResistanceValue();\nverifyParameters()
+						state "PWMOn" as PWMOn {
+							state "Heating" as Heating {
+							}
+							Heating : entry / startHeat()
+							state "Not__SPACE__Heating" as Not__SPACE__Heating {
+							}
+							Not__SPACE__Heating : entry / stopHeat()
+							
+							[*] -> Heating as "init2Heating" :    / 
+							Heating -> Not__SPACE__Heating as "Heating2Not Heating" : after(dutyCycle*T)   / 
+							Not__SPACE__Heating -> Heating as "Not Heating2Heating" : after(1-dutyCycle*T)   / 
+						}
+						state "Idle" as Idle {
+						}
+						
+						[*] -> Idle as "init2Idle" :    / 
+						Idle -> VerifyParameters as "Idle2VerifyParameters" : checkParameters   / 
+						VerifyParameters -> Idle as "VerifyParameters2Idle" :   [!paramOK] / heating = 0; checking = 0
+						VerifyParameters -> PWMOn as "VerifyParameters2PWMOn_1" : startVap   / calculateDutyCyle();\nheating = 1
+						VerifyParameters -> PWMOn as "VerifyParameters2PWMOn_2" :   [heating == 1 && paramOK] / 
+						PWMOn -> VerifyParameters as "PWMOn2VerifyParameters_1" : checkParameters   / checking = 1
+						PWMOn -> VerifyParameters as "PWMOn2VerifyParameters_2" : after(1s)   / checking == 1
+					`,
+				},
+				{
+					name: "speaker",
+					class: "Speaker",
+					behavior: String.raw`
+						state "TODO" as TODO {
+						}
+						
+						[*] -> TODO as "init2TODO_1" :    /
+					`,
+				},
+				{
+					name: "multimeter",
+					class: "Multimeter",
+				},
+				{
+					name: "interpret",
+					class: "Interpret",
+				},
+				{
+					name: "lcd",
+					class: "Lcd",
+				},
+				{
+					name: "led",
+					class: "Led",
+				},
+			],
+			connectorByName: {
+				C01: {
+					ends: [
+						"vapoteur",
+						"brain",
+					],
+				},
+				C02: {
+					ends: [
+						"E_Switch",
+						"switch",
+					],
+				},
+				C1: {
+					ends: [
+						"joystick",
+						"brain",
+					],
+				},
+				C2: {
+					ends: [
+						"switch",
+						"brain",
+					],
+				},
+				C3: {
+					ends: [
+						"brain",
+						"heater",
+					],
+				},
+				C4: {
+					ends: [
+						"brain",
+						"speaker",
+					],
+				},
+				C5: {
+					ends: [
+						"brain",
+						"battery",
+					],
+				},
+				C6: {
+					ends: [
+						"speaker",
+						"interpret",
+					],
+				},
+				C7: {
+					ends: [
+						"battery",
+						"multimeter",
+					],
+				},
+				C8: {
+					ends: [
+						"heater",
+						"multimeter",
+					],
+				},
+				C9: {
+					ends: [
+						"speaker",
+						"lcd",
+					],
+				},
+				C10: {
+					ends: [
+						"switch",
+						"led",
+					],
+				},
+			},
+			interactions: {
+				"Vapoter en sécurité avec assistance": String.raw`
+					title CU 2.3.6
+					actor vapoteur
+					actor E_Switch
+					participant switch
+					participant brain
+					participant speaker
+					e0 : vapoteur -? brain : powerOn()
+					ref over a, b accepting e0 from optionalName : Démarrer
+					loop 5 times
+						e0 : E_Switch -? switch : switchPressed()
+						accept e0
+					end
+					e3 : switch -? brain : unlock()
+					accept e3
+					e5 : brain -? speaker : showScreen(Welcome)
+					ref over a, b accepting e5 from optionalName : Afficher un écran
+					e7 : E_Switch -? switch : switchPressed()
+					accept e7
+					ref over a, b : Vapoter
+					...after(TA_AE)...
+					e11 : brain -? speaker : showScreen(ScreenOff)
+					ref over a, b accepting e11 from optionalName : Afficher un écran
+					...after(TA_AE)...
+					e14 : brain -? brain : lock()
+					accept e14
+					e16 : brain -? speaker : showScreen(Locked)
+					ref over a, b accepting e16 from optionalName : Afficher un écran
+				`,
+				Démarrer: String.raw`
+					actor vapoteur
+					participant brain
+					participant interpret
+					participant speaker
+					participant heater
+					participant battery
+					[optionalName-> brain : powerOn()
+					e1 : brain -? interpret : initInterpret(EN)
+					accept e1
+					e3 : brain -? speaker : initSpeaker(powerReg)
+					accept e3
+					e5 : brain -? heater : initHeater(cdm)
+					accept e5
+					e7 : brain -? battery : initBattery()
+					accept e7
+					e9 : brain -? speaker : lightScreen()
+					accept e9
+					e11 : brain -? brain : lock()
+					accept e11
+					...after(TD)...
+					e14 : brain -? speaker : showScreen(Locked)
+					ref over a, b accepting e14 from optionalName : Afficher un écran
+				`,
+				"Afficher un écran": String.raw`
+					participant speaker
+					participant interpret
+					participant lcd
+					[optionalName-> speaker : showScreen(IDScreen)
+					loop Prend les informations à afficher pour l'écran(IDScreen)
+						e0 : speaker -? speaker : Prendre informations pour la ieme ligne()
+						accept e0
+						loop Pour chaque ligne, parcours les différents éléments (box) à afficher
+							alt box.typeBox == Message à afficher
+								e0 : speaker -? interpret : getMsg(currentLine,box.msg)
+								accept e0
+								returning e0 : string
+							else box.typeBox == Symbole à afficher
+								e0 : speaker -? interpret : getSymbol(box.symb)
+								accept e0
+								returning e0 : string
+							else box.typeBox == Valeur a afficher
+								e0 : speaker -? speaker : translateIndex(box.id)
+								accept e0
+							end
+							e1 : speaker -? speaker : fabrique la ligne à afficher(string)
+							accept e1
+						end
+						e3 : speaker -? lcd : writeLine(string)
+						accept e3
+					end
+				`,
+				Vapoter: String.raw`
+					actor E_Switch
+					participant led
+					participant switch
+					participant brain
+					participant battery
+					participant speaker
+					participant heater
+					participant multimeter
+					e0 : E_Switch -> switch : switchPressed()
+					e1 : switch -> brain : startVap()
+					e2 : brain -> battery : checkBattery()
+					e3 : battery -> multimeter : getBatteryVoltage()
+					returning e3 : batteryLevel
+					e5 : battery -> speaker : storeBatteryLevel(batteryLevel)
+					e6 : battery -> battery : checkBatteryLevel(batteryLevel)
+					e7 : brain -> heater : checkParameters(powerReg)
+					e8 : heater -> multimeter : calculateResistanceValue()
+					returning e8 : resistanceValue
+					e10 : heater -> speaker : storeResistanceValue(resistanceValue)
+					e11 : heater -> heater : verifyParameters(cdm,powerReg)
+					returning e7 : Param Ok
+					e13 : brain -> heater : startVap(powerReg)
+					ref over a, b : Démarrer le vapotage
+					e15 : brain -> switch : reportHeating()
+					e16 : switch -> led : ledOn()
+					e17 : brain -> speaker : showScreen(Heating)
+					ref over a, b : Afficher un écran
+					e19 : E_Switch -> switch : switchReleased()
+					e20 : switch -> brain : stopVap()
+					e21 : brain -> heater : stopVap()
+					e22 : brain -> switch : reportNotHeating()
+					e23 : switch -> led : ledOff()
+					e24 : brain -> speaker : showScreen(Welcome)
+					ref over a, b : Afficher un écran
+				`,
+				"Démarrer le vapotage": String.raw`
+					participant brain
+					participant speaker
+					participant heater
+					participant multimeter
+					e0 : brain -> heater : startVap(powerReg)
+					loop TCP s
+						e0 : heater -> multimeter : calculateResistanceValue()
+						returning e0 : resistanceValue
+						e2 : heater -> speaker : storeResistanceValue(resistanceValue)
+						e3 : heater -> heater : verifyParameters(cdm,powerReg,resistanceValue)
+						alt Param OK
+							e0 : heater -> heater : calculateDutyCycle(powerReg,resistanceValue)
+							e1 : heater -> heater : startPWM(dutyCycle)
+						else Param KO
+							e0 : heater -> heater : stopPWM()
+							e1 : heater -> brain : stopVap()
+						end
+					end
+				`,
+				"Régler la consigne de régulation": String.raw`
+					participant E_Joystick
+					participant joystick
+					participant brain
+					participant speaker
+					e0 : E_Joystick -> joystick : rightPressed()
+					e1 : joystick -> brain : goToNextScreen()
+					e2 : brain -> speaker : showScreen(powerReg)
+					ref over a, b : Afficher un écran
+					e4 : E_Joystick -> joystick : upPressed()
+					e5 : joystick -> brain : increasePower()
+					alt power &lt; 15
+						e0 : brain -> brain : increasePower(powerReg)
+						e1 : brain -> speaker : storePowerValue(powerReg)
+						e2 : brain -> speaker : showScreen(powerReg)
+						ref over a, b : Afficher un écran
+					else power > 15
+					end
+				`,
+			},
+			settings: {
+				display: {
+					showComments: false,
+					hideStateMachines: true,
+				},
+				semantics: {
+					checkEvents: false,
+					considerGuardsTrue: true,
+				},
+				interface: {
+					mainWidth: "40%",
+					histWidth: "60%",
+				},
+			},
+		}
+	;
+	document.write(`
+		<iframe width="100%" height="100%" src='http://172.24.2.1/AnimUML.html#${encodeURIComponent(JSON.stringify(model)).replace(/'/g, '%27')}'></iframe>
+	`);
+</script>

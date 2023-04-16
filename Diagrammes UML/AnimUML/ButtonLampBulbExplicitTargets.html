@@ -1,0 +1,91 @@
+<script>
+	const model =
+		{
+			name: "ButtonLampBulbExplicitTargets",
+			objects: [
+				{
+					name: "button",
+					class: "Button",
+					isActor: true,
+					behavior: String.raw`
+						state "Waiting" as Waiting {
+						}
+						[*] -> Waiting as "tInitialOFF" :    / 
+						Waiting -> Waiting as "T1" :    / lamp.onButton()
+						Waiting -> Waiting as "T2" :    / lamp.offButton()
+					`,
+				},
+				{
+					name: "lamp",
+					class: "Lamp",
+					behavior: String.raw`
+						state "Off" as Off {
+						}
+						state "On" as On {
+						}
+						[*] -> Off as "tInitialOFF" :    / 
+						On -> Off as "tONOFF" : offButton   / bulb.turnOff()
+						Off -> On as "tOFFON" : onButton   / bulb.turnOn()
+						On -> Off as "T1" : after(10min)   / bulb.turnOff()
+					`,
+					features: String.raw`
+						onButton()
+						offButton()
+					`,
+				},
+				{
+					name: "bulb",
+					class: "Bulb",
+					features: String.raw`
+						turnOn()
+						turnOff()
+					`,
+				},
+			],
+			connectorByName: {
+				C1: {
+					ends: [
+						"button",
+						"lamp",
+					],
+					possibleMessages: {
+						forward: [
+							"onButton",
+							"offButton",
+						],
+					},
+				},
+				C2: {
+					ends: [
+						"lamp",
+						"bulb",
+					],
+					possibleMessages: {
+						forward: [
+							"turnOn",
+							"turnOff",
+						],
+					},
+				},
+			},
+			interactions: {
+				turnOnOff: String.raw`
+					actor button
+					participant lamp
+					participant bulb
+					e0 : button -? lamp : onButton()
+					accept e0
+					e2 : lamp -? bulb : turnOn()
+					accept e2
+					e4 : button -? lamp : offButton()
+					accept e4
+					e6 : lamp -? bulb : turnOff()
+					accept e6
+				`,
+			},
+		}
+	;
+	document.write(`
+		<iframe width="100%" height="100%" src='http://172.24.2.1/AnimUML.html#${encodeURIComponent(JSON.stringify(model)).replace(/'/g, '%27')}'></iframe>
+	`);
+</script>

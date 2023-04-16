@@ -1,0 +1,150 @@
+<script>
+	const model =
+		{
+			name: "Imported_JDLevelCrossingV1",
+			objects: [
+				{
+					name: "Train",
+					isActor: true,
+					features: String.raw`
+						allIsGood()
+						nothing2say()
+					`,
+				},
+				{
+					name: "aRadar",
+					isActor: false,
+					features: String.raw`
+						trainArrives()
+						trainPasses()
+						trainExits()
+						-startChrono()
+						-stopChrono()
+						-calcSpeed()
+					`,
+				},
+				{
+					name: "aLCKeeper",
+					features: String.raw`
+						notifyTrainArriving()
+						notifyTrainExiting()
+						-calcDelay()
+						-controlTrainSpeed()
+					`,
+				},
+				{
+					name: "aLC",
+					features: String.raw`
+						openLC()
+						closeLC()
+					`,
+				},
+				{
+					name: "RoadUser",
+					isActor: true,
+					features: String.raw`
+						allowAccess()
+						forbidAccess()
+					`,
+				},
+			],
+			connectorByName: {
+				C1: {
+					ends: [
+						"Train",
+						"aRadar",
+					],
+					possibleMessages: {
+						forward: [
+							"trainArrives()",
+							"trainPasses()",
+							"trainExits()",
+						],
+					},
+				},
+				C2: {
+					ends: [
+						"aRadar",
+						"aLCKeeper",
+					],
+					possibleMessages: {
+						forward: [
+							"notifyTrainArriving()",
+							"notifyTrainExiting()",
+						],
+					},
+				},
+				C3: {
+					ends: [
+						"aLCKeeper",
+						"aLC",
+					],
+					possibleMessages: {
+						forward: [
+							"openLC()",
+							"closeLC()",
+						],
+					},
+				},
+				C4: {
+					ends: [
+						"aLCKeeper",
+						"Train",
+					],
+					possibleMessages: {
+						forward: [
+							"allIsGood()",
+							"nothing2say()",
+						],
+					},
+				},
+				C5: {
+					ends: [
+						"aLC",
+						"RoadUser",
+					],
+					possibleMessages: {
+						forward: [
+							"allowAccess()",
+							"forbidAccess()",
+						],
+					},
+				},
+			},
+			settings: {
+				display: {
+					hideLinks: false,
+					hideClasses: false,
+					hideOperations: false,
+					hideMethods: false,
+					showPorts: false,
+					showEndNames: false,
+					hideStateMachines: true,
+					hideOuterSMBoxes: true,
+					showExplicitSM: false,
+					hideStates: false,
+					showPseudostateInvariants: false,
+					hideSets: false,
+					showTransitions: false,
+				},
+				semantics: {
+					fireInitialTransitions: true,
+					autoFireAfterChoice: true,
+					autoReceiveDisabled: false,
+					considerGuardsTrue: true,
+					checkEvents: false,
+					keepOneMessagePerTrigger: true,
+					enableEventPools: true,
+					matchFirst: true,
+					symbolicValues: false,
+					reactiveSystem: false,
+				},
+				interface: {
+				},
+			},
+		}
+	;
+	document.write(`
+		<iframe width="100%" height="100%" src='http://172.24.2.1/AnimUML.html#${encodeURIComponent(JSON.stringify(model)).replace(/'/g, '%27')}'></iframe>
+	`);
+</script>
