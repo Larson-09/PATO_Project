@@ -1,0 +1,324 @@
+<head></head>
+<body></body>
+<script>
+	const model =
+		{
+			name: "Imported_EXPLORATION_ALL",
+			classes: String.raw`
+				enum screenID  {
+					EcranNonConnecte
+					EcranPrincipal
+					EcranVerrouille
+					EcranSelectionExplo
+					EcranOption
+				}
+				class USER <<actor>>{
+				}
+				class GUI_PHONE {
+					
+					confirm_connection()
+					display_connection_state()
+					display_map()
+					select_options()
+					send_status(status)
+					set_end_criteria(crit)
+					set_explo_algorithm(algo)
+					set_value_criteria(crit, value)
+					start_explo()
+					start_M_CTRL()
+					-display_screen(screenID)
+				}
+				class ARCHIVIST {
+					
+					save_explo()
+				}
+				class UI_ROBOT {
+
+					ask_connection()
+					start_M_EMB()
+					stand_by()
+				}
+				class DRIVER {
+					
+					set_explo_metrics(metrics)
+					set_end_criterias(crit, value)
+					set_explo_algorithm(algo)
+					-init_explo_metrics()
+					-dodge_obstacle()
+					-execute_move()
+					-lock_metrics()
+					-read_move()
+					-stop_move()
+					-update_explo_metrics()
+				}
+				class RADAR {
+					
+					get_info() : info
+				}
+				class MAPPER {
+					
+					get_map() : map
+					-update_map()
+				}
+				class LOCATOR {
+					
+					init_start_location()
+					get_pos()
+					-set_pos()
+				}
+				class ROBOT <<actor>>{
+				}
+				USER  -->  GUI_PHONE
+				USER  -->  UI_ROBOT
+				GUI_PHONE  -->  ARCHIVIST
+				GUI_PHONE  -->  MAPPER
+				GUI_PHONE  <->  UI_ROBOT
+				GUI_PHONE  <->  DRIVER
+				DRIVER  -->  RADAR
+				RADAR  <--  MAPPER
+				MAPPER  -->  LOCATOR
+				DRIVER  --  ROBOT
+				RADAR  --  ROBOT
+				LOCATOR  --  ROBOT
+				DRIVER  -->  LOCATOR
+				UI_ROBOT  --  MAPPER
+			`,
+			objects: [
+				{
+					name: "USER",
+					class: "USER",
+					isActor: true,
+				},
+				{
+					name: "GUI_PHONE",
+					class: "GUI_PHONE",
+					isActor: false,
+				},
+				{
+					name: "MAPPER",
+					class: "MAPPER",
+					isActor: false,
+				},
+				{
+					name: "ARCHIVIST",
+					class: "ARCHIVIST",
+					isActor: false,
+				},
+				{
+					name: "DRIVER",
+					class: "DRIVER",
+					isActor: false,
+				},
+				{
+					name: "UI_ROBOT",
+					class: "UI_ROBOT",
+					isActor: false,
+				},
+				{
+					name: "LOCATOR",
+					class: "LOCATOR",
+					isActor: false,
+				},
+				{
+					name: "RADAR",
+					class: "RADAR",
+					isActor: false,
+				},
+				{
+					name: "ROBOT",
+					class: "ROBOT",
+					isActor: true,
+				},
+			],
+			connectorByName: {
+				C1: {
+					ends: [
+						"USER",
+						"GUI_PHONE",
+					],
+					possibleMessages: {
+						forward: [
+							"select_options",
+							"set_end_criteria(crit)",
+							"set_value_criteria(crit,value)",
+							"set_explo_algorithm(algo)",
+							"start_M_CTRL",
+							"start_explo",
+						],
+					},
+				},
+				C2: {
+					ends: [
+						"USER",
+						"UI_ROBOT",
+					],
+					possibleMessages: {
+						forward: [
+							"start_M_EMB",
+						],
+					},
+				},
+				C3: {
+					ends: [
+						"GUI_PHONE",
+						"ARCHIVIST",
+					],
+					possibleMessages: {
+						forward: [
+							"save_explo",
+						],
+					},
+				},
+				C4: {
+					ends: [
+						"GUI_PHONE",
+						"UI_ROBOT",
+					],
+					possibleMessages: {
+						forward: [
+							"ask_connection",
+							"stand_by",
+						],
+						reverse: [
+							"confirm_connection",
+							"display_connection_state",
+							"display_map",
+						],
+					},
+				},
+				C5: {
+					ends: [
+						"GUI_PHONE",
+						"MAPPER",
+					],
+					possibleMessages: {
+						forward: [
+							"get_map",
+						],
+					},
+				},
+				C6: {
+					ends: [
+						"GUI_PHONE",
+						"DRIVER",
+					],
+					possibleMessages: {
+						forward: [
+							"set_end_criterias(crit,value)",
+							"set_explo_algorithm(algo)",
+							"set_explo_metrics(metrics)",
+						],
+						reverse: [
+							"send_status(status)",
+						],
+					},
+				},
+				C7: {
+					ends: [
+						"DRIVER",
+						"RADAR",
+					],
+					possibleMessages: {
+						forward: [
+							"get_info",
+						],
+						
+					},
+				},
+				C8: {
+					ends: [
+						"RADAR",
+						"MAPPER",
+					],
+					possibleMessages: {
+						reverse: [
+							"get_info",
+						],
+						
+					},
+				},
+				C9: {
+					ends: [
+						"MAPPER",
+						"LOCATOR",
+					],
+					possibleMessages: {
+						forward: [
+							"get_pos",
+						],
+						
+					},
+				},
+				C10: {
+					ends: [
+						"DRIVER",
+						"ROBOT",
+					],
+				},
+				C11: {
+					ends: [
+						"RADAR",
+						"ROBOT",
+					],
+				},
+				C12: {
+					ends: [
+						"DRIVER",
+						"LOCATOR",
+					],
+					possibleMessages: {
+						forward: [
+							"init_start_location",
+						],
+					},
+				},
+				C13: {
+					ends: [
+						"UI_ROBOT",
+						"MAPPER",
+					],
+				},
+				C14: {
+					ends: [
+						"LOCATOR",
+						"ROBOT",
+					],
+				},
+			},
+			settings: {
+				display: {
+					hideLinks: false,
+					hideClasses: false,
+					hideOperations: false,
+					hideMethods: false,
+					showPorts: false,
+					showEndNames: false,
+					hideStateMachines: true,
+					hideOuterSMBoxes: true,
+					showExplicitSM: false,
+					hideStates: false,
+					showPseudostateInvariants: false,
+					hideSets: false,
+					showTransitions: false,
+				},
+				semantics: {
+					fireInitialTransitions: true,
+					autoFireAfterChoice: true,
+					autoReceiveDisabled: false,
+					considerGuardsTrue: true,
+					checkEvents: false,
+					keepOneMessagePerTrigger: true,
+					enableEventPools: true,
+					matchFirst: true,
+					symbolicValues: false,
+					reactiveSystem: false,
+				},
+				interface: {
+				},
+			},
+		}
+	;
+	document.write(`
+		<iframe width="100%" height="100%" src='http://172.24.2.1/AnimUML.html#${encodeURIComponent(JSON.stringify(model)).replace(/'/g, '%27')}'></iframe>
+	`);
+</script>
