@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.4.17)  17 APR 2023 14:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.4.17)  17 APR 2023 19:51
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1542,19 +1542,19 @@ Package biblatex Info: ... file 'CONC_B2.bbl' found.
 (build/CONC_B2.bbl)
 Package biblatex Info: Reference section=0 on input line 60.
 Package biblatex Info: Reference segment=0 on input line 60.
-<../../../communs/figures//logoEseo.png, id=199, 409.2891pt x 143.8173pt>
+<../../../communs/figures//logoEseo.png, id=212, 409.2891pt x 143.8173pt>
 File: ../../../communs/figures//logoEseo.png Graphic file (type png)
 <use ../../../communs/figures//logoEseo.png>
 Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
 line 62.
 (pdftex.def)             Requested size: 142.29155pt x 50.0pt.
-<../../../communs/figures//logoClient.png, id=201, 1412.61774pt x 315.90186pt>
+<../../../communs/figures//logoClient.png, id=214, 1412.61774pt x 315.90186pt>
 File: ../../../communs/figures//logoClient.png Graphic file (type png)
 <use ../../../communs/figures//logoClient.png>
 Package pdftex.def Info: ../../../communs/figures//logoClient.png  used on inpu
 t line 62.
 (pdftex.def)             Requested size: 223.56621pt x 50.0pt.
-<../../../communs/figures//logoTeam.png, id=202, 677.6517pt x 677.6517pt>
+<../../../communs/figures//logoTeam.png, id=215, 677.6517pt x 677.6517pt>
 File: ../../../communs/figures//logoTeam.png Graphic file (type png)
 <use ../../../communs/figures//logoTeam.png>
 Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
@@ -1595,96 +1595,15 @@ line 76.
 
 
 ] (build/CONC_B2.toc
-build/CONC_B2.toc:20: Missing $ inserted.
-<inserted text> 
-                $
-l.20 ...classe GUI_PHONE}{11}{subsubsection.2.4.3}
-                                                  %
-? q
-OK, entering \batchmode...
-build/CONC_B2.toc:20: Extra }, or forgotten $.
-<argument> ...mberline {2.4.3}La classe GUI_PHONE}
-                                                  \hyper@linkend 
-l.20 ...classe GUI_PHONE}{11}{subsubsection.2.4.3}
-                                                  %
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-build/CONC_B2.toc:20: Missing $ inserted.
-<inserted text> 
-                $
-l.20 ...classe GUI_PHONE}{11}{subsubsection.2.4.3}
-                                                  %
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-build/CONC_B2.toc:20: Missing } inserted.
-<inserted text> 
-                }
-l.20 ...classe GUI_PHONE}{11}{subsubsection.2.4.3}
-                                                  %
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-build/CONC_B2.toc:26: Missing $ inserted.
-<inserted text> 
-                $
-l.26 ... classe UI_ROBOT}{11}{subsubsection.2.4.5}
-                                                  %
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-build/CONC_B2.toc:26: Extra }, or forgotten $.
-<argument> ...umberline {2.4.5}La classe UI_ROBOT}
-                                                  \hyper@linkend 
-l.26 ... classe UI_ROBOT}{11}{subsubsection.2.4.5}
-                                                  %
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-build/CONC_B2.toc:26: Missing $ inserted.
-<inserted text> 
-                $
-l.26 ... classe UI_ROBOT}{11}{subsubsection.2.4.5}
-                                                  %
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-build/CONC_B2.toc:26: Missing } inserted.
-<inserted text> 
-                }
-l.26 ... classe UI_ROBOT}{11}{subsubsection.2.4.5}
-                                                  %
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
 File: ../../../communs/figures//logoTeam.png Graphic file (type png)
 <use ../../../communs/figures//logoTeam.png>
 Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
-line 47.
+line 48.
 (pdftex.def)             Requested size: 14.99316pt x 15.0pt.
 File: ../../../communs/figures//logoEseo.png Graphic file (type png)
 <use ../../../communs/figures//logoEseo.png>
 Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
-line 47.
+line 48.
 (pdftex.def)             Requested size: 36.99055pt x 13.0pt.
  [3
 
@@ -1693,7 +1612,8 @@ line 47.
 \tf@toc=\write11
 \openout11 = `CONC_B2.toc'.
 
- (./sections/1.Introduction/introduction.tex
+
+(./sections/1.Introduction/introduction.tex
 File: ../../../communs/figures//logoTeam.png Graphic file (type png)
 <use ../../../communs/figures//logoTeam.png>
 Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
@@ -1704,7 +1624,8 @@ File: ../../../communs/figures//logoEseo.png Graphic file (type png)
 Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
 line 1.
 (pdftex.def)             Requested size: 36.99055pt x 13.0pt.
- [4] (./sections/1.Introduction/1.1.objet.tex
+ [4]
+(./sections/1.Introduction/1.1.objet.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
@@ -1728,7 +1649,8 @@ line 1.
 (pdftex.def)             Requested size: 36.99055pt x 13.0pt.
  [5
 
-] (build/CONC_B2.acr)) (./sections/1.Introduction/1.4.references.tex
+]
+(build/CONC_B2.acr)) (./sections/1.Introduction/1.4.references.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
  []
@@ -1738,7 +1660,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
- (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd)
 Underfull \hbox (badness 3568) in paragraph at lines 36--36
 []|\T1/cmr/m/n/10.95 Société UKIO, "Compte-rendu de la réunion du
  []
@@ -1753,7 +1675,7 @@ File: ../../../communs/figures//logoEseo.png Graphic file (type png)
 Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
 line 36.
 (pdftex.def)             Requested size: 36.99055pt x 13.0pt.
- [6]) (./sections/1.Introduction/1.5.vueEnsemble.tex
+[6]) (./sections/1.Introduction/1.5.vueEnsemble.tex
 File: ../../../communs/figures//logoTeam.png Graphic file (type png)
 <use ../../../communs/figures//logoTeam.png>
 Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
@@ -1764,7 +1686,8 @@ File: ../../../communs/figures//logoEseo.png Graphic file (type png)
 Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
 line 1.
 (pdftex.def)             Requested size: 36.99055pt x 13.0pt.
- [7]) (./sections/1.Introduction/1.6.version.tex
+ [7])
+(./sections/1.Introduction/1.6.version.tex
 File: ../../../communs/figures//logoTeam.png Graphic file (type png)
 <use ../../../communs/figures//logoTeam.png>
 Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
@@ -1775,7 +1698,8 @@ File: ../../../communs/figures//logoEseo.png Graphic file (type png)
 Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
 line 1.
 (pdftex.def)             Requested size: 36.99055pt x 13.0pt.
- [8])) (./sections/2.ConceptionGenerale/conceptionGenerale.tex
+ [8]))
+(./sections/2.ConceptionGenerale/conceptionGenerale.tex
 File: ../../../communs/figures//logoTeam.png Graphic file (type png)
 <use ../../../communs/figures//logoTeam.png>
 Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
@@ -1787,265 +1711,116 @@ Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input
 line 3.
 (pdftex.def)             Requested size: 36.99055pt x 13.0pt.
  [9]
-(../animUML/conceptionGenerale/conceptionGenerale-macros.tex
-../animUML/conceptionGenerale/conceptionGenerale-macros.tex:22: Missing \endcsn
-ame inserted.
-<to be read again> 
-                   \protect 
-l.22 ...def{classGUI\_PHONEProperties\macroSuffix}
-                                                  {
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-../animUML/conceptionGenerale/conceptionGenerale-macros.tex:27: Missing \endcsn
-ame inserted.
-<to be read again> 
-                   \protect 
-l.27 ...def{classGUI\_PHONEOperations\macroSuffix}
-                                                  {
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-../animUML/conceptionGenerale/conceptionGenerale-macros.tex:52: Missing \endcsn
-ame inserted.
-<to be read again> 
-                   \protect 
-l.52 ...edef{classUI\_ROBOTProperties\macroSuffix}
-                                                  {
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-../animUML/conceptionGenerale/conceptionGenerale-macros.tex:57: Missing \endcsn
-ame inserted.
-<to be read again> 
-                   \protect 
-l.57 ...edef{classUI\_ROBOTOperations\macroSuffix}
-                                                  {
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-)
-<../animUML/conceptionGenerale/conceptionGenerale-context.pdf, id=345, 732.4865
-6pt x 926.71219pt>
+(../animUML/conceptionGenerale/conceptionGenerale-macros.tex)
+<../animUML/conceptionGenerale/conceptionGenerale-context.pdf, id=363, 894.3412
+5pt x 1060.71281pt>
 File: ../animUML/conceptionGenerale/conceptionGenerale-context.pdf Graphic file
  (type pdf)
 <use ../animUML/conceptionGenerale/conceptionGenerale-context.pdf>
 Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-conte
 xt.pdf  used on input line 13.
-(pdftex.def)             Requested size: 366.24237pt x 463.35497pt.
+(pdftex.def)             Requested size: 447.16953pt x 530.35512pt.
 
 (./sections/2.ConceptionGenerale/descriptionArchiCand/description_archi_candi.t
 ex)
-<../animUML/conceptionGenerale/conceptionGenerale-datatypes.pdf, id=347, 108.40
-5pt x 95.6072pt>
-File: ../animUML/conceptionGenerale/conceptionGenerale-datatypes.pdf Graphic fi
-le (type pdf)
-<use ../animUML/conceptionGenerale/conceptionGenerale-datatypes.pdf>
-Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-datat
-ypes.pdf  used on input line 27.
-(pdftex.def)             Requested size: 54.20236pt x 47.80347pt.
+<../animUML/conceptionGenerale/conceptionGenerale-sequence-CU1_INIT.pdf, id=365
+, 1866.36334pt x 415.23491pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-sequence-CU1_INIT.pdf Gr
+aphic file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-sequence-CU1_INIT.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-seque
+nce-CU1_INIT.pdf  used on input line 24.
+(pdftex.def)             Requested size: 933.1794pt x 207.61694pt.
 File: ../../../communs/figures//logoTeam.png Graphic file (type png)
 <use ../../../communs/figures//logoTeam.png>
 Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
-line 31.
+line 28.
 (pdftex.def)             Requested size: 14.99316pt x 15.0pt.
 File: ../../../communs/figures//logoEseo.png Graphic file (type png)
 <use ../../../communs/figures//logoEseo.png>
 Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
-line 31.
+line 28.
 (pdftex.def)             Requested size: 36.99055pt x 13.0pt.
  [10
 
  <../animUML/conceptionGenerale/conceptionGenerale-context.pdf>]
-<../animUML/conceptionGenerale/conceptionGenerale-classes.pdf, id=362, 431.3615
-6pt x 722.7pt>
-File: ../animUML/conceptionGenerale/conceptionGenerale-classes.pdf Graphic file
- (type pdf)
-<use ../animUML/conceptionGenerale/conceptionGenerale-classes.pdf>
-Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
-es.pdf  used on input line 42.
-(pdftex.def)             Requested size: 215.68025pt x 361.3491pt.
+(./sections/2.ConceptionGenerale/descriptionSeq/description_CU1_INIT.tex)
+<../animUML/conceptionGenerale/conceptionGenerale-sequence-CU2_MAJ_EXPLO.pdf, i
+d=380, 1866.36334pt x 324.8974pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-sequence-CU2_MAJ_EXPLO.p
+df Graphic file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-sequence-CU2_MAJ_EXPLO.pd
+f>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-seque
+nce-CU2_MAJ_EXPLO.pdf  used on input line 33.
+(pdftex.def)             Requested size: 933.1794pt x 162.4483pt.
+
+(./sections/2.ConceptionGenerale/descriptionSeq/description_CU2_MAJ_EXPLO.tex)
+<../animUML/conceptionGenerale/conceptionGenerale-sequence-CU3_LAUNCH_EXPLO.pdf
+, id=382, 1866.36334pt x 505.5724pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-sequence-CU3_LAUNCH_EXPL
+O.pdf Graphic file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-sequence-CU3_LAUNCH_EXPLO
+.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-seque
+nce-CU3_LAUNCH_EXPLO.pdf  used on input line 42.
+(pdftex.def)             Requested size: 933.1794pt x 252.78557pt.
+
+(./sections/2.ConceptionGenerale/descriptionSeq/description_CU3_LAUNCH_EXPLO.te
+x)
+<../animUML/conceptionGenerale/conceptionGenerale-datatypes.pdf, id=384, 116.68
+594pt x 95.6072pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-datatypes.pdf Graphic fi
+le (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-datatypes.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-datat
+ypes.pdf  used on input line 54.
+(pdftex.def)             Requested size: 58.34282pt x 47.80347pt.
 File: ../../../communs/figures//logoTeam.png Graphic file (type png)
 <use ../../../communs/figures//logoTeam.png>
 Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
-line 46.
+line 61.
 (pdftex.def)             Requested size: 14.99316pt x 15.0pt.
 File: ../../../communs/figures//logoEseo.png Graphic file (type png)
 <use ../../../communs/figures//logoEseo.png>
 Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
-line 46.
+line 61.
 (pdftex.def)             Requested size: 36.99055pt x 13.0pt.
- [11 <../animUML/conceptionGenerale/conceptionGenerale-datatypes.pdf>]
-<../animUML/conceptionGenerale/conceptionGenerale-class-USER.pdf, id=383, 50.43
+ [11 <../animUML/conceptionGenerale/conceptionGenerale-sequence-CU1_INIT.pdf> <
+../animUML/conceptionGenerale/conceptionGenerale-sequence-CU2_MAJ_EXPLO.pdf
+
+pdfTeX warning: pdflatex (file ../animUML/conceptionGenerale/conceptionGenerale
+-sequence-CU2_MAJ_EXPLO.pdf): PDF inclusion: multiple pdfs with page group incl
+uded in a single page
+> <../animUML/conceptionGenerale/conceptionGenerale-sequence-CU3_LAUNCH_EXPLO.p
+df
+
+pdfTeX warning: pdflatex (file ../animUML/conceptionGenerale/conceptionGenerale
+-sequence-CU3_LAUNCH_EXPLO.pdf): PDF inclusion: multiple pdfs with page group i
+ncluded in a single page
+> <../animUML/conceptionGenerale/conceptionGenerale-datatypes.pdf
+
+pdfTeX warning: pdflatex (file ../animUML/conceptionGenerale/conceptionGenerale
+-datatypes.pdf): PDF inclusion: multiple pdfs with page group included in a sin
+gle page
+>]
+<../animUML/conceptionGenerale/conceptionGenerale-classes.pdf, id=429, 773.8912
+5pt x 820.56563pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-classes.pdf Graphic file
+ (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-classes.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
+es.pdf  used on input line 69.
+(pdftex.def)             Requested size: 386.94467pt x 410.28181pt.
+<../animUML/conceptionGenerale/conceptionGenerale-class-USER.pdf, id=432, 50.43
 843pt x 41.4047pt>
 File: ../animUML/conceptionGenerale/conceptionGenerale-class-USER.pdf Graphic f
 ile (type pdf)
 <use ../animUML/conceptionGenerale/conceptionGenerale-class-USER.pdf>
 Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
--USER.pdf  used on input line 53.
+-USER.pdf  used on input line 80.
 (pdftex.def)             Requested size: 25.21915pt x 20.70229pt.
-
-(./sections/2.ConceptionGenerale/descriptionClass/description_USER.tex)
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:63: Missing $ inserted.
-<inserted text> 
-                $
-l.63 \subsubsection{La classe GUI_PHONE}
-                                        
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:63: Extra }, or forgotte
-n $.
-\ttlh@block ...ttl@calc \hspace {#3}\fi \fi #4{#8}
-                                                  \kern \z@ \ttl@strut \@@pa...
-l.63 \subsubsection{La classe GUI_PHONE}
-                                        
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:63: Missing $ inserted.
-<inserted text> 
-                $
-l.63 \subsubsection{La classe GUI_PHONE}
-                                        
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:63: Missing } inserted.
-<inserted text> 
-                }
-l.63 \subsubsection{La classe GUI_PHONE}
-                                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 63.
-
-
-LaTeX Warning: Reference `fig:class-GUI_PHONE' on page 12 undefined on input li
-ne 65.
-
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:65: Missing $ inserted.
-<inserted text> 
-                $
-l.65 ...lass-GUI_PHONE} reprÃ©sente la classe GUI_
-                                                  PHONE.
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-<../animUML/conceptionGenerale/conceptionGenerale-class-GUI_PHONE.pdf, id=384, 
-152.82094pt x 143.03438pt>
-File: ../animUML/conceptionGenerale/conceptionGenerale-class-GUI_PHONE.pdf Grap
-hic file (type pdf)
-<use ../animUML/conceptionGenerale/conceptionGenerale-class-GUI_PHONE.pdf>
-Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
--GUI_PHONE.pdf  used on input line 68.
-(pdftex.def)             Requested size: 76.41026pt x 71.517pt.
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:69: Missing $ inserted.
-<inserted text> 
-                $
-l.69 	\caption{Diagramme de la classe GUI_PHONE}
-                                                
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:69: Missing $ inserted.
-<inserted text> 
-                $
-l.69 	\caption{Diagramme de la classe GUI_PHONE}
-                                                
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:69: Missing $ inserted.
-<inserted text> 
-                $
-l.69 	\caption{Diagramme de la classe GUI_PHONE}
-                                                
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:69: Missing $ inserted.
-<inserted text> 
-                $
-l.69 	\caption{Diagramme de la classe GUI_PHONE}
-                                                
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:71: Missing $ inserted.
-<inserted text> 
-                $
-l.71 \end{figure}
-                 
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:71: Missing \endgroup in
-serted.
-<inserted text> 
-                \endgroup 
-l.71 \end{figure}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:71: Undefined control se
-quence.
-\endfigure ...box \columnwidth \fi \box \@currbox 
-                                                  \vskip \intextsep \relax 
-l.71 \end{figure}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:71: Missing number, trea
-ted as zero.
-<to be read again> 
-                   \vskip 
-l.71 \end{figure}
-                 
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:71: LaTeX Error: \begin{
-document} ended by \end{figure}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.71 \end{figure}
-                 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:71: Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.71 \end{figure}
-                 
-Things are pretty mixed up, but I think the worst is over.
-
-
-(./sections/2.ConceptionGenerale/descriptionClass/description_GUI_PHONE.tex
+ (./sections/2.ConceptionGenerale/descriptionClass/description_USER.tex
 File: ../../../communs/figures//logoTeam.png Graphic file (type png)
 <use ../../../communs/figures//logoTeam.png>
 Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
@@ -2056,306 +1831,155 @@ File: ../../../communs/figures//logoEseo.png Graphic file (type png)
 Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
 line 1.
 (pdftex.def)             Requested size: 36.99055pt x 13.0pt.
- [12 <../animUML/conceptionGenerale/conceptionGenerale-classes.pdf> <../animUML
-/conceptionGenerale/conceptionGenerale-class-USER.pdf
 
-pdfTeX warning: pdflatex (file ../animUML/conceptionGenerale/conceptionGenerale
--class-USER.pdf): PDF inclusion: multiple pdfs with page group included in a si
-ngle page
->])
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:75: Use of \classGUI doe
-sn't match its definition.
-l.75 \classGUI_
-               PHONEProperties
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
+[12 <../animUML/conceptionGenerale/conceptionGenerale-classes.pdf>])
+<../animUML/conceptionGenerale/conceptionGenerale-class-GUIPhone.pdf, id=455, 3
+07.1475pt x 162.6075pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-class-GUIPhone.pdf Graph
+ic file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-class-GUIPhone.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
+-GUIPhone.pdf  used on input line 95.
+(pdftex.def)             Requested size: 153.57336pt x 81.30354pt.
 
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:77: Use of \classGUI doe
-sn't match its definition.
-l.77 \classGUI_
-               PHONEOperations
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-<../animUML/conceptionGenerale/conceptionGenerale-class-ARCHIVIST.pdf, id=420, 
-82.80937pt x 46.67438pt>
+(./sections/2.ConceptionGenerale/descriptionClass/description_GUIPhone.tex)
+<../animUML/conceptionGenerale/conceptionGenerale-class-ARCHIVIST.pdf, id=457, 
+178.41656pt x 46.67438pt>
 File: ../animUML/conceptionGenerale/conceptionGenerale-class-ARCHIVIST.pdf Grap
 hic file (type pdf)
 <use ../animUML/conceptionGenerale/conceptionGenerale-class-ARCHIVIST.pdf>
 Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
--ARCHIVIST.pdf  used on input line 83.
-(pdftex.def)             Requested size: 41.40457pt x 23.33711pt.
+-ARCHIVIST.pdf  used on input line 110.
+(pdftex.def)             Requested size: 89.20805pt x 23.33711pt.
 
-(./sections/2.ConceptionGenerale/descriptionClass/description_ARCHIVIST.tex)
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:93: Missing $ inserted.
-<inserted text> 
-                $
-l.93 \subsubsection{La classe UI_ROBOT}
-                                       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+(./sections/2.ConceptionGenerale/descriptionClass/description_ARCHIVIST.tex
+File: ../../../communs/figures//logoTeam.png Graphic file (type png)
+<use ../../../communs/figures//logoTeam.png>
+Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
+line 1.
+(pdftex.def)             Requested size: 14.99316pt x 15.0pt.
+File: ../../../communs/figures//logoEseo.png Graphic file (type png)
+<use ../../../communs/figures//logoEseo.png>
+Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
+line 1.
+(pdftex.def)             Requested size: 36.99055pt x 13.0pt.
 
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:93: Extra }, or forgotte
-n $.
-\ttlh@block ...ttl@calc \hspace {#3}\fi \fi #4{#8}
-                                                  \kern \z@ \ttl@strut \@@pa...
-l.93 \subsubsection{La classe UI_ROBOT}
-                                       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+[13 <../animUML/conceptionGenerale/conceptionGenerale-class-USER.pdf> <../animU
+ML/conceptionGenerale/conceptionGenerale-class-GUIPhone.pdf
 
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:93: Missing $ inserted.
-<inserted text> 
-                $
-l.93 \subsubsection{La classe UI_ROBOT}
-                                       
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:93: Missing } inserted.
-<inserted text> 
-                }
-l.93 \subsubsection{La classe UI_ROBOT}
-                                       
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 93.
-
-
-LaTeX Warning: Reference `fig:class-UI_ROBOT' on page 13 undefined on input lin
-e 95.
-
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:95: Missing $ inserted.
-<inserted text> 
-                $
-l.95 ...:class-UI_ROBOT} reprÃ©sente la classe UI_
-                                                  ROBOT.
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-<../animUML/conceptionGenerale/conceptionGenerale-class-UI_ROBOT.pdf, id=421, 1
-00.87688pt x 66.2475pt>
-File: ../animUML/conceptionGenerale/conceptionGenerale-class-UI_ROBOT.pdf Graph
-ic file (type pdf)
-<use ../animUML/conceptionGenerale/conceptionGenerale-class-UI_ROBOT.pdf>
+pdfTeX warning: pdflatex (file ../animUML/conceptionGenerale/conceptionGenerale
+-class-GUIPhone.pdf): PDF inclusion: multiple pdfs with page group included in 
+a single page
+>])
+<../animUML/conceptionGenerale/conceptionGenerale-class-UIRobot.pdf, id=485, 30
+7.1475pt x 85.06781pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-class-UIRobot.pdf Graphi
+c file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-class-UIRobot.pdf>
 Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
--UI_ROBOT.pdf  used on input line 98.
-(pdftex.def)             Requested size: 50.43831pt x 33.12366pt.
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:99: Missing $ inserted.
-<inserted text> 
-                $
-l.99 	\caption{Diagramme de la classe UI_ROBOT}
-                                               
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:99: Missing $ inserted.
-<inserted text> 
-                $
-l.99 	\caption{Diagramme de la classe UI_ROBOT}
-                                               
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:99: Missing $ inserted.
-<inserted text> 
-                $
-l.99 	\caption{Diagramme de la classe UI_ROBOT}
-                                               
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:99: Missing $ inserted.
-<inserted text> 
-                $
-l.99 	\caption{Diagramme de la classe UI_ROBOT}
-                                               
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:101: Missing $ inserted.
-<inserted text> 
-                $
-l.101 \end{figure}
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:101: Missing \endgroup i
-nserted.
-<inserted text> 
-                \endgroup 
-l.101 \end{figure}
-                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:101: Undefined control s
-equence.
-\endfigure ...box \columnwidth \fi \box \@currbox 
-                                                  \vskip \intextsep \relax 
-l.101 \end{figure}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:101: Missing number, tre
-ated as zero.
-<to be read again> 
-                   \vskip 
-l.101 \end{figure}
-                  
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:101: LaTeX Error: \begin
-{document} ended by \end{figure}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.101 \end{figure}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:101: Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.101 \end{figure}
-                  
-Things are pretty mixed up, but I think the worst is over.
-
-
-(./sections/2.ConceptionGenerale/descriptionClass/description_UI_ROBOT.tex)
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:105: Use of \classUI doe
-sn't match its definition.
-l.105 \classUI_
-               ROBOTProperties
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-./sections/2.ConceptionGenerale/conceptionGenerale.tex:107: Use of \classUI doe
-sn't match its definition.
-l.107 \classUI_
-               ROBOTOperations
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-<../animUML/conceptionGenerale/conceptionGenerale-class-DRIVER.pdf, id=423, 151
-.3153pt x 134.00063pt>
+-UIRobot.pdf  used on input line 125.
+(pdftex.def)             Requested size: 153.57336pt x 42.5338pt.
+ (./sections/2.ConceptionGenerale/descriptionClass/description_UIRobot.tex)
+<../animUML/conceptionGenerale/conceptionGenerale-class-DRIVER.pdf, id=487, 179
+.92218pt x 85.06781pt>
 File: ../animUML/conceptionGenerale/conceptionGenerale-class-DRIVER.pdf Graphic
  file (type pdf)
 <use ../animUML/conceptionGenerale/conceptionGenerale-class-DRIVER.pdf>
 Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
--DRIVER.pdf  used on input line 113.
-(pdftex.def)             Requested size: 75.65746pt x 67.00014pt.
+-DRIVER.pdf  used on input line 140.
+(pdftex.def)             Requested size: 89.96086pt x 42.5338pt.
 
 (./sections/2.ConceptionGenerale/descriptionClass/description_DRIVER.tex)
 File: ../../../communs/figures//logoTeam.png Graphic file (type png)
 <use ../../../communs/figures//logoTeam.png>
 Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
-line 120.
+line 149.
 (pdftex.def)             Requested size: 14.99316pt x 15.0pt.
 File: ../../../communs/figures//logoEseo.png Graphic file (type png)
 <use ../../../communs/figures//logoEseo.png>
 Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
-line 120.
+line 149.
 (pdftex.def)             Requested size: 36.99055pt x 13.0pt.
- [13 <../animUML/conceptionGenerale/conceptionGenerale-class-ARCHIVIST.pdf> <..
-/animUML/conceptionGenerale/conceptionGenerale-class-DRIVER.pdf
+
+[14 <../animUML/conceptionGenerale/conceptionGenerale-class-ARCHIVIST.pdf> <../
+animUML/conceptionGenerale/conceptionGenerale-class-UIRobot.pdf
+
+pdfTeX warning: pdflatex (file ../animUML/conceptionGenerale/conceptionGenerale
+-class-UIRobot.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+> <../animUML/conceptionGenerale/conceptionGenerale-class-DRIVER.pdf
 
 pdfTeX warning: pdflatex (file ../animUML/conceptionGenerale/conceptionGenerale
 -class-DRIVER.pdf): PDF inclusion: multiple pdfs with page group included in a 
 single page
 >]
-<../animUML/conceptionGenerale/conceptionGenerale-class-RADAR.pdf, id=446, 94.1
-0156pt x 46.67438pt>
+<../animUML/conceptionGenerale/conceptionGenerale-class-EXPLORER.pdf, id=517, 2
+09.28188pt x 94.85437pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-class-EXPLORER.pdf Graph
+ic file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-class-EXPLORER.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
+-EXPLORER.pdf  used on input line 155.
+(pdftex.def)             Requested size: 104.64067pt x 47.42706pt.
+ (./sections/2.ConceptionGenerale/descriptionClass/description_EXPLORER.tex)
+<../animUML/conceptionGenerale/conceptionGenerale-class-RADAR.pdf, id=519, 89.5
+8469pt x 46.67438pt>
 File: ../animUML/conceptionGenerale/conceptionGenerale-class-RADAR.pdf Graphic 
 file (type pdf)
 <use ../animUML/conceptionGenerale/conceptionGenerale-class-RADAR.pdf>
 Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
--RADAR.pdf  used on input line 128.
-(pdftex.def)             Requested size: 47.05066pt x 23.33711pt.
+-RADAR.pdf  used on input line 170.
+(pdftex.def)             Requested size: 44.79222pt x 23.33711pt.
 
 (./sections/2.ConceptionGenerale/descriptionClass/description_RADAR.tex)
-<../animUML/conceptionGenerale/conceptionGenerale-class-MAPPER.pdf, id=448, 100
-.12407pt x 56.46094pt>
+<../animUML/conceptionGenerale/conceptionGenerale-class-MAPPER.pdf, id=521, 94.
+10156pt x 56.46094pt>
 File: ../animUML/conceptionGenerale/conceptionGenerale-class-MAPPER.pdf Graphic
  file (type pdf)
 <use ../animUML/conceptionGenerale/conceptionGenerale-class-MAPPER.pdf>
 Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
--MAPPER.pdf  used on input line 143.
-(pdftex.def)             Requested size: 50.0619pt x 28.2304pt.
+-MAPPER.pdf  used on input line 185.
+(pdftex.def)             Requested size: 47.05066pt x 28.2304pt.
 
-(./sections/2.ConceptionGenerale/descriptionClass/description_MAPPER.tex)
-<../animUML/conceptionGenerale/conceptionGenerale-class-LOCATOR.pdf, id=450, 11
-0.66344pt x 66.2475pt>
-File: ../animUML/conceptionGenerale/conceptionGenerale-class-LOCATOR.pdf Graphi
-c file (type pdf)
-<use ../animUML/conceptionGenerale/conceptionGenerale-class-LOCATOR.pdf>
-Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
--LOCATOR.pdf  used on input line 158.
-(pdftex.def)             Requested size: 55.33157pt x 33.12366pt.
+(./sections/2.ConceptionGenerale/descriptionClass/description_MAPPER.tex
 File: ../../../communs/figures//logoTeam.png Graphic file (type png)
 <use ../../../communs/figures//logoTeam.png>
 Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
-line 161.
+line 1.
 (pdftex.def)             Requested size: 14.99316pt x 15.0pt.
 File: ../../../communs/figures//logoEseo.png Graphic file (type png)
 <use ../../../communs/figures//logoEseo.png>
 Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
-line 161.
+line 1.
 (pdftex.def)             Requested size: 36.99055pt x 13.0pt.
- [14 <../animUML/conceptionGenerale/conceptionGenerale-class-RADAR.pdf> <../ani
-mUML/conceptionGenerale/conceptionGenerale-class-MAPPER.pdf
+
+[15 <../animUML/conceptionGenerale/conceptionGenerale-class-EXPLORER.pdf> <../a
+nimUML/conceptionGenerale/conceptionGenerale-class-RADAR.pdf
 
 pdfTeX warning: pdflatex (file ../animUML/conceptionGenerale/conceptionGenerale
--class-MAPPER.pdf): PDF inclusion: multiple pdfs with page group included in a 
-single page
->]
-(./sections/2.ConceptionGenerale/descriptionClass/description_LOCATOR.tex)
-<../animUML/conceptionGenerale/conceptionGenerale-class-ROBOT.pdf, id=473, 50.4
+-class-RADAR.pdf): PDF inclusion: multiple pdfs with page group included in a s
+ingle page
+>])
+<../animUML/conceptionGenerale/conceptionGenerale-class-LOCATOR.pdf, id=543, 13
+5.50626pt x 66.2475pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-class-LOCATOR.pdf Graphi
+c file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-class-LOCATOR.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
+-LOCATOR.pdf  used on input line 200.
+(pdftex.def)             Requested size: 67.75294pt x 33.12366pt.
+ (./sections/2.ConceptionGenerale/descriptionClass/description_LOCATOR.tex)
+<../animUML/conceptionGenerale/conceptionGenerale-class-ROBOT.pdf, id=545, 50.4
 3843pt x 41.4047pt>
 File: ../animUML/conceptionGenerale/conceptionGenerale-class-ROBOT.pdf Graphic 
 file (type pdf)
 <use ../animUML/conceptionGenerale/conceptionGenerale-class-ROBOT.pdf>
 Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
--ROBOT.pdf  used on input line 173.
+-ROBOT.pdf  used on input line 215.
 (pdftex.def)             Requested size: 25.21915pt x 20.70229pt.
 
 (./sections/2.ConceptionGenerale/descriptionClass/description_ROBOT.tex))
 (./sections/3.ConceptionDetaillee/conceptionDetaillee.tex
-(./sections/3.ConceptionDetaillee/3.1.architecturePhysique.tex)
-(./sections/3.ConceptionDetaillee/3.2.descriptionDesClasses.tex)) (./sections/4
-.dictionnaireDuDomaine.tex
 File: ../../../communs/figures//logoTeam.png Graphic file (type png)
 <use ../../../communs/figures//logoTeam.png>
 Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
@@ -2366,13 +1990,31 @@ File: ../../../communs/figures//logoEseo.png Graphic file (type png)
 Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
 line 1.
 (pdftex.def)             Requested size: 36.99055pt x 13.0pt.
- [15 <../animUML/conceptionGenerale/conceptionGenerale-class-LOCATOR.pdf> <../a
-nimUML/conceptionGenerale/conceptionGenerale-class-ROBOT.pdf
+ [16 <../animUML/conceptionGenerale/conceptionGenerale-class-MAPPER.pdf> <../an
+imUML/conceptionGenerale/conceptionGenerale-class-LOCATOR.pdf
+
+pdfTeX warning: pdflatex (file ../animUML/conceptionGenerale/conceptionGenerale
+-class-LOCATOR.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+> <../animUML/conceptionGenerale/conceptionGenerale-class-ROBOT.pdf
 
 pdfTeX warning: pdflatex (file ../animUML/conceptionGenerale/conceptionGenerale
 -class-ROBOT.pdf): PDF inclusion: multiple pdfs with page group included in a s
 ingle page
->] (build/CONC_B2.gls
+>] (./sections/3.ConceptionDetaillee/3.1.architecturePhysique.tex)
+(./sections/3.ConceptionDetaillee/3.2.descriptionDesClasses.tex))
+(./sections/4.dictionnaireDuDomaine.tex
+File: ../../../communs/figures//logoTeam.png Graphic file (type png)
+<use ../../../communs/figures//logoTeam.png>
+Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
+line 1.
+(pdftex.def)             Requested size: 14.99316pt x 15.0pt.
+File: ../../../communs/figures//logoEseo.png Graphic file (type png)
+<use ../../../communs/figures//logoEseo.png>
+Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
+line 1.
+(pdftex.def)             Requested size: 36.99055pt x 13.0pt.
+ [17] (build/CONC_B2.gls
 Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
  []
@@ -2393,7 +2035,7 @@ File: ../../../communs/figures//logoEseo.png Graphic file (type png)
 Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
 line 100.
 (pdftex.def)             Requested size: 36.99055pt x 13.0pt.
- [16
+ [18
 
 ] (build/CONC_B2.lof)
 \tf@lof=\write12
@@ -2411,47 +2053,39 @@ File: ../../../communs/figures//logoEseo.png Graphic file (type png)
 Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
 line 102.
 (pdftex.def)             Requested size: 36.99055pt x 13.0pt.
- [17
+[19
 
 ] (build/CONC_B2.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `CONC_B2.out' has not changed.
-(rerunfilecheck)             Checksum: 7D6CA8D7A74CF87A400BA8C46810E5B0;6836.
+(rerunfilecheck)             Checksum: 13A3B90E4BC3BB718B85389B1CEFD2A2;7275.
 Package logreq Info: Writing requests to 'CONC_B2.run.xml'.
 \openout1 = `CONC_B2.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46225 strings out of 480177
- 904948 string characters out of 5893867
- 1712498 words of memory out of 5000000
- 63240 multiletter control sequences out of 15000+600000
- 482003 words of font info for 56 fonts, out of 8000000 for 9000
+ 46297 strings out of 480177
+ 909296 string characters out of 5893867
+ 1712958 words of memory out of 5000000
+ 63283 multiletter control sequences out of 15000+600000
+ 482323 words of font info for 54 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 121i,16n,119p,1456b,2198s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 121i,16n,119p,1456b,2182s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/buryhugo/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.
-600pk> </home/buryhugo/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1
+600pk> </home/buryhugo/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1
 095.600pk> </home/buryhugo/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/e
-ctt1095.600pk> </home/buryhugo/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/
-ec/ecrm1440.600pk> </home/buryhugo/.texlive2021/texmf-var/fonts/pk/ljfour/jknap
-pen/ec/ecbx1728.600pk> </home/buryhugo/.texlive2021/texmf-var/fonts/pk/ljfour/j
-knappen/ec/tcrm1095.600pk> </home/buryhugo/.texlive2021/texmf-var/fonts/pk/ljfo
-ur/jknappen/ec/ecrm1095.600pk> </home/buryhugo/.texlive2021/texmf-var/fonts/pk/
-ljfour/jknappen/ec/ecbx1095.600pk> </home/buryhugo/.texlive2021/texmf-var/fonts
-/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/buryhugo/.texlive2021/texmf-var/f
-onts/pk/ljfour/jknappen/ec/ecbx2074.600pk></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmmi8.pfb>
-Output written on build/CONC_B2.pdf (18 pages, 867889 bytes).
+ccc1095.600pk> </home/buryhugo/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/
+ec/ectt1095.600pk> </home/buryhugo/.texlive2021/texmf-var/fonts/pk/ljfour/jknap
+pen/ec/ecrm1440.600pk> </home/buryhugo/.texlive2021/texmf-var/fonts/pk/ljfour/j
+knappen/ec/ecbx1728.600pk> </home/buryhugo/.texlive2021/texmf-var/fonts/pk/ljfo
+ur/jknappen/ec/tcrm1095.600pk> </home/buryhugo/.texlive2021/texmf-var/fonts/pk/
+ljfour/jknappen/ec/ecrm1095.600pk> </home/buryhugo/.texlive2021/texmf-var/fonts
+/pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/buryhugo/.texlive2021/texmf-var/f
+onts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/buryhugo/.texlive2021/texmf-v
+ar/fonts/pk/ljfour/jknappen/ec/ecbx2074.600pk>
+Output written on build/CONC_B2.pdf (20 pages, 912022 bytes).
 PDF statistics:
- 912 PDF objects out of 1000 (max. 8388607)
- 514 compressed objects within 6 object streams
- 101 named destinations out of 1000 (max. 500000)
- 472 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1031 PDF objects out of 1200 (max. 8388607)
+ 593 compressed objects within 6 object streams
+ 113 named destinations out of 1000 (max. 500000)
+ 516 words of extra memory for PDF output out of 10000 (max. 10000000)
 

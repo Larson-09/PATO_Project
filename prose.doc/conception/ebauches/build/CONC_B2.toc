@@ -15,35 +15,38 @@
 \contentsline {subsection}{\numberline {2.4}Classes}{12}{subsection.2.4}%
 \contentsline {subsubsection}{\numberline {2.4.1}Vue générale}{12}{subsubsection.2.4.1}%
 \contentsline {subsubsection}{\numberline {2.4.2}La classe USER}{12}{subsubsection.2.4.2}%
-\contentsline {paragraph}{\numberline {2.4.2.1}Attributs}{12}{paragraph.2.4.2.1}%
-\contentsline {paragraph}{\numberline {2.4.2.2}Services offerts}{12}{paragraph.2.4.2.2}%
-\contentsline {subsubsection}{\numberline {2.4.3}La classe GUI_PHONE}{13}{subsubsection.2.4.3}%
+\contentsline {paragraph}{\numberline {2.4.2.1}Attributs}{13}{paragraph.2.4.2.1}%
+\contentsline {paragraph}{\numberline {2.4.2.2}Services offerts}{13}{paragraph.2.4.2.2}%
+\contentsline {subsubsection}{\numberline {2.4.3}La classe GUIPhone}{13}{subsubsection.2.4.3}%
 \contentsline {paragraph}{\numberline {2.4.3.1}Attributs}{13}{paragraph.2.4.3.1}%
 \contentsline {paragraph}{\numberline {2.4.3.2}Services offerts}{13}{paragraph.2.4.3.2}%
-\contentsline {subsubsection}{\numberline {2.4.4}La classe ARCHIVIST}{13}{subsubsection.2.4.4}%
-\contentsline {paragraph}{\numberline {2.4.4.1}Attributs}{13}{paragraph.2.4.4.1}%
-\contentsline {paragraph}{\numberline {2.4.4.2}Services offerts}{13}{paragraph.2.4.4.2}%
-\contentsline {subsubsection}{\numberline {2.4.5}La classe UI_ROBOT}{13}{subsubsection.2.4.5}%
-\contentsline {paragraph}{\numberline {2.4.5.1}Attributs}{13}{paragraph.2.4.5.1}%
-\contentsline {paragraph}{\numberline {2.4.5.2}Services offerts}{13}{paragraph.2.4.5.2}%
-\contentsline {subsubsection}{\numberline {2.4.6}La classe DRIVER}{13}{subsubsection.2.4.6}%
+\contentsline {subsubsection}{\numberline {2.4.4}La classe ARCHIVIST}{14}{subsubsection.2.4.4}%
+\contentsline {paragraph}{\numberline {2.4.4.1}Attributs}{14}{paragraph.2.4.4.1}%
+\contentsline {paragraph}{\numberline {2.4.4.2}Services offerts}{14}{paragraph.2.4.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.5}La classe UIRobot}{14}{subsubsection.2.4.5}%
+\contentsline {paragraph}{\numberline {2.4.5.1}Attributs}{14}{paragraph.2.4.5.1}%
+\contentsline {paragraph}{\numberline {2.4.5.2}Services offerts}{14}{paragraph.2.4.5.2}%
+\contentsline {subsubsection}{\numberline {2.4.6}La classe DRIVER}{14}{subsubsection.2.4.6}%
 \contentsline {paragraph}{\numberline {2.4.6.1}Attributs}{14}{paragraph.2.4.6.1}%
-\contentsline {paragraph}{\numberline {2.4.6.2}Services offerts}{14}{paragraph.2.4.6.2}%
-\contentsline {subsubsection}{\numberline {2.4.7}La classe RADAR}{14}{subsubsection.2.4.7}%
-\contentsline {paragraph}{\numberline {2.4.7.1}Attributs}{14}{paragraph.2.4.7.1}%
-\contentsline {paragraph}{\numberline {2.4.7.2}Services offerts}{14}{paragraph.2.4.7.2}%
-\contentsline {subsubsection}{\numberline {2.4.8}La classe MAPPER}{14}{subsubsection.2.4.8}%
-\contentsline {paragraph}{\numberline {2.4.8.1}Attributs}{14}{paragraph.2.4.8.1}%
-\contentsline {paragraph}{\numberline {2.4.8.2}Services offerts}{14}{paragraph.2.4.8.2}%
-\contentsline {subsubsection}{\numberline {2.4.9}La classe LOCATOR}{15}{subsubsection.2.4.9}%
-\contentsline {paragraph}{\numberline {2.4.9.1}Attributs}{15}{paragraph.2.4.9.1}%
-\contentsline {paragraph}{\numberline {2.4.9.2}Services offerts}{15}{paragraph.2.4.9.2}%
-\contentsline {subsubsection}{\numberline {2.4.10}La classe ROBOT}{15}{subsubsection.2.4.10}%
-\contentsline {paragraph}{\numberline {2.4.10.1}Attributs}{15}{paragraph.2.4.10.1}%
-\contentsline {paragraph}{\numberline {2.4.10.2}Services offerts}{15}{paragraph.2.4.10.2}%
-\contentsline {subsection}{\numberline {2.5}Diagrammes d'activité}{15}{subsection.2.5}%
-\contentsline {section}{\numberline {3}Conception détaillée}{15}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Architecture physique}{15}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Description des classes}{15}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Dictionnaire du domaine}{16}{section.4}%
-\contentsline {section}{\numberline {5}Table des figures}{17}{section.5}%
+\contentsline {paragraph}{\numberline {2.4.6.2}Services offerts}{15}{paragraph.2.4.6.2}%
+\contentsline {subsubsection}{\numberline {2.4.7}La classe EXPLORER}{15}{subsubsection.2.4.7}%
+\contentsline {paragraph}{\numberline {2.4.7.1}Attributs}{15}{paragraph.2.4.7.1}%
+\contentsline {paragraph}{\numberline {2.4.7.2}Services offerts}{15}{paragraph.2.4.7.2}%
+\contentsline {subsubsection}{\numberline {2.4.8}La classe RADAR}{15}{subsubsection.2.4.8}%
+\contentsline {paragraph}{\numberline {2.4.8.1}Attributs}{15}{paragraph.2.4.8.1}%
+\contentsline {paragraph}{\numberline {2.4.8.2}Services offerts}{15}{paragraph.2.4.8.2}%
+\contentsline {subsubsection}{\numberline {2.4.9}La classe MAPPER}{16}{subsubsection.2.4.9}%
+\contentsline {paragraph}{\numberline {2.4.9.1}Attributs}{16}{paragraph.2.4.9.1}%
+\contentsline {paragraph}{\numberline {2.4.9.2}Services offerts}{16}{paragraph.2.4.9.2}%
+\contentsline {subsubsection}{\numberline {2.4.10}La classe LOCATOR}{16}{subsubsection.2.4.10}%
+\contentsline {paragraph}{\numberline {2.4.10.1}Attributs}{16}{paragraph.2.4.10.1}%
+\contentsline {paragraph}{\numberline {2.4.10.2}Services offerts}{16}{paragraph.2.4.10.2}%
+\contentsline {subsubsection}{\numberline {2.4.11}La classe ROBOT}{16}{subsubsection.2.4.11}%
+\contentsline {paragraph}{\numberline {2.4.11.1}Attributs}{16}{paragraph.2.4.11.1}%
+\contentsline {paragraph}{\numberline {2.4.11.2}Services offerts}{17}{paragraph.2.4.11.2}%
+\contentsline {subsection}{\numberline {2.5}Diagrammes d'activité}{17}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Conception détaillée}{17}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Architecture physique}{17}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Description des classes}{17}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Dictionnaire du domaine}{18}{section.4}%
+\contentsline {section}{\numberline {5}Table des figures}{19}{section.5}%
