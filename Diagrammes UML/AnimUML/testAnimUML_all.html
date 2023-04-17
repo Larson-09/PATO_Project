@@ -1,52 +1,59 @@
 <script>
 	const model =
 		{
-			name: "Imported_EXPLORATION_ALL",
+			name: "EXPLORATION",
 			classes: String.raw`
-				enum screenID  {
-					EcranNonConnecte
-					EcranPrincipal
-					EcranVerrouille
-					EcranSelectionExplo
-					EcranOption
+				enum ScreenID  {
+					DisconnectedScreen
+					MainScreen
+					LockedScreen
+					ExploSelectionScreen
+					MetricsParamsScreen
 				}
 				class USER <<actor>>{
 				}
-				class GUI_PHONE {
-					
+				class GUIPhone {
+				
 					confirm_connection()
-					display_connection_state()
+					resp_stop_request(resp:boolean)
+					display_connection_state(connection_state: ConnectionStateEnum)
 					display_map()
-					select_options()
-					send_status(status)
-					set_end_criteria(crit)
-					set_explo_algorithm(algo)
-					set_value_criteria(crit, value)
+					access_metrics_params()
+					set_end_criteria(end_criterias[]: criteria)
+					set_value_criteria(criteria, value)
+					set_explo_algorithm(explo_algorithm)
 					start_explo()
 					start_M_CTRL()
-					-display_screen(screenID)
+					stop_MARCO()
+					-stop_M_CTRL()
+					-display_screen(screen_id: ScreenID)
 				}
 				class ARCHIVIST {
 					
-					save_explo()
+					save_explo(explo_save: ExploSave)
 				}
-				class UI_ROBOT {
+				class UIRobot {
 
 					ask_connection()
 					start_M_EMB()
+					stop_M_EMB()
 					stand_by()
 				}
 				class DRIVER {
 					
-					set_explo_metrics(metrics)
-					set_end_criterias(crit, value)
-					set_explo_algorithm(algo)
-					-init_explo_metrics()
-					-dodge_obstacle()
-					-execute_move()
-					-lock_metrics()
-					-read_move()
+					set_explo_algorithm(explo_algorithm)
+					-dodge_obstacle(explo_algorithm:: dodge_strategy)
+					-execute_move(move)
+					-read_next_move(): move
 					-stop_move()
+				}
+				class EXPLORER {
+					
+					-lock_metrics()
+					set_explo_metrics(end_criterias[]: criteria)
+					set_explo_algorithm(explo_algorithm)
+					get_status(): StatusEnum
+					-init_explo_metrics()
 					-update_explo_metrics()
 				}
 				class RADAR {
@@ -61,17 +68,18 @@
 				class LOCATOR {
 					
 					init_start_location()
-					get_pos()
-					-set_pos()
+					get_coords(): Coordinate
+					-update_coords()
 				}
 				class ROBOT <<actor>>{
 				}
-				USER  -->  GUI_PHONE
-				USER  -->  UI_ROBOT
-				GUI_PHONE  -->  ARCHIVIST
-				GUI_PHONE  -->  MAPPER
-				GUI_PHONE  <->  UI_ROBOT
-				GUI_PHONE  <->  DRIVER
+				USER  -->  GUIPhone
+				USER  -->  UIRobot
+				GUIPhone  -->  ARCHIVIST
+				GUIPhone  -->  MAPPER
+				GUIPhone  <->  UIRobot
+				GUIPhone  <->  EXPLORER
+				EXPLORER -- DRIVER
 				DRIVER  -->  RADAR
 				RADAR  <--  MAPPER
 				MAPPER  -->  LOCATOR
@@ -79,7 +87,7 @@
 				RADAR  --  ROBOT
 				LOCATOR  --  ROBOT
 				DRIVER  -->  LOCATOR
-				UI_ROBOT  --  MAPPER
+				UIRobot  --  MAPPER
 			`,
 			objects: [
 				{
@@ -88,8 +96,8 @@
 					isActor: true,
 				},
 				{
-					name: "GUI_PHONE",
-					class: "GUI_PHONE",
+					name: "GUIPhone",
+					class: "GUIPhone",
 					isActor: false,
 				},
 				{
@@ -103,13 +111,18 @@
 					isActor: false,
 				},
 				{
+					name: "EXPLORER",
+					class: "EXPLORER",
+					isActor: false,
+				},
+				{
 					name: "DRIVER",
 					class: "DRIVER",
 					isActor: false,
 				},
 				{
-					name: "UI_ROBOT",
-					class: "UI_ROBOT",
+					name: "UIRobot",
+					class: "UIRobot",
 					isActor: false,
 				},
 				{
@@ -132,23 +145,25 @@
 				C1: {
 					ends: [
 						"USER",
-						"GUI_PHONE",
+						"GUIPhone",
 					],
 					possibleMessages: {
 						forward: [
-							"select_options",
-							"set_end_criteria(crit)",
+							"access_metrics_params()",
+							"set_end_criteria(end_criterias[]: criteria)",
 							"set_value_criteria(crit,value)",
-							"set_explo_algorithm(algo)",
+							"set_explo_algorithm(explo_algorithm)",
 							"start_M_CTRL",
 							"start_explo",
+							"stop_MARCO",
+							"resp_stop_request(resp:boolean)",
 						],
 					},
 				},
 				C2: {
 					ends: [
 						"USER",
-						"UI_ROBOT",
+						"UIRobot",
 					],
 					possibleMessages: {
 						forward: [
@@ -158,35 +173,36 @@
 				},
 				C3: {
 					ends: [
-						"GUI_PHONE",
+						"GUIPhone",
 						"ARCHIVIST",
 					],
 					possibleMessages: {
 						forward: [
-							"save_explo",
+							"save_explo(explo_save: ExploSave)",
 						],
 					},
 				},
 				C4: {
 					ends: [
-						"GUI_PHONE",
-						"UI_ROBOT",
+						"GUIPhone",
+						"UIRobot",
 					],
 					possibleMessages: {
 						forward: [
 							"ask_connection",
 							"stand_by",
+							"stop_M_EMB",
 						],
 						reverse: [
 							"confirm_connection",
-							"display_connection_state",
-							"display_map",
+							"display_connection_state(connection_state: ConnectionStateEnum)",
+							"display_map()",
 						],
 					},
 				},
 				C5: {
 					ends: [
-						"GUI_PHONE",
+						"GUIPhone",
 						"MAPPER",
 					],
 					possibleMessages: {
@@ -197,17 +213,15 @@
 				},
 				C6: {
 					ends: [
-						"GUI_PHONE",
-						"DRIVER",
+						"GUIPhone",
+						"EXPLORER",
 					],
 					possibleMessages: {
 						forward: [
-							"set_end_criterias(crit,value)",
-							"set_explo_algorithm(algo)",
+							"set_value_criteria(crit,value)",
+							"set_explo_algorithm(explo_algorithm)",
 							"set_explo_metrics(metrics)",
-						],
-						reverse: [
-							"send_status(status)",
+							"get_status",
 						],
 					},
 				},
@@ -242,7 +256,7 @@
 					],
 					possibleMessages: {
 						forward: [
-							"get_pos",
+							"get_coords(): Coordinate",
 						],
 						
 					},
@@ -272,7 +286,7 @@
 				},
 				C13: {
 					ends: [
-						"UI_ROBOT",
+						"UIRobot",
 						"MAPPER",
 					],
 				},
@@ -280,6 +294,12 @@
 					ends: [
 						"LOCATOR",
 						"ROBOT",
+					],
+				},
+				C15: {
+					ends: [
+						"EXPLORER",
+						"DRIVER",
 					],
 				},
 			},
