@@ -1,124 +1,104 @@
 <script>
 	const model =
 		{
-			name: "Imported_EXPLORATION_ALL",
-			classes: String.raw`
-				class USER <<actor>>{
-				}
-				class GUI_PHONE {
-					
-					confirm_connection()
-					display_connection_state()
-					display_map()
-					select_options()
-					send_status(status)
-					set_end_criteria(crit)
-					set_explo_algorithm(algo)
-					set_value_criteria(crit, value)
-					start_explo()
-					start_M_CTRL()
-					-display_screen(screenID)
-				}
-				class ARCHIVIST {
-					
-					save_explo()
-				}
-				class UI_ROBOT {
-
-					ask_connection()
-					start_M_EMB()
-					stand_by()
-				}
-				class DRIVER {
-					
-					set_explo_metrics(metrics)
-					set_end_criterias(crit, value)
-					set_explo_algorithm(algo)
-					-init_explo_metrics()
-					-dodge_obstacle()
-					-execute_move()
-					-lock_metrics()
-					-read_move()
-					-stop_move()
-					-update_explo_metrics()
-				}
-				class RADAR {
-					
-					get_info() : info
-				}
-				class MAPPER {
-					
-					get_map() : map
-					-update_map()
-				}
-				class LOCATOR {
-					
-					init_start_location()
-					get_pos()
-					-set_pos()
-				}
-				class ROBOT <<actor>>{
-				}
-				USER  -->  GUI_PHONE
-				USER  -->  UI_ROBOT
-				GUI_PHONE  -->  ARCHIVIST
-				GUI_PHONE  -->  MAPPER
-				GUI_PHONE  <->  UI_ROBOT
-				GUI_PHONE  <->  DRIVER
-				DRIVER  -->  RADAR
-				RADAR  <--  MAPPER
-				MAPPER  -->  LOCATOR
-				DRIVER  --  ROBOT
-				RADAR  --  ROBOT
-				LOCATOR  --  ROBOT
-				DRIVER  -->  LOCATOR
-				UI_ROBOT  --  MAPPER
-			`,
+			name: "EXPLORATION_ALL",
 			objects: [
 				{
 					name: "USER",
-					class: "USER",
 					isActor: true,
+					features: String.raw`
+					`,
 				},
 				{
 					name: "GUI_PHONE",
-					class: "GUI_PHONE",
 					isActor: false,
-				},
-				{
-					name: "MAPPER",
-					class: "MAPPER",
-					isActor: false,
+					features: String.raw`
+						display_connection_state()
+						display_map()
+						select_options()
+						send_explo_metrics(metrics)
+						send_status(status)
+						set_end_criteria(crit)
+						set_explo_algorithm(algo)
+						set_value_criteria(crit,value)
+						start_explo()
+						start_M_CTRL()
+						-display_screen(screenID)
+					`,
 				},
 				{
 					name: "ARCHIVIST",
-					class: "ARCHIVIST",
 					isActor: false,
+					features: String.raw`
+						save_explo()
+					`,
 				},
-				{
-					name: "DRIVER",
-					class: "DRIVER",
+                {
+					name: "SYNC_PHONE",
 					isActor: false,
+					behavior: String.raw`
+					`,
+					features: String.raw`
+						confirm_connection()
+					`,
 				},
-				{
+                {
+					name: "SYNC_ROBOT",
+					isActor: false,
+					features: String.raw`
+						ask_connection()
+					`,
+				},
+                {
 					name: "UI_ROBOT",
-					class: "UI_ROBOT",
 					isActor: false,
+					features: String.raw`
+						start_M_EMB()
+						stand_by()
+					`,
 				},
-				{
-					name: "LOCATOR",
-					class: "LOCATOR",
+                {
+					name: "DRIVER",
 					isActor: false,
+					features: String.raw`
+						set_end_criterias(crit,value)
+						set_explo_algorithm(algo)
+						-init_explo_metrics()
+						-dodge_obstacle()
+						-execute_move()
+						-lock_metrics()
+						-read_move()
+						-stop_move()
+						-update_explo_metrics()
+					`,
 				},
-				{
+                {
 					name: "RADAR",
-					class: "RADAR",
 					isActor: false,
+					features: String.raw`
+						get_info():info
+					`,
+				},
+                {
+					name: "MAPPER",
+					isActor: false,
+					features: String.raw`
+						get_map():map
+					`,
+				},
+                {
+					name: "LOCATOR",
+					isActor: false,
+					features: String.raw`
+						set_start_location()
+						-set_pos()
+					`,
 				},
 				{
 					name: "ROBOT",
-					class: "ROBOT",
 					isActor: true,
+					features: String.raw`
+					`,
 				},
 			],
 			connectorByName: {
@@ -129,6 +109,7 @@
 					],
 					possibleMessages: {
 						forward: [
+							
 							"select_options",
 							"set_end_criteria(crit)",
 							"set_value_criteria(crit,value)",
@@ -138,7 +119,7 @@
 						],
 					},
 				},
-				C2: {
+                C2: {
 					ends: [
 						"USER",
 						"UI_ROBOT",
@@ -149,7 +130,7 @@
 						],
 					},
 				},
-				C3: {
+                C3: {
 					ends: [
 						"GUI_PHONE",
 						"ARCHIVIST",
@@ -158,26 +139,21 @@
 						forward: [
 							"save_explo",
 						],
-					},
+					}
 				},
-				C4: {
+                C4: {
 					ends: [
 						"GUI_PHONE",
-						"UI_ROBOT",
+						"SYNC_PHONE",
 					],
 					possibleMessages: {
-						forward: [
-							"ask_connection",
-							"stand_by",
-						],
 						reverse: [
-							"confirm_connection",
 							"display_connection_state",
 							"display_map",
 						],
 					},
 				},
-				C5: {
+                C5: {
 					ends: [
 						"GUI_PHONE",
 						"MAPPER",
@@ -188,7 +164,32 @@
 						],
 					},
 				},
-				C6: {
+                C6: {
+					ends: [
+						"SYNC_PHONE",
+						"SYNC_ROBOT",
+					],
+					possibleMessages: {
+						forward: [
+							"confirm_connection",
+						],
+						reverse: [
+							"ask_connection",
+						],
+					},
+				},
+                C7: {
+					ends: [
+						"SYNC_ROBOT",
+						"UI_ROBOT",
+					],
+					possibleMessages: {
+						forward: [
+							"stand_by",
+						],
+					},
+				},
+                C8: {
 					ends: [
 						"GUI_PHONE",
 						"DRIVER",
@@ -197,82 +198,58 @@
 						forward: [
 							"set_end_criterias(crit,value)",
 							"set_explo_algorithm(algo)",
-							"set_explo_metrics(metrics)",
 						],
 						reverse: [
+							"send_explo_metrics(metrics)",
 							"send_status(status)",
 						],
 					},
 				},
-				C7: {
+                C9: {
 					ends: [
 						"DRIVER",
 						"RADAR",
 					],
-					possibleMessages: {
-						forward: [
-							"get_info",
-						],
-						
-					},
 				},
-				C8: {
+                C10: {
 					ends: [
 						"RADAR",
 						"MAPPER",
 					],
-					possibleMessages: {
-						reverse: [
-							"get_info",
-						],
-						
-					},
 				},
-				C9: {
+                C11: {
 					ends: [
 						"MAPPER",
 						"LOCATOR",
 					],
-					possibleMessages: {
-						forward: [
-							"get_pos",
-						],
-						
-					},
 				},
-				C10: {
+                C12: {
 					ends: [
 						"DRIVER",
 						"ROBOT",
 					],
 				},
-				C11: {
+                C13: {
 					ends: [
 						"RADAR",
 						"ROBOT",
-					],
-				},
-				C12: {
-					ends: [
-						"DRIVER",
-						"LOCATOR",
-					],
-					possibleMessages: {
-						forward: [
-							"init_start_location",
-						],
-					},
-				},
-				C13: {
-					ends: [
-						"UI_ROBOT",
-						"MAPPER",
 					],
 				},
 				C14: {
 					ends: [
+						"DRIVER",
 						"LOCATOR",
-						"ROBOT",
+					],
+					possibleMessages: {
+						forward: [
+							"set_start_location",
+						],
+					},
+				},
+				C15: {
+					ends: [
+						"SYNC_ROBOT",
+						"MAPPER",
 					],
 				},
 			},
