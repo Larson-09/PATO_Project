@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.4.17)  17 APR 2023 19:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.4.17)  17 APR 2023 19:58
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2082,7 +2082,7 @@ ljfour/jknappen/ec/ecrm1095.600pk> </home/buryhugo/.texlive2021/texmf-var/fonts
 /pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/buryhugo/.texlive2021/texmf-var/f
 onts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/buryhugo/.texlive2021/texmf-v
 ar/fonts/pk/ljfour/jknappen/ec/ecbx2074.600pk>
-Output written on build/CONC_B2.pdf (20 pages, 912022 bytes).
+Output written on build/CONC_B2.pdf (20 pages, 912017 bytes).
 PDF statistics:
  1031 PDF objects out of 1200 (max. 8388607)
  593 compressed objects within 6 object streams
