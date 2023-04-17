@@ -3,13 +3,6 @@
 		{
 			name: "Imported_EXPLORATION_ALL",
 			classes: String.raw`
-				enum screenID  {
-					EcranNonConnecte
-					EcranPrincipal
-					EcranVerrouille
-					EcranSelectionExplo
-					EcranOption
-				}
 				class USER <<actor>>{
 				}
 				class GUI_PHONE {
@@ -31,7 +24,7 @@
 					save_explo()
 				}
 				class UI_ROBOT {
-
+					
 					ask_connection()
 					start_M_EMB()
 					stand_by()
@@ -56,7 +49,6 @@
 				class MAPPER {
 					
 					get_map() : map
-					-update_map()
 				}
 				class LOCATOR {
 					
@@ -70,8 +62,8 @@
 				USER  -->  UI_ROBOT
 				GUI_PHONE  -->  ARCHIVIST
 				GUI_PHONE  -->  MAPPER
-				GUI_PHONE  <->  UI_ROBOT
-				GUI_PHONE  <->  DRIVER
+				GUI_PHONE  <-->  UI_ROBOT
+				GUI_PHONE  <-->  DRIVER
 				DRIVER  -->  RADAR
 				RADAR  <--  MAPPER
 				MAPPER  -->  LOCATOR
@@ -220,7 +212,6 @@
 						forward: [
 							"get_info",
 						],
-						
 					},
 				},
 				C8: {
@@ -232,7 +223,6 @@
 						reverse: [
 							"get_info",
 						],
-						
 					},
 				},
 				C9: {
@@ -244,7 +234,6 @@
 						forward: [
 							"get_pos",
 						],
-						
 					},
 				},
 				C10: {
@@ -282,6 +271,33 @@
 						"ROBOT",
 					],
 				},
+			},
+			interactions: {
+				LiftedTrace1: String.raw`
+					actor USER
+					participant GUI_PHONE
+					participant MAPPER
+					participant ARCHIVIST
+					participant DRIVER
+					participant UI_ROBOT
+					participant LOCATOR
+					participant RADAR
+					actor ROBOT
+					e0 : USER -? GUI_PHONE : start_M_CTRL()
+					accept e0
+					e2 : GUI_PHONE -? GUI_PHONE : display_screen(screenID)
+					accept e2
+					e4 : GUI_PHONE -? UI_ROBOT : stand_by()
+					accept e4
+					e6 : USER -? UI_ROBOT : start_M_EMB()
+					accept e6
+					e8 : GUI_PHONE -? UI_ROBOT : ask_connection()
+					accept e8
+					e10 : UI_ROBOT -? GUI_PHONE : confirm_connection()
+					accept e10
+					e12 : GUI_PHONE -? UI_ROBOT : stand_by()
+					accept e12
+				`,
 			},
 			settings: {
 				display: {
