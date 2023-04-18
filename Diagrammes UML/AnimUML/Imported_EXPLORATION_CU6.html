@@ -93,6 +93,7 @@
 					setExploMetrics(end_criterias : Criteria[*])
 					setExploAlgorithm(explo_algorithm)
 					getExploInfo() : StatusEnum
+					moveFinished()
 					-initExploMetrics()
 					-lockMetrics()
 					-updateExploMetrics()
@@ -126,7 +127,7 @@
 				AlgoManager  -->  Explorer
 				AlgoManager  -->  Driver
 				NetworkPhone  <-->  NetworkRobot
-				Explorer  -->  Driver
+				Explorer  <->  Driver
 				Driver  -->  Radar
 				Radar  <--  Mapper
 				Mapper  -->  Locator
@@ -356,6 +357,9 @@
 						forward: [
 							"setExploAlgorithm(explo_algorithm)",
 						],
+						reverse: [
+							"moveFinished()",
+						],
 					},
 				},
 				C15: {
@@ -512,22 +516,23 @@
 					returning e0: move
 					e2 : Explorer -? Driver : executeMove(move, value)
 					accept e2
-					returning e2: OK
-					e4 : Driver -? Radar : getInfo()
+					e4 : Driver -? Explorer : moveFinished()
 					accept e4
-					returning e4: info
-					e6 : Mapper -? Locator : getCoords()
+					e6 : Driver -? Radar : getInfo()
 					accept e6
-					returning e6: coordinates
-					e8 : Mapper -? Radar : getInfo()
+					returning e4: info
+					e8 : Mapper -? Locator : getCoords()
 					accept e8
-					returning e8: info
-					e10 : Locator -? Locator : updateCoords()
+					returning e8: coordinates
+					e10 : Mapper -? Radar : getInfo()
 					accept e10
-					e12 : Explorer -? Explorer : updateExploMetrics()
+					returning e10: info
+					e12 : Locator -? Locator : updateCoords()
 					accept e12
-					e14 : Explorer -? Explorer : lockMetrics()
+					e14 : Explorer -? Explorer : updateExploMetrics()
 					accept e14
+					e16 : Explorer -? Explorer : lockMetrics()
+					accept e16
 				`,
 				"CU5 ETEINDRE MARCO": String.raw`
 					actor User
