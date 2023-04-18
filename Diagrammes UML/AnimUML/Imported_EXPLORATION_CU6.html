@@ -49,6 +49,7 @@
 					-executeMove(move)
 					-readNextMove() : move
 					-stopMove()
+					+DriveType()
 				}
 				class EXPLORER {
 					
@@ -119,6 +120,32 @@
 					name: "DRIVER",
 					class: "DRIVER",
 					isActor: false,
+					behavior: String.raw`
+					state "Standby" as Standby {
+						}
+	
+						state "Move" as Move {
+						}
+						Move : entry / log("Move")
+						state "Dodge" as Dodge {
+						}
+						state "Run" as Run {
+						}
+						state "choice" as choice <<choice>>
+						Run : entry / log("Run")
+
+						[*] -> Standby as "Init" :   /
+						Standby -> Move as "ModeAuto": executeMove(move)
+						Standby -> Run as "ModeManuel":    /moveOrder(direction : DirEnum)
+						Move -> Dodge as "DodgeAuto": /dodgeObstacle()
+						Run -> Dodge as "DodgeManuel": /dodgeObstacle()
+						Dodge -> choice as "ReturnAuto": capteur ne detecte plus d'obstacle?
+
+						choice -> Move as "choice2Idle_1" :   [log("Move")]
+						choice -> Run as "choice2Idle_2" : [else]
+
+
+					`,
 				},
 				{
 					name: "UIRobot",
@@ -479,13 +506,15 @@
 					hideMethods: false,
 					showPorts: false,
 					showEndNames: false,
-					hideStateMachines: true,
+					hideStateMachines: false,
 					hideOuterSMBoxes: true,
 					showExplicitSM: false,
 					hideStates: false,
 					showPseudostateInvariants: false,
 					hideSets: false,
 					showTransitions: false,
+					showComments : false,
+					 
 				},
 				semantics: {
 					fireInitialTransitions: true,
