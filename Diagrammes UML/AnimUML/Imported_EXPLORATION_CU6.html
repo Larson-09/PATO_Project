@@ -3,19 +3,41 @@
 		{
 			name: "EXPLORATION",
 			classes: String.raw`
-				enum ScreenID  {
+			
+				enum EScreen  {
 					DisconnectedScreen
 					MainScreen
 					LockedScreen
+					StopValidationScreen
 					ExploSelectionScreen
 					MetricsParamsScreen
+					CompletedExploScreen
 				}
-				class USER <<actor>>{
+
+				enum EConnectionState  {
+					NOT_CONNECTED
+					CONNECTED
+					EXPLORATING
 				}
+
+				enum EAlgo{
+					MANUAL
+					RANDOM
+					WAVE
+				}
+
+				enum EMove{
+					RIGHT
+					LEFT
+					FORWARD
+				}
+
+				class User <<actor>>{
+				}
+
 				class GUIPhone {
 					
-					confirmConnection()													''méthode de confirmation de connection a ROBOT 
-					respStopRequest(resp : boolean)										''informe l'utilisateurs que ROBOT va s'éteindre
+					respStopRequest(resp : boolean)										''informe l'utilisateurs que Robot va s'éteindre
 					displayMap()														''affichage de la carte sur l'ecran de PHONE
 					accessMetricsParams()												''action de l'utilisateurs visant à accéder au menu des métriques 
 					setEndCriteria(end_criterias : Criteria[*])							''action de l'utilisateurs visant à selectionner les métriques à utiliser pour la prochaine exploration
@@ -24,87 +46,101 @@
 					startExplo()														''action visant à lancer une  exploration
 					startMCTRL()														''ordre de démarage de M_CTRL
 					stopMARCO()															''volonté d'extinction global du SAE
-					askMove(direction : DirEnum)										''ordre de mouvement dans une direction "direction " et de type DirEnum cette méthode est intimement lié au joystick
-					-displayConnectionState(connection_state : ConnectionStateEnum)		'' affichage de l'état de connection à ROBOT sur Phone via un logo sur l'écran l'état du logo est définie par la variable connection_state qui est du type ConnectionStateEnum
+					askMove(direction : EDirection)										''ordre de mouvement dans une direction "direction " et de type EDirection cette méthode est intimement lié au joystick
+					-displayConnectionState(connection_state : EConnectionState)		'' affichage de l'état de connection à Robot sur Phone via un logo sur l'écran l'état du logo est définie par la variable connection_state qui est du type EConnectionState
 					-stopMCTRL()														''ordre d'arret du logiciel embarquer M_CTRL
-					-displayScreen(screen_id : ScreenID)								''méthode permetant l'affichage des divers écrans de PHONE le paramètre screen_id est une énumération de type ScreenID
+					-displayScreen(screen_id : EScreen)								''méthode permetant l'affichage des divers écrans de PHONE le paramètre screen_id est une énumération de type EScreen
 				}
 				class NetworkPhone {
 					
-					
+					confirmConnection()													''méthode de confirmation de connection a Robot 
 				}
 				class NetworkRobot {
-					
+
+					askConnection()
+				}
+				class AlgoManager {
 					
 				}
-				class ARCHIVIST {
+				class Archivist {
 					
 					saveExplo(explo_save : ExploSave)
 				}
 				class UIRobot {
 					
-					askConnection()
 					startMEMB()
 					stopMEMB()
-					standBy()
-					-displayConnectionState(connection_state : ConnectionStateEnum)
+					displayConnectionState(connection_state : EConnectionState)
+					-standBy()
 				}
-				class DRIVER {
+
+				class AlgoManager{
+					setUsedAlgo(explo_algorithm: EAlgo)
+					getMove(): EMove
+				}
+
+				class Driver {
 					
 					setExploAlgorithm(explo_algorithm)
-					moveOrder(direction : DirEnum)
+					moveOrder(direction : EDirection)
 					-dodgeObstacle()
-					-executeMove(move)
-					-readNextMove() : move
+					executeMove(move: EMove, value: Integer)
 					-stopMove()
 				}
-				class EXPLORER {
+
+				class Explorer {
 					
 					setExploMetrics(end_criterias : Criteria[*])
 					setExploAlgorithm(explo_algorithm)
-					getStatus() : StatusEnum
+					getExploInfo() : StatusEnum
 					-initExploMetrics()
 					-lockMetrics()
 					-updateExploMetrics()
 				}
-				class RADAR {
+				class Radar {
 					
 					getInfo() : info
 				}
-				class MAPPER {
+				class Mapper {
 					
 					getMap() : map
 					-updateMap()
 				}
-				class LOCATOR {
+				class Locator {
 					
 					initStartLocation()
 					getCoords() : Coordinate
 					-updateCoords()
 				}
-				class ROBOT <<actor>>{
+				class Robot <<actor>>{
 				}
-				USER  -->  GUIPhone
-				USER  -->  UIRobot
-				GUIPhone  -->  ARCHIVIST
-				GUIPhone  -->  MAPPER
+				User  -->  GUIPhone
+				User  -->  UIRobot
+				GUIPhone  -->  Archivist
+				GUIPhone  -->  Mapper
 				GUIPhone  <-->  UIRobot
-				GUIPhone  -->  EXPLORER
-				GUIPhone  -->  DRIVER
-				EXPLORER  -->  DRIVER
-				DRIVER  -->  RADAR
-				RADAR  <--  MAPPER
-				MAPPER  -->  LOCATOR
-				DRIVER  --  ROBOT
-				RADAR  --  ROBOT
-				LOCATOR  --  ROBOT
-				DRIVER  -->  LOCATOR
-				UIRobot  --  MAPPER
+				GUIPhone  -->  Explorer
+				GUIPhone  -->  Driver
+				GUIPhone  --  NetworkPhone
+				GUIPhone  --  AlgoManager
+				AlgoManager  -->  Explorer
+				AlgoManager  -->  Driver
+				NetworkPhone  <-->  NetworkRobot
+				Explorer  -->  Driver
+				Driver  -->  Radar
+				Radar  <--  Mapper
+				Mapper  -->  Locator
+				Driver  --  Robot
+				Radar  --  Robot
+				Locator  --  Robot
+				Driver  -->  Locator
+				UIRobot  --  Mapper
+				UIRobot  --  NetworkRobot
 			`,
 			objects: [
 				{
-					name: "USER",
-					class: "USER",
+					name: "User",
+					class: "User",
 					isActor: true,
 				},
 				{
@@ -113,29 +149,29 @@
 					isActor: false,
 				},
 				{
-					name: "NetworkPhone",
-					class: "NetworkPhone",
-					isActor: false,
-				},
-				{
 					name: "NetworkRobot",
 					class: "NetworkRobot",
 					isActor: false,
 				},
 				{
-					name: "ARCHIVIST",
-					class: "ARCHIVIST",
+					name: "Archivist",
+					class: "Archivist",
 					isActor: false,
 					stereotypes: ["entity"],
 				},
 				{
-					name: "EXPLORER",
-					class: "EXPLORER",
+					name: "AlgoManager",
+					class: "AlgoManager",
 					isActor: false,
 				},
 				{
-					name: "DRIVER",
-					class: "DRIVER",
+					name: "Explorer",
+					class: "Explorer",
+					isActor: false,
+				},
+				{
+					name: "Driver",
+					class: "Driver",
 					isActor: false,
 				},
 				{
@@ -144,30 +180,35 @@
 					isActor: false,
 				},
 				{
-					name: "MAPPER",
-					class: "MAPPER",
+					name: "NetworkPhone",
+					class: "NetworkPhone",
 					isActor: false,
 				},
 				{
-					name: "RADAR",
-					class: "RADAR",
+					name: "Mapper",
+					class: "Mapper",
 					isActor: false,
 				},
 				{
-					name: "LOCATOR",
-					class: "LOCATOR",
+					name: "Radar",
+					class: "Radar",
 					isActor: false,
 				},
 				{
-					name: "ROBOT",
-					class: "ROBOT",
+					name: "Locator",
+					class: "Locator",
+					isActor: false,
+				},
+				{
+					name: "Robot",
+					class: "Robot",
 					isActor: true,
 				},
 			],
 			connectorByName: {
 				C1: {
 					ends: [
-						"USER",
+						"User",
 						"GUIPhone",
 					],
 					possibleMessages: {
@@ -180,13 +221,13 @@
 							"startExplo",
 							"stopMARCO",
 							"respStopRequest(resp:boolean)",
-							"askMove(direction: DirEnum)",
+							"askMove(direction: EDirection)",
 						],
 					},
 				},
 				C2: {
 					ends: [
-						"USER",
+						"User",
 						"UIRobot",
 					],
 					possibleMessages: {
@@ -198,7 +239,7 @@
 				C3: {
 					ends: [
 						"GUIPhone",
-						"ARCHIVIST",
+						"Archivist",
 					],
 					possibleMessages: {
 						forward: [
@@ -213,12 +254,9 @@
 					],
 					possibleMessages: {
 						forward: [
-							"askConnection",
-							"standBy()",
 							"stopMEMB",
 						],
 						reverse: [
-							"confirmConnection",
 							"displayMap()",
 						],
 					},
@@ -226,7 +264,7 @@
 				C5: {
 					ends: [
 						"GUIPhone",
-						"MAPPER",
+						"Mapper",
 					],
 					possibleMessages: {
 						forward: [
@@ -237,20 +275,20 @@
 				C6: {
 					ends: [
 						"GUIPhone",
-						"EXPLORER",
+						"Explorer",
 					],
 					possibleMessages: {
 						forward: [
 							"setExploAlgorithm(explo_algorithm)",
 							"setExploMetrics(metrics)",
-							"getStatus",
+							"getExploInfo",
 						],
 					},
 				},
 				C7: {
 					ends: [
-						"DRIVER",
-						"RADAR",
+						"Driver",
+						"Radar",
 					],
 					possibleMessages: {
 						forward: [
@@ -260,8 +298,8 @@
 				},
 				C8: {
 					ends: [
-						"RADAR",
-						"MAPPER",
+						"Radar",
+						"Mapper",
 					],
 					possibleMessages: {
 						reverse: [
@@ -271,8 +309,8 @@
 				},
 				C9: {
 					ends: [
-						"MAPPER",
-						"LOCATOR",
+						"Mapper",
+						"Locator",
 					],
 					possibleMessages: {
 						forward: [
@@ -282,20 +320,20 @@
 				},
 				C10: {
 					ends: [
-						"DRIVER",
-						"ROBOT",
+						"Driver",
+						"Robot",
 					],
 				},
 				C11: {
 					ends: [
-						"RADAR",
-						"ROBOT",
+						"Radar",
+						"Robot",
 					],
 				},
 				C12: {
 					ends: [
-						"DRIVER",
-						"LOCATOR",
+						"Driver",
+						"Locator",
 					],
 					possibleMessages: {
 						forward: [
@@ -305,14 +343,14 @@
 				},
 				C13: {
 					ends: [
-						"LOCATOR",
-						"ROBOT",
+						"Locator",
+						"Robot",
 					],
 				},
 				C14: {
 					ends: [
-						"EXPLORER",
-						"DRIVER",
+						"Explorer",
+						"Driver",
 					],
 					possibleMessages: {
 						forward: [
@@ -322,146 +360,184 @@
 				},
 				C15: {
 					ends: [
-						"DRIVER",
+						"Driver",
 						"GUIPhone",
 					],
 					possibleMessages: {
 						reverse: [
-							"moveOrder(direction: DirEnum)",
+							"moveOrder(direction: EDirection)",
+						],
+					},
+				},
+				C16: {
+					ends: [
+						"GUIPhone",
+						"NetworkPhone",
+					],
+					possibleMessages: {
+						reverse: [
+						],
+					},
+				},
+				C17: {
+					ends: [
+						"UIRobot",
+						"NetworkRobot",
+					],
+					possibleMessages: {
+						reverse: [
+						],
+					},
+				},
+				C18: {
+					ends: [
+						"NetworkPhone",
+						"NetworkRobot",
+					],
+					possibleMessages: {
+						forward: [
+							"askConnection()",
+						],
+						reverse: [
+							"confirmConnection()",
+						],
+					},
+				},
+				C19: {
+					ends: [
+						"GUIPhone",
+						"AlgoManager",
+					],
+					possibleMessages: {
+						forward: [
+						"setUsedAlgo(explo_algorithm)",
+						],
+					},
+				},
+				C20: {
+					ends: [
+						"AlgoManager",
+						"Explorer",
+					],
+					possibleMessages: {
+						reverse: [
 						],
 					},
 				},
 			},
 			interactions: {
 				"CU1 INIT": String.raw`
-					actor USER
+					actor User
 					participant GUIPhone
 					participant UIRobot
-					''participant MAPPER
-					''participant ARCHIVIST
-					''participant EXPLORER
-					''participant DRIVER
-					''participant LOCATOR
-					''participant RADAR
-					''actor ROBOT
-					e0 : USER -? UIRobot : startMEMB()
+					participant NetworkPhone
+					participant NetworkRobot
+					e0 : User -? UIRobot : startMEMB()													''User démarre M_EMB 
 					accept e0
-					e2 : GUIPhone -? UIRobot : standBy()
+					e2 : UIRobot -? UIRobot : standBy()
 					accept e2
-					e4 : UIRobot -? UIRobot : displayConnectionState(connection_state)
+					e4 : UIRobot -? UIRobot : displayConnectionState(EConnectionState::NOT_CONNECTED)
 					accept e4
-					e6 : USER -? GUIPhone : startMCTRL()
+					e6 : User -? GUIPhone : startMCTRL()
 					accept e6
-					e8 : GUIPhone -? UIRobot : askConnection()
+					e8 : NetworkPhone -? NetworkRobot : askConnection()
 					accept e8
-					e10 : UIRobot -? GUIPhone : confirmConnection()
+					e10 : NetworkRobot -? NetworkPhone : confirmConnection()
 					accept e10
-					e12 : GUIPhone -? GUIPhone : displayConnectionState(connection_state)
+					e12 : GUIPhone -? GUIPhone : displayConnectionState(EConnectionState::CONNECTED)
 					accept e12
-					e14 : UIRobot -? UIRobot : displayConnectionState(connection_state)
+					e14 : UIRobot -? UIRobot : displayConnectionState(EConnectionState::CONNECTED)
 					accept e14
 				`,
 				"CU2 MAJ EXPLO": String.raw`
-					actor USER
+					actor User
 					participant GUIPhone
-					participant MAPPER
-					participant ARCHIVIST
-					participant EXPLORER
-					participant DRIVER
-					participant UIRobot
-					participant LOCATOR
-					participant RADAR
-					actor ROBOT
-					e0 : USER -? GUIPhone : accessMetricsParams()
+					participant Explorer
+					e0 : User -? GUIPhone : accessMetricsParams()
 					accept e0
-					e2 : GUIPhone -? GUIPhone : displayScreen(screen_id)
+					e2 : GUIPhone -? GUIPhone : displayScreen(EScreen::MetricsParamsScreen)
 					accept e2
-					e4 : USER -? GUIPhone : setEndCriteria(end_criterias: Criteria[*])
+					e4 : User -? GUIPhone : setEndCriteria(end_criterias)
 					accept e4
-					e6 : USER -? GUIPhone : setValueCriteria(criteria,value)
+					e6 : GUIPhone -? Explorer : setExploMetrics(end_criterias)
 					accept e6
-					e8 : GUIPhone -? EXPLORER : setExploMetrics(metrics)
+					e8 : User -? GUIPhone : setValueCriteria(criteria,value)
 					accept e8
+					e10 : GUIPhone -? Explorer : setExploMetrics(end_criterias)
+					accept e10
 				`,
 				"CU3 LANCER EXPLO": String.raw`
-					actor USER
+					actor User
 					participant GUIPhone
-					participant MAPPER
-					participant ARCHIVIST
-					participant EXPLORER
-					participant DRIVER
 					participant UIRobot
-					participant LOCATOR
-					participant RADAR
-					actor ROBOT
-					e0 : USER -? GUIPhone : startExplo()
+					participant AlgoManager
+					participant Explorer
+					participant Driver
+					participant Locator
+					participant Archivist
+					e0 : User -? GUIPhone : startExplo()
 					accept e0
-					e2 : GUIPhone -? GUIPhone : displayScreen(screen_id)
+					e2 : GUIPhone -? GUIPhone : displayScreen(EScreen::ExploAlgoScreen)
 					accept e2
-					e4 : USER -? GUIPhone : setExploAlgorithm(explo_algorithm)
+					e4 : User -? GUIPhone : setExploAlgorithm(algo)
 					accept e4
-					e6 : GUIPhone -? EXPLORER : setExploAlgorithm(explo_algorithm)
+					e6 : GUIPhone -? AlgoManager : setUsedAlgo(explo_algorithm)
 					accept e6
-					e8 : EXPLORER -? DRIVER : setExploAlgorithm(explo_algorithm)
+					e8 : GUIPhone -? UIRobot : displayConnectionState(EConnectionState::EXPLORATING)
 					accept e8
-					e10 : DRIVER -? LOCATOR : initStartLocation()
+					e10 : Driver -? Locator : initStartLocation()
 					accept e10
-					e12 : EXPLORER -? EXPLORER : initExploMetrics()
+					e12 : Explorer -? Explorer : initExploMetrics()
 					accept e12
-					e14 : DRIVER -? DRIVER : stopMove()
+					ref over a, b : CU4 EXPLORER
+					e14 : Driver -? Driver : stopMove()
 					accept e14
-					e16 : GUIPhone -? EXPLORER : getStatus()
+					e16 : GUIPhone -? Explorer : getExploInfo()
 					accept e16
-					returning e16: ExploStatusEnum::Completed
-					e18 : GUIPhone -? GUIPhone : displayScreen(screen_id)
+					returning e16: Explo_info
+					e18 : GUIPhone -? GUIPhone : displayScreen(EScreen::CompletedExploScreen)
 					accept e18
-					e20 : GUIPhone -? ARCHIVIST : saveExplo(explo_save: ExploSave)
+					e20 : GUIPhone -? Archivist : saveExplo(explo_info)
 					accept e20
 				`,
 				"CU4 EXPLORER": String.raw`
-					actor USER
-					participant GUIPhone
-					participant MAPPER
-					participant ARCHIVIST
-					participant EXPLORER
-					participant DRIVER
-					participant UIRobot
-					participant LOCATOR
-					participant RADAR
-					actor ROBOT
-					e0 : DRIVER -? DRIVER : readNextMove()
+					participant Explorer
+					participant AlgoManager
+					participant Driver
+					participant Mapper
+					participant Locator
+					participant Radar
+					e0 : Explorer -? AlgoManager : getMove()
 					accept e0
-					e2 : DRIVER -? DRIVER : executeMove(move)
+					returning e0: move
+					e2 : Explorer -? Driver : executeMove(move, value)
 					accept e2
-					e4 : DRIVER -? RADAR : getInfo()
+					returning e2: OK
+					e4 : Driver -? Radar : getInfo()
 					accept e4
-					e6 : MAPPER -? LOCATOR : getCoords()
+					returning e4: info
+					e6 : Mapper -? Locator : getCoords()
 					accept e6
-					e8 : MAPPER -? RADAR : getInfo()
+					returning e6: coordinates
+					e8 : Mapper -? Radar : getInfo()
 					accept e8
-					e10 : LOCATOR -? LOCATOR : updateCoords()
+					returning e8: info
+					e10 : Locator -? Locator : updateCoords()
 					accept e10
-					e12 : EXPLORER -? EXPLORER : updateExploMetrics()
+					e12 : Explorer -? Explorer : updateExploMetrics()
 					accept e12
-					e14 : EXPLORER -? EXPLORER : lockMetrics()
+					e14 : Explorer -? Explorer : lockMetrics()
 					accept e14
 				`,
 				"CU5 ETEINDRE MARCO": String.raw`
-					actor USER
+					actor User
 					participant GUIPhone
-					participant MAPPER
-					participant ARCHIVIST
-					participant EXPLORER
-					participant DRIVER
 					participant UIRobot
-					participant LOCATOR
-					participant RADAR
-					actor ROBOT
-					e0 : USER -? GUIPhone : stopMARCO()
+					e0 : User -? GUIPhone : stopMARCO()
 					accept e0
-					e2 : GUIPhone -? GUIPhone : displayScreen(screen_id)
+					e2 : GUIPhone -? GUIPhone : displayScreen(EScreen::StopValidationScreen)
 					accept e2
-					e4 : USER -? GUIPhone : respStopRequest(resp:boolean)
+					e4 : User -? GUIPhone : respStopRequest(resp::TRUE)
 					accept e4
 					e6 : GUIPhone -? UIRobot : stopMEMB()
 					accept e6
@@ -469,24 +545,15 @@
 					accept e8
 				`,
 				"CU6 DEPLACEMENT MANUEL": String.raw`
-					actor USER
+					actor User
 					participant GUIPhone
-					participant ARCHIVIST
-					participant EXPLORER
-					participant DRIVER
-					participant UIRobot
-					participant MAPPER
-					participant RADAR
-					participant LOCATOR
-					actor ROBOT
-					e0 : USER -? GUIPhone : askMove(direction: DirEnum)
+					participant Driver
+					e0 : User -? GUIPhone : askMove(direction: EDirection)
 					accept e0
-					e2 : GUIPhone -? DRIVER : moveOrder(direction: DirEnum)
+					e2 : GUIPhone -? Driver : moveOrder(direction: EDirection)
 					accept e2
-					e4 : DRIVER -? DRIVER : executeMove(move)
+					e4 : Driver -? Driver : executeMove(move)
 					accept e4
-					e6 : DRIVER -? RADAR : getInfo()
-					accept e6
 				`,
 			},
 			settings: {
@@ -503,6 +570,7 @@
 					hideStates: false,
 					showPseudostateInvariants: false,
 					hideSets: false,
+					showComments: false,
 					showTransitions: false,
 				},
 				semantics: {
