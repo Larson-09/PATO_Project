@@ -29,6 +29,14 @@
 					-stopMCTRL()
 					-displayScreen(screen_id : ScreenID)
 				}
+				class NetworkPhone {
+					
+					
+				}
+				class NetworkRobot {
+					
+					
+				}
 				class ARCHIVIST {
 					
 					saveExplo(explo_save : ExploSave)
@@ -102,6 +110,16 @@
 				{
 					name: "GUIPhone",
 					class: "GUIPhone",
+					isActor: false,
+				},
+				{
+					name: "NetworkPhone",
+					class: "NetworkPhone",
+					isActor: false,
+				},
+				{
+					name: "NetworkRobot",
+					class: "NetworkRobot",
 					isActor: false,
 				},
 				{
@@ -318,14 +336,14 @@
 				"CU1 INIT": String.raw`
 					actor USER
 					participant GUIPhone
-					participant MAPPER
-					participant ARCHIVIST
-					participant EXPLORER
-					participant DRIVER
 					participant UIRobot
-					participant LOCATOR
-					participant RADAR
-					actor ROBOT
+					''participant MAPPER
+					''participant ARCHIVIST
+					''participant EXPLORER
+					''participant DRIVER
+					''participant LOCATOR
+					''participant RADAR
+					''actor ROBOT
 					e0 : USER -? UIRobot : startMEMB()
 					accept e0
 					e2 : GUIPhone -? UIRobot : standBy()
