@@ -1,7 +1,9 @@
+<head></head>
+<body></body>
 <script>
 	const model =
 		{
-			name: "Imported_EXPLORATION",
+			name: "EXPLORATION",
 			classes: String.raw`
 				enum ScreenID  {
 					DisconnectedScreen
@@ -80,7 +82,7 @@
 				GUIPhone  -->  MAPPER
 				GUIPhone  <-->  UIRobot
 				GUIPhone  -->  EXPLORER
-				EXPLORER  -->  DRIVER
+				EXPLORER  --  DRIVER
 				DRIVER  -->  RADAR
 				RADAR  <--  MAPPER
 				MAPPER  -->  LOCATOR

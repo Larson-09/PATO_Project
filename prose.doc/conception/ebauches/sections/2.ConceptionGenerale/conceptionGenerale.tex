@@ -1,0 +1,227 @@
+% WARNING: automatically generated file that may be overwritten or removed at any time
+
+\section{Conception générale}
+
+\newcommand\macroSuffix{}
+\input{../animUML/conceptionGenerale/conceptionGenerale-macros}
+
+
+\subsection{Architecture candidate}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.5,max width=\textwidth,max height=.9\textheight]{../animUML/conceptionGenerale/conceptionGenerale-context}
+	\caption{Architecture candidate}
+	\label{fig:archiCand}
+\end{figure}
+Le diagramme de la \autoref{fig:archiCand} représente l'architecture candidate du système.
+\input{sections/2.ConceptionGenerale/descriptionArchiCand/description_archi_candi.tex}
+
+\subsection{Diagrammes de séquence}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.5,max width=\textwidth,max height=.9\textheight]{../animUML/conceptionGenerale/conceptionGenerale-sequence-CU1_INIT}
+	\caption{Diagramme de séquence \emph{CU1 INIT}}
+	\label{fig:inter-CU1_INIT}
+\end{figure}
+Le diagramme de la \autoref{fig:inter-CU1_INIT} représente le diagramme de séquence \emph{CU1 INIT}.
+\input{sections/2.ConceptionGenerale/descriptionSeq/description_CU1_INIT.tex}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.5,max width=\textwidth,max height=.9\textheight]{../animUML/conceptionGenerale/conceptionGenerale-sequence-CU2_MAJ_EXPLO}
+	\caption{Diagramme de séquence \emph{CU2 MAJ EXPLO}}
+	\label{fig:inter-CU2_MAJ_EXPLO}
+\end{figure}
+Le diagramme de la \autoref{fig:inter-CU2_MAJ_EXPLO} représente le diagramme de séquence \emph{CU2 MAJ EXPLO}.
+\input{sections/2.ConceptionGenerale/descriptionSeq/description_CU2_MAJ_EXPLO.tex}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.5,max width=\textwidth,max height=.9\textheight]{../animUML/conceptionGenerale/conceptionGenerale-sequence-CU3_LAUNCH_EXPLO}
+	\caption{Diagramme de séquence \emph{CU3 LAUNCH EXPLO}}
+	\label{fig:inter-CU3_LAUNCH_EXPLO}
+\end{figure}
+Le diagramme de la \autoref{fig:inter-CU3_LAUNCH_EXPLO} représente le diagramme de séquence \emph{CU3 LAUNCH EXPLO}.
+\input{sections/2.ConceptionGenerale/descriptionSeq/description_CU3_LAUNCH_EXPLO.tex}
+
+
+\subsection{Types de données}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.5,max width=\textwidth,max height=.9\textheight]{../animUML/conceptionGenerale/conceptionGenerale-datatypes}
+	\caption{Diagramme des types de données}
+	\label{fig:datatypes}
+\end{figure}
+Le diagramme de la \autoref{fig:datatypes} représente les types de données utilisés.
+\newline
+L'énumération ScreenID possède les littéraux suivants :
+\enumScreenIDLiteralDescriptions
+
+\subsection{Classes}
+
+\subsubsection{Vue générale}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.5,max width=\textwidth,max height=.9\textheight]{../animUML/conceptionGenerale/conceptionGenerale-classes}
+	\caption{Diagramme de classes}
+	\label{fig:classes}
+\end{figure}
+Le diagramme de la \autoref{fig:classes} représente les classes du système.
+
+\subsubsection{La classe USER}
+
+Le diagramme de la \autoref{fig:class-USER} représente la classe USER.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.5,max width=\textwidth,max height=.9\textheight]{../animUML/conceptionGenerale/conceptionGenerale-class-USER}
+	\caption{Diagramme de la classe USER}
+	\label{fig:class-USER}
+\end{figure}
+\input{sections/2.ConceptionGenerale/descriptionClass/description_USER.tex}
+
+\paragraph{Attributs}
+\classUSERProperties
+\paragraph{Services offerts}
+\classUSEROperations
+\subsubsection{La classe GUIPhone}
+
+Le diagramme de la \autoref{fig:class-GUIPhone} représente la classe GUIPhone.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.5,max width=\textwidth,max height=.9\textheight]{../animUML/conceptionGenerale/conceptionGenerale-class-GUIPhone}
+	\caption{Diagramme de la classe GUIPhone}
+	\label{fig:class-GUIPhone}
+\end{figure}
+\input{sections/2.ConceptionGenerale/descriptionClass/description_GUIPhone.tex}
+
+\paragraph{Attributs}
+\classGUIPhoneProperties
+\paragraph{Services offerts}
+\classGUIPhoneOperations
+\subsubsection{La classe ARCHIVIST}
+
+Le diagramme de la \autoref{fig:class-ARCHIVIST} représente la classe ARCHIVIST.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.5,max width=\textwidth,max height=.9\textheight]{../animUML/conceptionGenerale/conceptionGenerale-class-ARCHIVIST}
+	\caption{Diagramme de la classe ARCHIVIST}
+	\label{fig:class-ARCHIVIST}
+\end{figure}
+\input{sections/2.ConceptionGenerale/descriptionClass/description_ARCHIVIST.tex}
+
+\paragraph{Attributs}
+\classARCHIVISTProperties
+\paragraph{Services offerts}
+\classARCHIVISTOperations
+\subsubsection{La classe UIRobot}
+
+Le diagramme de la \autoref{fig:class-UIRobot} représente la classe UIRobot.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.5,max width=\textwidth,max height=.9\textheight]{../animUML/conceptionGenerale/conceptionGenerale-class-UIRobot}
+	\caption{Diagramme de la classe UIRobot}
+	\label{fig:class-UIRobot}
+\end{figure}
+\input{sections/2.ConceptionGenerale/descriptionClass/description_UIRobot.tex}
+
+\paragraph{Attributs}
+\classUIRobotProperties
+\paragraph{Services offerts}
+\classUIRobotOperations
+\subsubsection{La classe DRIVER}
+
+Le diagramme de la \autoref{fig:class-DRIVER} représente la classe DRIVER.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.5,max width=\textwidth,max height=.9\textheight]{../animUML/conceptionGenerale/conceptionGenerale-class-DRIVER}
+	\caption{Diagramme de la classe DRIVER}
+	\label{fig:class-DRIVER}
+\end{figure}
+\input{sections/2.ConceptionGenerale/descriptionClass/description_DRIVER.tex}
+
+\paragraph{Attributs}
+\classDRIVERProperties
+\paragraph{Services offerts}
+\classDRIVEROperations
+\subsubsection{La classe EXPLORER}
+
+Le diagramme de la \autoref{fig:class-EXPLORER} représente la classe EXPLORER.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.5,max width=\textwidth,max height=.9\textheight]{../animUML/conceptionGenerale/conceptionGenerale-class-EXPLORER}
+	\caption{Diagramme de la classe EXPLORER}
+	\label{fig:class-EXPLORER}
+\end{figure}
+\input{sections/2.ConceptionGenerale/descriptionClass/description_EXPLORER.tex}
+
+\paragraph{Attributs}
+\classEXPLORERProperties
+\paragraph{Services offerts}
+\classEXPLOREROperations
+\subsubsection{La classe RADAR}
+
+Le diagramme de la \autoref{fig:class-RADAR} représente la classe RADAR.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.5,max width=\textwidth,max height=.9\textheight]{../animUML/conceptionGenerale/conceptionGenerale-class-RADAR}
+	\caption{Diagramme de la classe RADAR}
+	\label{fig:class-RADAR}
+\end{figure}
+\input{sections/2.ConceptionGenerale/descriptionClass/description_RADAR.tex}
+
+\paragraph{Attributs}
+\classRADARProperties
+\paragraph{Services offerts}
+\classRADAROperations
+\subsubsection{La classe MAPPER}
+
+Le diagramme de la \autoref{fig:class-MAPPER} représente la classe MAPPER.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.5,max width=\textwidth,max height=.9\textheight]{../animUML/conceptionGenerale/conceptionGenerale-class-MAPPER}
+	\caption{Diagramme de la classe MAPPER}
+	\label{fig:class-MAPPER}
+\end{figure}
+\input{sections/2.ConceptionGenerale/descriptionClass/description_MAPPER.tex}
+
+\paragraph{Attributs}
+\classMAPPERProperties
+\paragraph{Services offerts}
+\classMAPPEROperations
+\subsubsection{La classe LOCATOR}
+
+Le diagramme de la \autoref{fig:class-LOCATOR} représente la classe LOCATOR.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.5,max width=\textwidth,max height=.9\textheight]{../animUML/conceptionGenerale/conceptionGenerale-class-LOCATOR}
+	\caption{Diagramme de la classe LOCATOR}
+	\label{fig:class-LOCATOR}
+\end{figure}
+\input{sections/2.ConceptionGenerale/descriptionClass/description_LOCATOR.tex}
+
+\paragraph{Attributs}
+\classLOCATORProperties
+\paragraph{Services offerts}
+\classLOCATOROperations
+\subsubsection{La classe ROBOT}
+
+Le diagramme de la \autoref{fig:class-ROBOT} représente la classe ROBOT.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.5,max width=\textwidth,max height=.9\textheight]{../animUML/conceptionGenerale/conceptionGenerale-class-ROBOT}
+	\caption{Diagramme de la classe ROBOT}
+	\label{fig:class-ROBOT}
+\end{figure}
+\input{sections/2.ConceptionGenerale/descriptionClass/description_ROBOT.tex}
+
+\paragraph{Attributs}
+\classROBOTProperties
+\paragraph{Services offerts}
+\classROBOTOperations
+
+\subsection{Diagrammes d'activité}
+

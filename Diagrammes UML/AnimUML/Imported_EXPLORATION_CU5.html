@@ -1,7 +1,7 @@
 <script>
 	const model =
 		{
-			name: "Imported_EXPLORATION",
+			name: "EXPLORATION",
 			classes: String.raw`
 				enum ScreenID  {
 					DisconnectedScreen
@@ -24,6 +24,7 @@
 					startExplo()
 					startMCTRL()
 					stopMARCO()
+					askMove(direction: DirEnum)
 					-displayConnectionState(connection_state : ConnectionStateEnum)
 					-stopMCTRL()
 					-displayScreen(screen_id : ScreenID)
@@ -43,6 +44,7 @@
 				class DRIVER {
 					
 					setExploAlgorithm(explo_algorithm)
+					moveOrder(direction: DirEnum)
 					-dodgeObstacle()
 					-executeMove(move)
 					-readNextMove() : move
@@ -80,6 +82,7 @@
 				GUIPhone  -->  MAPPER
 				GUIPhone  <-->  UIRobot
 				GUIPhone  -->  EXPLORER
+				GUIPhone  -->  DRIVER
 				EXPLORER  -->  DRIVER
 				DRIVER  -->  RADAR
 				RADAR  <--  MAPPER
@@ -99,11 +102,6 @@
 				{
 					name: "GUIPhone",
 					class: "GUIPhone",
-					isActor: false,
-				},
-				{
-					name: "MAPPER",
-					class: "MAPPER",
 					isActor: false,
 				},
 				{
@@ -127,13 +125,18 @@
 					isActor: false,
 				},
 				{
-					name: "LOCATOR",
-					class: "LOCATOR",
+					name: "MAPPER",
+					class: "MAPPER",
 					isActor: false,
 				},
 				{
 					name: "RADAR",
 					class: "RADAR",
+					isActor: false,
+				},
+				{
+					name: "LOCATOR",
+					class: "LOCATOR",
 					isActor: false,
 				},
 				{
@@ -158,6 +161,7 @@
 							"startExplo",
 							"stopMARCO",
 							"respStopRequest(resp:boolean)",
+							"askMove(direction: DirEnum)",
 						],
 					},
 				},
@@ -297,6 +301,17 @@
 						],
 					},
 				},
+				C15: {
+					ends: [
+						"DRIVER",
+						"GUIPhone",
+					],
+					possibleMessages: {
+						reverse: [
+							"moveOrder(direction: DirEnum)",
+						],
+					},
+				},
 			},
 			interactions: {
 				"CU1 INIT": String.raw`
@@ -349,7 +364,7 @@
 					e8 : GUIPhone -? EXPLORER : setExploMetrics(metrics)
 					accept e8
 				`,
-				"CU3 LAUNCH EXPLO": String.raw`
+				"CU3 LANCER EXPLO": String.raw`
 					actor USER
 					participant GUIPhone
 					participant MAPPER
@@ -382,6 +397,56 @@
 					accept e18
 					e20 : GUIPhone -? ARCHIVIST : saveExplo(explo_save: ExploSave)
 					accept e20
+				`,
+				"CU4 EXPLORER": String.raw`
+					actor USER
+					participant GUIPhone
+					participant MAPPER
+					participant ARCHIVIST
+					participant EXPLORER
+					participant DRIVER
+					participant UIRobot
+					participant LOCATOR
+					participant RADAR
+					actor ROBOT
+					e0 : DRIVER -? DRIVER : readNextMove()
+					accept e0
+					e2 : DRIVER -? DRIVER : executeMove(move)
+					accept e2
+					e4 : DRIVER -? RADAR : getInfo()
+					accept e4
+					e6 : MAPPER -? LOCATOR : getCoords()
+					accept e6
+					e8 : MAPPER -? RADAR : getInfo()
+					accept e8
+					e10 : LOCATOR -? LOCATOR : updateCoords()
+					accept e10
+					e12 : EXPLORER -? EXPLORER : updateExploMetrics()
+					accept e12
+					e14 : EXPLORER -? EXPLORER : lockMetrics()
+					accept e14
+				`,
+				"CU5 ETEINDRE MARCO": String.raw`
+					actor USER
+					participant GUIPhone
+					participant MAPPER
+					participant ARCHIVIST
+					participant EXPLORER
+					participant DRIVER
+					participant UIRobot
+					participant LOCATOR
+					participant RADAR
+					actor ROBOT
+					e0 : USER -? GUIPhone : stopMARCO()
+					accept e0
+					e2 : GUIPhone -? GUIPhone : displayScreen(screen_id)
+					accept e2
+					e4 : USER -? GUIPhone : respStopRequest(resp:boolean)
+					accept e4
+					e6 : GUIPhone -? UIRobot : stopMEMB()
+					accept e6
+					e8 : GUIPhone -? GUIPhone : stopMCTRL()
+					accept e8
 				`,
 			},
 			settings: {

@@ -1,0 +1,36 @@
+\glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
+\begin{theglossary}\glossaryheader
+\glsgroupheading{C}\relax \glsresetentrylist %
+\glossentry{client}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsignore{6}\delimN 
+		\setentrycounter[]{page}\glsignore{18}}}%
+\glossentry{cu}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsignore{6}\delimN 
+		\setentrycounter[]{page}\glsignore{18}}}\glsgroupskip
+\glsgroupheading{I}\relax \glsresetentrylist %
+\glossentry{ieee}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsignore{6}\delimN 
+		\setentrycounter[]{page}\glsignore{18}}}\glsgroupskip
+\glsgroupheading{N}\relax \glsresetentrylist %
+\glossentry{na}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsignore{6}\delimN 
+		\setentrycounter[]{page}\glsignore{18}}}\glsgroupskip
+\glsgroupheading{O}\relax \glsresetentrylist %
+\glossentry{omg}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsignore{6}\delimN 
+		\setentrycounter[]{page}\glsignore{18}}}\glsgroupskip
+\glsgroupheading{P}\relax \glsresetentrylist %
+\glossentry{pp}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsignore{6}\delimN 
+		\setentrycounter[]{page}\glsignore{18}}}\glsgroupskip
+\glsgroupheading{R}\relax \glsresetentrylist %
+\glossentry{RDPS}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsignore{6}}}\glsgroupskip
+\glsgroupheading{S}\relax \glsresetentrylist %
+\glossentry{sae}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{5}}}\glsgroupskip
+\glsgroupheading{U}\relax \glsresetentrylist %
+\glossentry{uml}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsignore{6}\delimN 
+		\setentrycounter[]{page}\glsignore{18}}}%
+\end{theglossary}\glossarypostamble

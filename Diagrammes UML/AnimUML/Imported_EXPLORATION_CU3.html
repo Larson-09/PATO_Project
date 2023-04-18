@@ -14,63 +14,63 @@
 				}
 				class GUIPhone {
 					
-					confirmConnection()
-					respStopRequest(resp : boolean)
-					displayMap()
-					accessMetricsParams()
-					setEndCriteria(end_criterias : Criteria[*])
-					setValueCriteria(criteria, value)
-					setExploAlgorithm(explo_algorithm)
-					startExplo()
-					startMCTRL()
-					stopMARCO()
-					-displayConnectionState(connection_state : ConnectionStateEnum)
-					-stopMCTRL()
-					-displayScreen(screen_id : ScreenID)
+					confirm_connection()
+					resp_stop_request(resp : boolean)
+					display_map()
+					access_metrics_params()
+					set_end_criteria(end_criterias : Criteria[*])
+					set_value_criteria(criteria, value)
+					set_explo_algorithm(explo_algorithm)
+					start_explo()
+					start_M_CTRL()
+					stop_MARCO()
+					-display_connection_state(connection_state : ConnectionStateEnum)
+					-stop_M_CTRL()
+					-display_screen(screen_id : ScreenID)
 				}
 				class ARCHIVIST {
 					
-					saveExplo(explo_save : ExploSave)
+					save_explo(explo_save : ExploSave)
 				}
 				class UIRobot {
 					
-					askConnection()
-					startMEMB()
-					stopMEMB()
-					standBy()
-					-displayConnectionState(connection_state : ConnectionStateEnum)
+					ask_connection()
+					start_M_EMB()
+					stop_M_EMB()
+					stand_by()
+					-display_connection_state(connection_state : ConnectionStateEnum)
 				}
 				class DRIVER {
 					
-					setExploAlgorithm(explo_algorithm)
-					-dodgeObstacle()
-					-executeMove(move)
-					-readNextMove() : move
-					-stopMove()
+					set_explo_algorithm(explo_algorithm)
+					-dodge_obstacle()
+					-execute_move(move)
+					-read_next_move() : move
+					-stop_move()
 				}
 				class EXPLORER {
 					
-					setExploMetrics(end_criterias : Criteria[*])
-					setExploAlgorithm(explo_algorithm)
-					getStatus() : StatusEnum
-					-initExploMetrics()
-					-lockMetrics()
-					-updateExploMetrics()
+					-lock_metrics()
+					set_explo_metrics(end_criterias : Criteria[*])	'' tableau
+					set_explo_algorithm(explo_algorithm)
+					get_status() : StatusEnum
+					-init_explo_metrics()
+					-update_explo_metrics()
 				}
 				class RADAR {
 					
-					getInfo() : info
+					get_info() : info
 				}
 				class MAPPER {
 					
-					getMap() : map
-					-updateMap()
+					get_map() : map
+					-update_map()
 				}
 				class LOCATOR {
 					
-					initStartLocation()
-					getCoords() : Coordinate
-					-updateCoords()
+					init_start_location()
+					get_coords() : Coordinate
+					-update_coords()
 				}
 				class ROBOT <<actor>>{
 				}
@@ -80,7 +80,7 @@
 				GUIPhone  -->  MAPPER
 				GUIPhone  <-->  UIRobot
 				GUIPhone  -->  EXPLORER
-				EXPLORER  -->  DRIVER
+				EXPLORER  --  DRIVER
 				DRIVER  -->  RADAR
 				RADAR  <--  MAPPER
 				MAPPER  -->  LOCATOR
@@ -150,14 +150,14 @@
 					],
 					possibleMessages: {
 						forward: [
-							"accessMetricsParams()",
-							"setEndCriteria(end_criterias: Criteria[*])",
-							"setValueCriteria(criteria, value)",
-							"setExploAlgorithm(explo_algorithm)",
-							"startMCTRL",
-							"startExplo",
-							"stopMARCO",
-							"respStopRequest(resp:boolean)",
+							"access_metrics_params()",
+							"set_end_criteria(end_criterias: Criteria[*])",
+							"set_value_criteria(criteria, value)",
+							"set_explo_algorithm(explo_algorithm)",
+							"start_M_CTRL",
+							"start_explo",
+							"stop_MARCO",
+							"resp_stop_request(resp:boolean)",
 						],
 					},
 				},
@@ -168,7 +168,7 @@
 					],
 					possibleMessages: {
 						forward: [
-							"startMEMB",
+							"start_M_EMB",
 						],
 					},
 				},
@@ -179,7 +179,7 @@
 					],
 					possibleMessages: {
 						forward: [
-							"saveExplo(explo_save: ExploSave)",
+							"save_explo(explo_save: ExploSave)",
 						],
 					},
 				},
@@ -190,13 +190,13 @@
 					],
 					possibleMessages: {
 						forward: [
-							"askConnection",
-							"standBy()",
-							"stopMEMB",
+							"ask_connection",
+							"stand_by()",
+							"stop_M_EMB",
 						],
 						reverse: [
-							"confirmConnection",
-							"displayMap()",
+							"confirm_connection",
+							"display_map()",
 						],
 					},
 				},
@@ -207,7 +207,7 @@
 					],
 					possibleMessages: {
 						forward: [
-							"getMap",
+							"get_map",
 						],
 					},
 				},
@@ -218,9 +218,9 @@
 					],
 					possibleMessages: {
 						forward: [
-							"setExploAlgorithm(explo_algorithm)",
-							"setExploMetrics(metrics)",
-							"getStatus",
+							"set_explo_algorithm(explo_algorithm)",
+							"set_explo_metrics(metrics)",
+							"get_status",
 						],
 					},
 				},
@@ -231,7 +231,7 @@
 					],
 					possibleMessages: {
 						forward: [
-							"getInfo",
+							"get_info",
 						],
 					},
 				},
@@ -242,7 +242,7 @@
 					],
 					possibleMessages: {
 						reverse: [
-							"getInfo",
+							"get_info",
 						],
 					},
 				},
@@ -253,7 +253,7 @@
 					],
 					possibleMessages: {
 						forward: [
-							"getCoords(): Coordinate",
+							"get_coords(): Coordinate",
 						],
 					},
 				},
@@ -276,7 +276,7 @@
 					],
 					possibleMessages: {
 						forward: [
-							"initStartLocation",
+							"init_start_location",
 						],
 					},
 				},
@@ -293,7 +293,7 @@
 					],
 					possibleMessages: {
 						forward: [
-							"setExploAlgorithm(explo_algorithm)",
+							"set_explo_algorithm(explo_algorithm)",
 						],
 					},
 				},
@@ -310,21 +310,21 @@
 					participant LOCATOR
 					participant RADAR
 					actor ROBOT
-					e0 : USER -? UIRobot : startMEMB()
+					e0 : USER -? UIRobot : start_M_EMB()
 					accept e0
-					e2 : GUIPhone -? UIRobot : standBy()
+					e2 : GUIPhone -? UIRobot : stand_by()
 					accept e2
-					e4 : UIRobot -? UIRobot : displayConnectionState(connection_state)
+					e4 : UIRobot -? UIRobot : display_connection_state(connection_state)
 					accept e4
-					e6 : USER -? GUIPhone : startMCTRL()
+					e6 : USER -? GUIPhone : start_M_CTRL()
 					accept e6
-					e8 : GUIPhone -? UIRobot : askConnection()
+					e8 : GUIPhone -? UIRobot : ask_connection()
 					accept e8
-					e10 : UIRobot -? GUIPhone : confirmConnection()
+					e10 : UIRobot -? GUIPhone : confirm_connection()
 					accept e10
-					e12 : GUIPhone -? GUIPhone : displayConnectionState(connection_state)
+					e12 : GUIPhone -? GUIPhone : display_connection_state(connection_state)
 					accept e12
-					e14 : UIRobot -? UIRobot : displayConnectionState(connection_state)
+					e14 : UIRobot -? UIRobot : display_connection_state(connection_state)
 					accept e14
 				`,
 				"CU2 MAJ EXPLO": String.raw`
@@ -338,15 +338,15 @@
 					participant LOCATOR
 					participant RADAR
 					actor ROBOT
-					e0 : USER -? GUIPhone : accessMetricsParams()
+					e0 : USER -? GUIPhone : access_metrics_params()
 					accept e0
-					e2 : GUIPhone -? GUIPhone : displayScreen(screen_id)
+					e2 : GUIPhone -? GUIPhone : display_screen(screen_id)
 					accept e2
-					e4 : USER -? GUIPhone : setEndCriteria(end_criterias: Criteria[*])
+					e4 : USER -? GUIPhone : set_end_criteria(end_criterias: Criteria[*])
 					accept e4
-					e6 : USER -? GUIPhone : setValueCriteria(criteria,value)
+					e6 : USER -? GUIPhone : set_value_criteria(criteria,value)
 					accept e6
-					e8 : GUIPhone -? EXPLORER : setExploMetrics(metrics)
+					e8 : GUIPhone -? EXPLORER : set_explo_metrics(metrics)
 					accept e8
 				`,
 				"CU3 LAUNCH EXPLO": String.raw`
@@ -360,27 +360,27 @@
 					participant LOCATOR
 					participant RADAR
 					actor ROBOT
-					e0 : USER -? GUIPhone : startExplo()
+					e0 : USER -? GUIPhone : start_explo()
 					accept e0
-					e2 : GUIPhone -? GUIPhone : displayScreen(screen_id)
+					e2 : GUIPhone -? GUIPhone : display_screen(screen_id)
 					accept e2
-					e4 : USER -? GUIPhone : setExploAlgorithm(explo_algorithm)
+					e4 : USER -? GUIPhone : set_explo_algorithm(explo_algorithm)
 					accept e4
-					e6 : GUIPhone -? EXPLORER : setExploAlgorithm(explo_algorithm)
+					e6 : GUIPhone -? EXPLORER : set_explo_algorithm(explo_algorithm)
 					accept e6
-					e8 : EXPLORER -? DRIVER : setExploAlgorithm(explo_algorithm)
+					e8 : EXPLORER -? DRIVER : set_explo_algorithm(explo_algorithm)
 					accept e8
-					e10 : DRIVER -? LOCATOR : initStartLocation()
+					e10 : DRIVER -? LOCATOR : init_start_location()
 					accept e10
-					e12 : EXPLORER -? EXPLORER : initExploMetrics()
+					e12 : EXPLORER -? EXPLORER : init_explo_metrics()
 					accept e12
-					e14 : DRIVER -? DRIVER : stopMove()
+					e14 : DRIVER -? DRIVER : stop_move()
 					accept e14
-					e16 : GUIPhone -? EXPLORER : getStatus()
+					e16 : GUIPhone -? EXPLORER : get_status()
 					accept e16
-					e18 : GUIPhone -? GUIPhone : displayScreen(screen_id)
+					e18 : GUIPhone -? GUIPhone : display_screen(screen_id)
 					accept e18
-					e20 : GUIPhone -? ARCHIVIST : saveExplo(explo_save: ExploSave)
+					e20 : GUIPhone -? ARCHIVIST : save_explo(explo_save: ExploSave)
 					accept e20
 				`,
 			},

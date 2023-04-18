@@ -1,0 +1,102 @@
+%-----------------------------------------------
+%   LaTeX template
+%   Written By: Thorkel-dev
+%-----------------------------------------------
+
+\documentclass[a4paper,11pt,titlepage]{article}
+
+%-----------------------------------------
+%       Settings
+%-----------------------------------------
+\input{../../communs/setup.tex}
+
+% Package required by animUML .tex files
+%\usepackage[export]{adjustbox}
+
+\newcommand{\version}{0.0}
+\newcommand{\revision}{2}
+\newcommand{\documentName}{Dossier de conception de \projectName}
+
+%\usepackage{lipsum} % For text generation, to be removed
+
+\usepackage{Parameter}
+
+\usepackage[
+            documentSubject     = {\documentName},
+            documentRef         = {\refConc},
+            documentRevision    = {\revision},
+            documentVersion     = {\version},
+            teamName            = {\teamCompany},
+            ]{FooterHeader}
+
+\usepackage[
+            documentSubject         =   {\increment},
+            projectName             =   {\projectName},
+            clientName              =   {\clientName},
+            teamCompany             =   {\teamCompany},
+            documentRevision        =   {\revision},
+            documentVersion         =   {\version},
+            documentState           =   {{en attente de validation}},
+            documentManager         =   {\devCUn},
+            ]{FrontPage}
+
+\makeglossaries
+\loadglsentries{glossary.tex} % We load the dictionary
+\loadglsentries{acronyms.tex} % We load the acronyms
+
+%-----------------------------------------
+%      Variables
+%-----------------------------------------
+\author{B2\_2024}        % Mandatory
+\title{\documentName}     % Mandatory
+\date{\normalsize\today}    % Mandatory, today's date
+
+\graphicspath{{../schemas/}{../../../communs/figures/}{/home/eliot/SE/ProSE_Lin/Exemple_animUML/ConceptionOVNI/}}
+
+%-----------------------------------------
+%      Document
+%-----------------------------------------
+
+\begin{document}
+
+\maketitle
+
+\setcounter{page}{1}
+\vspace*{\fill}
+\noindent
+\underline{\textbf{AVERTISSEMENT:}} \\
+Le présent document est à but pédagogique. Il a été réalisé par les étudiants {\teamMembers} de l'équipe \teamNumber\_{\graduationYear} de l'option Systèmes Embarqués (SE) de l’ESEO sous la direction de Fréderic JOUAULT et de Jérôme DELATOUR. Ce document est la propriété de ses auteurs. En dehors des activités pédagogiques de l'ESEO, ce document ne peut être diffusé ou recopié sans l’autorisation écrite de l'un de ses propriétaires. \\
+Le modèle de ce document a été mis à disposition par Edouard GAUTIER étudiant de l'ESEO selon le plan rédigé par Jérôme DELATOUR. \\ 
+La société {\teamCompany} n’a pas d’existence légale, il s’agit d'une société fictive créée pour des besoins pédagogiques.
+\vspace*{\fill}
+\clearpage
+
+\section*{Table des versions}
+\input{tablesVersion.tex} \label{Table des versions} % Add the page with the version tables
+\clearpage
+
+\tableofcontents % The table of contents
+
+%------------------------------------------------------
+%            Introduction
+%------------------------------------------------------
+
+\input{sections/1.Introduction/introduction.tex}
+
+%------------------------------------------------------
+%            Description Générale
+%------------------------------------------------------
+
+\input{sections/2.ConceptionGenerale/conceptionGenerale.tex}
+
+%------------------------------------------------------
+%            Exigences Spécifiques
+%------------------------------------------------------
+
+\input{sections/3.ConceptionDetaillee/conceptionDetaillee.tex}
+
+\input{sections/4.dictionnaireDuDomaine.tex}
+
+\listoffigures \label{TableOfFigure} % The table of figures
+
+\end{document}
