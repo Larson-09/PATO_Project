@@ -148,6 +148,19 @@
 					name: "GUIPhone",
 					class: "GUIPhone",
 					isActor: false,
+					behavior: String.raw`
+						state "Sync" as Sync {
+						}
+						state "WaitInteract" as WaitInteract {
+						}
+						state "WaitInteract" as WaitInteract {
+						}
+
+						[*] -> Sync as "INIT"
+						
+
+						`,
+
 				},
 				{
 					name: "NetworkRobot",
@@ -175,7 +188,7 @@
 					class: "Driver",
 					isActor: false,
 					behavior: String.raw`
-					state "Standby" as Standby {
+						state "Standby" as Standby {
 						}
 	
 						state "Move" as Move {
@@ -197,6 +210,10 @@
 
 						choice -> Move as "choice2Idle_1" :   [log("Move")]
 						choice -> Run as "choice2Idle_2" : [else]
+
+						Run -> Standby as "FinManuel": moveOrder(STOP)
+						Move -> Standby as "FinAuto": EndMove
+
 
 
 					`,
