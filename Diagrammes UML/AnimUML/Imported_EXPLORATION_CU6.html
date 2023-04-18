@@ -14,20 +14,20 @@
 				}
 				class GUIPhone {
 					
-					confirmConnection()
-					respStopRequest(resp : boolean)
-					displayMap()
-					accessMetricsParams()
-					setEndCriteria(end_criterias : Criteria[*])
-					setValueCriteria(criteria, value)
-					setExploAlgorithm(explo_algorithm)
-					startExplo()
-					startMCTRL()
-					stopMARCO()
-					askMove(direction : DirEnum)
-					-displayConnectionState(connection_state : ConnectionStateEnum)
-					-stopMCTRL()
-					-displayScreen(screen_id : ScreenID)
+					confirmConnection()													''méthode de confirmation de connection a ROBOT 
+					respStopRequest(resp : boolean)										''informe l'utilisateurs que ROBOT va s'éteindre
+					displayMap()														''affichage de la carte sur l'ecran de PHONE
+					accessMetricsParams()												''action de l'utilisateurs visant à accéder au menu des métriques 
+					setEndCriteria(end_criterias : Criteria[*])							''action de l'utilisateurs visant à selectionner les métriques à utiliser pour la prochaine exploration
+					setValueCriteria(criteria, value)									''action de l'utilisateurs visant a éditer les métriques de la prochaine exploration
+					setExploAlgorithm(explo_algorithm)									''action de l'utilisateurs visant a sélectionner l'algorythme d'exploration
+					startExplo()														''action visant à lancer une  exploration
+					startMCTRL()														''ordre de démarage de M_CTRL
+					stopMARCO()															''volonté d'extinction global du SAE
+					askMove(direction : DirEnum)										''ordre de mouvement dans une direction "direction " et de type DirEnum cette méthode est intimement lié au joystick
+					-displayConnectionState(connection_state : ConnectionStateEnum)		'' affichage de l'état de connection à ROBOT sur Phone via un logo sur l'écran l'état du logo est définie par la variable connection_state qui est du type ConnectionStateEnum
+					-stopMCTRL()														''ordre d'arret du logiciel embarquer M_CTRL
+					-displayScreen(screen_id : ScreenID)								''méthode permetant l'affichage des divers écrans de PHONE le paramètre screen_id est une énumération de type ScreenID
 				}
 				class NetworkPhone {
 					
