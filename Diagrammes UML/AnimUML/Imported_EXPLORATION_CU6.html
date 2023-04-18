@@ -31,6 +31,11 @@
 					LEFT
 					FORWARD
 				}
+				enum StatusEnum{
+					FINISHED
+					RUNNING
+					FAILED
+				}
 
 				class User <<actor>>{
 				}
@@ -47,9 +52,11 @@
 					startMCTRL()														''ordre de démarage de M_CTRL
 					stopMARCO()															''volonté d'extinction global du SAE
 					askMove(direction : EDirection)										''ordre de mouvement dans une direction "direction " et de type EDirection cette méthode est intimement lié au joystick
+					setConfirmationStatus()												''informe de l'etat de la connection
 					-displayConnectionState(connection_state : EConnectionState)		'' affichage de l'état de connection à Robot sur Phone via un logo sur l'écran l'état du logo est définie par la variable connection_state qui est du type EConnectionState
 					-stopMCTRL()														''ordre d'arret du logiciel embarquer M_CTRL
 					-displayScreen(screen_id : EScreen)								''méthode permetant l'affichage des divers écrans de PHONE le paramètre screen_id est une énumération de type EScreen
+					
 				}
 				class NetworkPhone {
 					
@@ -83,7 +90,7 @@
 					
 					setExploAlgorithm(explo_algorithm)
 					moveOrder(direction : EDirection)
-					-dodgeObstacle()
+					dodgeObstacle()
 					executeMove(move: EMove, value: Integer)
 					-stopMove()
 				}
@@ -94,6 +101,7 @@
 					setExploAlgorithm(explo_algorithm)
 					getExploInfo() : StatusEnum
 					moveFinished()
+					obstacleDodged()
 					-initExploMetrics()
 					-lockMetrics()
 					-updateExploMetrics()
@@ -153,11 +161,34 @@
 						}
 						state "WaitInteract" as WaitInteract {
 						}
-						state "WaitInteract" as WaitInteract {
+						state "AffMetricParam" as AffMetricParam {
+						}
+						state "WaitMetricFill" as WaitMetricFill {
+						}
+						state "Manual" as Manual {
+						}
+						state "Exploration" as Exploration {
 						}
 
-						[*] -> Sync as "INIT"
+						[*] -> Sync as "INIT" 
+						Sync -> WaitInteract as "finDeLINIT" : setConfirmationStatus()
 						
+
+						WaitInteract -> AffMetricParam as "lancementDeLaCu2" : accessMetricsParams() / displayScreen(MetricsParamsScreen)
+						AffMetricParam -> WaitMetricFill as "TypeChoisie" : setEndCriteria(critere)
+						WaitMetricFill -> WaitInteract as "Valeursrecu" : setValueCriteria(criteria, value)	
+
+						WaitInteract -> Manual as "passageEnControleManuelL" :askMove(LEFT)	
+						WaitInteract -> Manual as "passageEnControleManuelR" :askMove(RIGHT)	
+						WaitInteract -> Manual as "passageEnControleManuelF" :askMove(FORWARD)			
+						Manual -> WaitInteract as "quite le manual" :askMove(STOP)	
+
+
+						WaitInteract -> Exploration as "passe en explo" : setExploAlgorithm(explo_algorithm)/displayScreen(ExploSelectionScreen) startExplo()
+						Exploration -> WaitInteract as "retours en waitOK" : getExploInfo(FINISHED)  
+						Exploration -> WaitInteract as "retours en waitpasOK" : getExploInfo(FAILED) 
+						
+						Exploration -> Exploration as "Boucl eTsync" : after(t_sync)/displayMap()	
 
 						`,
 				},
@@ -188,8 +219,7 @@
 					isActor: false,
 					behavior: String.raw`
 						state "Standby" as Standby {
-							}
-	
+						}
 						state "Move" as Move {
 						}
 						Move : entry / log("Move")
@@ -200,12 +230,14 @@
 						state "choice" as choice <<choice>>
 						Run : entry / log("Run")
 
-						[*] -> Standby as "Init" :   /
-						Standby -> Move as "ModeAuto": executeMove(move)
-						Standby -> Run as "ModeManuel":    /moveOrder(direction : DirEnum)
-						Move -> Dodge as "DodgeAuto": /dodgeObstacle()
-						Run -> Dodge as "DodgeManuel": /dodgeObstacle()
-						Dodge -> choice as "ReturnAuto": capteur ne detecte plus d'obstacle?
+						[*] -> Standby as "Init" :  
+						Standby -> Move as "ModeAuto": executeMove(direction,dist)
+						Standby -> Run as "ModeManuelF":    moveOrder(FORWARD)
+						Standby -> Run as "ModeManuelR":    moveOrder(RIGHT)
+						Standby -> Run as "ModeManuelL":    moveOrder(LEFT)
+						Move -> Dodge as "DodgeAuto": dodgeObstacle()
+						Run -> Dodge as "DodgeManuel": dodgeObstacle()
+						Dodge -> choice as "ReturnAuto": obstacleDodged()
 
 						choice -> Move as "choice2Idle_1" :   [log("Move")]
 						choice -> Run as "choice2Idle_2" : [else]
@@ -401,6 +433,7 @@
 						],
 						reverse: [
 							"moveFinished()",
+							"obstacleDodged()",
 						],
 					},
 				},
@@ -422,6 +455,7 @@
 					],
 					possibleMessages: {
 						reverse: [
+						"setConfirmationStatus()",
 						],
 					},
 				},
@@ -432,6 +466,7 @@
 					],
 					possibleMessages: {
 						reverse: [
+						
 						],
 					},
 				},
@@ -611,7 +646,7 @@
 					hideMethods: false,
 					showPorts: false,
 					showEndNames: false,
-					hideStateMachines: true,
+					hideStateMachines: false,
 					hideOuterSMBoxes: true,
 					showExplicitSM: false,
 					hideStates: false,
