@@ -48,7 +48,8 @@
 					respStopRequest(resp : boolean)										''informe l'utilisateurs que Robot va s'éteindre
 					displayMap()														''affichage de la carte sur l'ecran de PHONE
 					accessMetricsParams()												''action de l'utilisateurs visant à accéder au menu des métriques 
-					setEndCriteria(criterias : Criteria[*])								''action de l'utilisateurs visant à selectionner les métriques à utiliser pour la prochaine exploration
+					exitMetricsParams()
+					setEndCriteria(criteria: EEndCriteria, isEnable: Boolean, value: float)		''action de l'utilisateurs visant à selectionner les métriques à utiliser pour la prochaine exploration et d'entrer sa valeur
 					setExploAlgorithm(explo_algorithm)									''action de l'utilisateurs visant a sélectionner l'algorythme d'exploration
 					startExplo()														''action visant à lancer une  exploration
 					startMCTRL()														''ordre de démarage de M_CTRL
@@ -98,8 +99,7 @@
 				}
 
 				class Explorer {
-					setEndCriteria(criterias : Criteria[*])
-					setExploMetrics(end_criterias : Criteria[*])
+					setEndCriteria(criteria: EEndCriteria, isEnable: Boolean, value: float)
 					setExploAlgorithm(explo_algorithm)
 					getExploInfo() : StatusEnum
 					moveFinished()
@@ -304,7 +304,7 @@
 					possibleMessages: {
 						forward: [
 							"accessMetricsParams()",
-							"setEndCriteria(end_criterias: Criteria[*])",
+							"setEndCriteria(criteria: EEndCriteria, isEnable: Boolean, value: float)",
 							"setValueCriteria(criteria, value)",
 							"setExploAlgorithm(explo_algorithm)",
 							"startMCTRL",
@@ -370,8 +370,8 @@
 					possibleMessages: {
 						forward: [
 							"setExploAlgorithm(explo_algorithm)",
-							"setExploMetrics(metrics)",
-							"getExploInfo",
+							"setEndCriteria(criteria: EEndCriteria, isEnable: Boolean, value: float)",
+							"getExploInfo()",
 						],
 					},
 				},
@@ -566,6 +566,8 @@
 					e10 : GUIPhone -? Explorer : setEndCriteria(EEndCriteria::PERCENTAGE, True, 80)
 					accept e10
 
+					e12 : User -? GUIPhone : exitMetricsParams()
+					accept e12
 				`,
 				"CU3 LANCER EXPLO": String.raw`
 					actor User
@@ -673,6 +675,7 @@
 					showPseudostateInvariants: false,
 					hideSets: false,
 					showTransitions: false,
+					showComments: false,
 				},
 				semantics: {
 					fireInitialTransitions: true,
