@@ -59,7 +59,7 @@
 					setConfirmationStatus()												''informe de l'etat de la connection
 					-displayConnectionState(connection_state : EConnectionState)		'' affichage de l'état de connection à Robot sur Phone via un logo sur l'écran l'état du logo est définie par la variable connection_state qui est du type EConnectionState
 					-stopMCTRL()														''ordre d'arret du logiciel embarquer M_CTRL
-					-displayScreen(screen_id : EScreen)								''méthode permetant l'affichage des divers écrans de PHONE le paramètre screen_id est une énumération de type EScreen
+					-displayScreen(screen_id : EScreen)									''méthode permetant l'affichage des divers écrans de PHONE le paramètre screen_id est une énumération de type EScreen
 					
 				}
 				class NetworkPhone {
@@ -178,8 +178,8 @@
 						state moveChoice <<choice>>
 						state exploChoice <<choice>>
 
-						[*] -> Sync as "INIT"
-						Sync -> WaitInteract as "finDeLINIT" : setConfirmationStatus()
+						[*] -> Sync as "INIT" : /displayScreen(DisconnectedScreen)
+						Sync -> WaitInteract as "finDeLINIT" : setConfirmationStatus()/displayConnectionState(EConnectionState::CONNECTED)
 
 
 						WaitInteract -> AffMetricParam as "lancementDeLaCu2" : accessMetricsParams() / displayScreen(MetricsParamsScreen)
@@ -192,7 +192,7 @@
 						moveChoice -> Manual : [else] / moveOrder(move)
 
 
-						WaitInteract -> Exploration as "passe en explo" : setExploAlgorithm(explo_algorithm)/displayScreen(ExploSelectionScreen) startExplo()
+						WaitInteract -> Exploration as "passe en explo" :  startExplo()/setExploAlgorithm(explo_algorithm)/displayScreen(ExploSelectionScreen)
 						Exploration -> exploChoice : setExploInfo(status)
 						
 						exploChoice --> WaitInteract : [status == StatusEnum::FINISHED]
