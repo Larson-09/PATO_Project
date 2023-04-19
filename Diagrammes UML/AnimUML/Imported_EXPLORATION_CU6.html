@@ -1,4 +1,8 @@
 <script>
+	// @ts-check
+	/**
+	 * @type {import("./Model.js").Model<false>}
+	 */
 	const model =
 		{
 			name: "EXPLORATION",
@@ -53,7 +57,7 @@
 					setConfirmationStatus()												''informe de l'etat de la connection
 					-displayConnectionState(connection_state : EConnectionState)		'' affichage de l'état de connection à Robot sur Phone via un logo sur l'écran l'état du logo est définie par la variable connection_state qui est du type EConnectionState
 					-stopMCTRL()														''ordre d'arret du logiciel embarquer M_CTRL
-					-displayScreen(screen_id : EScreen)								''méthode permetant l'affichage des divers écrans de PHONE le paramètre screen_id est une énumération de type EScreen
+					-displayScreen(screen_id : EScreen)									''méthode permetant l'affichage des divers écrans de PHONE le paramètre screen_id est une énumération de type EScreen
 					
 				}
 				class NetworkPhone {
@@ -155,6 +159,7 @@
 					class: "GUIPhone",
 					isActor: false,
 					behavior: String.raw`
+/'
 						state "Sync" as Sync {
 						}
 						state "WaitInteract" as WaitInteract {
@@ -167,24 +172,33 @@
 						}
 						state "Exploration" as Exploration {
 						}
+'/
+						state moveChoice <<choice>>
+						state exploChoice <<choice>>
 
-						[*] -> Sync as "INIT" 
-						Sync -> WaitInteract as "finDeLINIT" : setConfirmationStatus()
-						
+						[*] -> Sync as "INIT" : /displayScreen(DisconnectedScreen)
+						Sync -> WaitInteract as "finDeLINIT" : setConfirmationStatus()/displayConnectionState(EConnectionState::CONNECTED)
+
 
 						WaitInteract -> AffMetricParam as "lancementDeLaCu2" : accessMetricsParams() / displayScreen(MetricsParamsScreen)
 						AffMetricParam -> WaitMetricFill as "TypeChoisie" : setEndCriteria(critere)
-						WaitMetricFill -> WaitInteract as "Valeursrecu" : setValueCriteria(criteria, value)	
+						WaitMetricFill -> WaitInteract as "Valeursrecu" : setValueCriteria(criteria, value)
 
-						WaitInteract -> Manual as "passageEnControleManuelL" :askMove(LEFT)	
-						WaitInteract -> Manual as "passageEnControleManuelR" :askMove(RIGHT)	
-						WaitInteract -> Manual as "passageEnControleManuelF" :askMove(FORWARD)			
-						Manual -> WaitInteract as "quite le manual" :askMove(STOP)	
+						WaitInteract -> moveChoice as "passageEnControleManuel" : askMove(move)
+						Manual -> moveChoice : askMove(move)
+						moveChoice -> WaitInteract : [move == EMove::STOP]
+						moveChoice -> Manual : [else] / moveOrder(move)
 
 
-						WaitInteract -> Exploration as "passe en explo" : setExploAlgorithm(explo_algorithm)/displayScreen(ExploSelectionScreen) startExplo()
-						Exploration -> WaitInteract as "retours en waitOK" : getExploInfo(FINISHED)  
-						Exploration -> WaitInteract as "retours en waitpasOK" : getExploInfo(FAILED) 
+						WaitInteract -> ExplorationInit as "passe en explo" :  startExplo()/setExploAlgorithm(explo_algorithm);displayScreen(ExploSelectionScreen)
+						ExplorationInit -> 	Explore :  setExploAlgorithm(explo_algorithm)/setUsedAlgo(explo_algorithm);displayConnectionState(EConnectionState::EXPLORATING)
+
+						Exploration -> exploChoice : setExploInfo(status)
+						
+						exploChoice --> WaitInteract : [status == StatusEnum::FINISHED]
+						exploChoice -> Exploration : [status == StatusEnum::Running]
+						exploChoice -> WaitInteract : [else]
+							'[status == StatusEnum::FAILED]
 						
 						Exploration -> Exploration as "Boucl eTsync" : after(t_sync)/displayMap()	
 
@@ -230,9 +244,8 @@
 
 						[*] -> Standby as "Init" :  
 						Standby -> Move as "ModeAuto": executeMove(direction,dist)
-						Standby -> Run as "ModeManuelF":    moveOrder(FORWARD)
-						Standby -> Run as "ModeManuelR":    moveOrder(RIGHT)
-						Standby -> Run as "ModeManuelL":    moveOrder(LEFT)
+						Standby -> Run :    moveOrder(move)
+
 						Move -> Dodge as "DodgeAuto": dodgeObstacle()
 						Run -> Dodge as "DodgeManuel": dodgeObstacle()
 						Dodge -> choice as "ReturnAuto": obstacleDodged()
