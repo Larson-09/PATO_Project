@@ -2,8 +2,7 @@
 	const model =
 		{
 			name: "EXPLORATION",
-			classes: String.raw`
-			
+			classes: String.raw`	
 				enum EScreen  {
 					DisconnectedScreen
 					MainScreen
@@ -45,8 +44,7 @@
 					respStopRequest(resp : boolean)										''informe l'utilisateurs que Robot va s'éteindre
 					displayMap()														''affichage de la carte sur l'ecran de PHONE
 					accessMetricsParams()												''action de l'utilisateurs visant à accéder au menu des métriques 
-					setEndCriteria(end_criterias : Criteria[*])							''action de l'utilisateurs visant à selectionner les métriques à utiliser pour la prochaine exploration
-					setValueCriteria(criteria, value)									''action de l'utilisateurs visant a éditer les métriques de la prochaine exploration
+					setEndCriteria(criterias : Criteria[*])								''action de l'utilisateurs visant à selectionner les métriques à utiliser pour la prochaine exploration
 					setExploAlgorithm(explo_algorithm)									''action de l'utilisateurs visant a sélectionner l'algorythme d'exploration
 					startExplo()														''action visant à lancer une  exploration
 					startMCTRL()														''ordre de démarage de M_CTRL
@@ -96,7 +94,7 @@
 				}
 
 				class Explorer {
-					
+					setEndCriteria(criterias : Criteria[*])
 					setExploMetrics(end_criterias : Criteria[*])
 					setExploAlgorithm(explo_algorithm)
 					getExploInfo() : StatusEnum
@@ -538,14 +536,19 @@
 					accept e0
 					e2 : GUIPhone -? GUIPhone : displayScreen(EScreen::MetricsParamsScreen)
 					accept e2
-					e4 : User -? GUIPhone : setEndCriteria(end_criterias)
+
+					e4 : User -? GUIPhone : setEndCriteria(EEndCriteria::TIME, True, 1600)
 					accept e4
-					e6 : GUIPhone -? Explorer : setExploMetrics(end_criterias)
+
+					e6 : GUIPhone -? Explorer : setEndCriteria(EEndCriteria::TIME, True, 1600)
 					accept e6
-					e8 : User -? GUIPhone : setValueCriteria(criteria,value)
+
+					e8 : User -? GUIPhone : setEndCriteria(EEndCriteria::PERCENTAGE, True, 80)
 					accept e8
-					e10 : GUIPhone -? Explorer : setExploMetrics(end_criterias)
+
+					e10 : GUIPhone -? Explorer : setEndCriteria(EEndCriteria::PERCENTAGE, True, 80)
 					accept e10
+
 				`,
 				"CU3 LANCER EXPLO": String.raw`
 					actor User
@@ -652,7 +655,6 @@
 					hideStates: false,
 					showPseudostateInvariants: false,
 					hideSets: false,
-					showComments: false,
 					showTransitions: false,
 				},
 				semantics: {
