@@ -192,7 +192,9 @@
 						moveChoice -> Manual : [else] / moveOrder(move)
 
 
-						WaitInteract -> Exploration as "passe en explo" :  startExplo()/setExploAlgorithm(explo_algorithm)/displayScreen(ExploSelectionScreen)
+						WaitInteract -> ExplorationInit as "passe en explo" :  startExplo()/setExploAlgorithm(explo_algorithm);displayScreen(ExploSelectionScreen)
+						ExplorationInit -> 	Explore :  setExploAlgorithm(explo_algorithm)/setUsedAlgo(explo_algorithm);displayConnectionState(EConnectionState::EXPLORATING)
+
 						Exploration -> exploChoice : setExploInfo(status)
 						
 						exploChoice --> WaitInteract : [status == StatusEnum::FINISHED]
@@ -244,9 +246,8 @@
 
 						[*] -> Standby as "Init" :  
 						Standby -> Move as "ModeAuto": executeMove(direction,dist)
-						Standby -> Run as "ModeManuelF":    moveOrder(FORWARD)
-						Standby -> Run as "ModeManuelR":    moveOrder(RIGHT)
-						Standby -> Run as "ModeManuelL":    moveOrder(LEFT)
+						Standby -> Run :    moveOrder(move)
+
 						Move -> Dodge as "DodgeAuto": dodgeObstacle()
 						Run -> Dodge as "DodgeManuel": dodgeObstacle()
 						Dodge -> choice as "ReturnAuto": obstacleDodged()
