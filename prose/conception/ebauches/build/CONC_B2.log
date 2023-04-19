@@ -1,0 +1,2205 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.4.17)  19 APR 2023 17:15
+entering extended mode
+ \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**CONC_B2.tex
+(./CONC_B2.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-01-21>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(../../communs/setup.tex) (./param/parameter.sty
+Package: Parameter 
+
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2022/01/26 3.70 The Babel package
+\babel@savecnt=\count193
+\U@D=\dimen139
+\l@unhyphenated=\language7
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count194
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-french/french.ldf
+Language: french 2021/07/20 v3.5m French support from the babel system
+Package babel Info: Hyphen rules for 'acadian' set to \l@french
+(babel)             (\language4). Reported on input line 91.
+Package babel Info: Hyphen rules for 'canadien' set to \l@french
+(babel)             (\language4). Reported on input line 92.
+\FB@nonchar=\count195
+Package babel Info: Making : an active character on input line 430.
+Package babel Info: Making ; an active character on input line 431.
+Package babel Info: Making ! an active character on input line 432.
+Package babel Info: Making ? an active character on input line 433.
+\FBguill@level=\count196
+\FBold@everypar=\toks19
+\FB@Mht=\dimen140
+\mc@charclass=\count197
+\mc@charfam=\count198
+\mc@charslot=\count199
+\std@mcc=\count266
+\dec@mcc=\count267
+\listindentFB=\dimen141
+\descindentFB=\dimen142
+\labelindentFB=\dimen143
+\labelwidthFB=\dimen144
+\leftmarginFB=\dimen145
+\parindentFFN=\dimen146
+\FBfnindent=\dimen147
+))
+(/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen148
+\Gin@req@width=\dimen149
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2021/09/03 v1.2n Refers to last page's name (HMM; JPG)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen150
+\Hy@linkcounter=\count268
+\Hy@pagecounter=\count269
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
+nguages
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count270
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count271
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen151
+
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count272
+\Field@Width=\dimen152
+\Fld@charsize=\dimen153
+Package hyperref Info: Hyper figures OFF on input line 6076.
+Package hyperref Info: Link nesting OFF on input line 6081.
+Package hyperref Info: Hyper index ON on input line 6084.
+Package hyperref Info: backreferencing OFF on input line 6091.
+Package hyperref Info: Link coloring OFF on input line 6096.
+Package hyperref Info: Link coloring with OCG OFF on input line 6101.
+Package hyperref Info: PDF/A mode OFF on input line 6106.
+LaTeX Info: Redefining \ref on input line 6146.
+LaTeX Info: Redefining \pageref on input line 6150.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count273
+\c@Item=\count274
+\c@Hfootnote=\count275
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count276
+\c@bookmark@seq@number=\count277
+
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip49
+)
+(/usr/share/texlive/texmf-dist/tex/latex/subfiles/subfiles.sty
+Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
+
+(/usr/share/texlive/texmf-dist/tex/latex/import/import.sty
+Package: import 2020/04/01  v 6.2
+))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip50
+\LTright=\skip51
+\LTpre=\skip52
+\LTpost=\skip53
+\LTchunksize=\count278
+\LTcapwidth=\dimen154
+\LT@head=\box50
+\LT@firsthead=\box51
+\LT@foot=\box52
+\LT@lastfoot=\box53
+\LT@gbox=\box54
+\LT@cols=\count279
+\LT@rows=\count280
+\c@LT@tables=\count281
+\c@LT@chunks=\count282
+\LT@p@ftn=\toks20
+)
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2021/07/05 v2.14 Sectioning titles
+\ttl@box=\box55
+\beforetitleunit=\skip54
+\aftertitleunit=\skip55
+\ttl@plus=\dimen155
+\ttl@minus=\dimen156
+\ttl@toksa=\toks21
+\titlewidth=\dimen157
+\titlewidthlast=\dimen158
+\titlewidthfirst=\dimen159
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count283
+\float@exts=\toks22
+\float@box=\box56
+\@float@everytoks=\toks23
+\@floatcapt=\box57
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/xltabular/xltabular.sty
+Package: xltabular 2020/11/04 v0.2e `xltabular' package (hv,RN)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen160
+\ar@mcellbox=\box58
+\extrarowheight=\dimen161
+\NC@list=\toks24
+\extratabsurround=\skip56
+\backup@length=\skip57
+\ar@cellbox=\box59
+)
+\TX@col@width=\dimen162
+\TX@old@table=\dimen163
+\TX@old@col=\dimen164
+\TX@target=\dimen165
+\TX@delta=\dimen166
+\TX@cols=\count284
+\TX@ftn=\toks25
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ltablex/ltablex.sty
+Package: ltablex 2014/08/13 v1.1 Modified tabularx
+))
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip58
+\enit@outerparindent=\dimen167
+\enit@toks=\toks26
+\enit@inbox=\box60
+\enit@count@id=\count285
+\enitdp@description=\count286
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tocbibind/tocbibind.sty
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has section divisions on input line 50.
+
+
+Package tocbibind Note: Using section or other style headings.
+
+) (/usr/share/texlive/texmf-dist/tex/latex/minted/minted.sty
+Package: minted 2021/12/24 v2.6 Yet another Pygments shim for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count287
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2021/12/21 4.1b verbatim text (tvz,hv)
+\FV@CodeLineNo=\count288
+\FV@InFile=\read3
+\FV@TabBox=\box61
+\c@FancyVerbLine=\count289
+\FV@StepNumber=\count290
+\FV@OutFile=\write3
+)
+(/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+))
+(/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count291
+\output=\toks27
+\linenoprevgraf=\count292
+\linenumbersep=\dimen168
+\linenumberwidth=\dimen169
+\c@linenumber=\count293
+\c@pagewiselinenumber=\count294
+\c@LN@truepage=\count295
+\c@internallinenumber=\count296
+\c@internallinenumbers=\count297
+\quotelinenumbersep=\dimen170
+\bframerule=\dimen171
+\bframesep=\dimen172
+\bframebox=\box62
+LaTeX Info: Redefining \\ on input line 3056.
+)
+\c@FV@TrueTabGroupLevel=\count298
+\c@FV@TrueTabCounter=\count299
+\FV@TabBox@Group=\box63
+\FV@TmpLength=\skip59
+\c@FV@HighlightLinesStart=\count300
+\c@FV@HighlightLinesStop=\count301
+\FV@LoopCount=\count302
+\FV@NCharsBox=\box64
+\FV@BreakIndent=\dimen173
+\FV@BreakIndentNChars=\count303
+\FV@BreakSymbolSepLeft=\dimen174
+\FV@BreakSymbolSepLeftNChars=\count304
+\FV@BreakSymbolSepRight=\dimen175
+\FV@BreakSymbolSepRightNChars=\count305
+\FV@BreakSymbolIndentLeft=\dimen176
+\FV@BreakSymbolIndentLeftNChars=\count306
+\FV@BreakSymbolIndentRight=\dimen177
+\FV@BreakSymbolIndentRightNChars=\count307
+\c@FancyVerbLineBreakLast=\count308
+\FV@LineBox=\box65
+\FV@LineIndentBox=\box66
+\FV@LineWidth=\dimen178
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count309
+\calc@Bcount=\count310
+\calc@Adimen=\dimen179
+\calc@Bdimen=\dimen180
+\calc@Askip=\skip60
+\calc@Bskip=\skip61
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count311
+\calc@Cskip=\skip62
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+
+(/usr/share/texlive/texmf-dist/tex/generic/catchfile/catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+runsystem(uname -s > "CONC_B2.w18")...executed.
+
+ (./CONC_B2.w18)
+runsystem(rm -- "CONC_B2.w18")...executed.
+
+) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
+\integerpart=\count312
+\decimalpart=\count313
+)
+Package: xstring 2021/07/21 v1.84 String manipulations (CT)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip63
+\fb@frw=\dimen181
+\fb@frh=\dimen182
+\FrameRule=\dimen183
+\FrameSep=\dimen184
+)
+(/usr/share/texlive/texmf-dist/tex/latex/newfloat/newfloat.sty
+Package: newfloat 2019/09/02 v1.1l Defining new floating environments (AR)
+)
+\minted@appexistsfile=\read4
+\minted@bgbox=\box67
+\minted@code=\write4
+\c@minted@FancyVerbLineTemp=\count314
+\c@minted@pygmentizecounter=\count315
+Package newfloat Info: New float `listing' with options `fileext=lol,placement=
+tbp' on input line 1190.
+\c@listing=\count316
+Package newfloat Info: float type `listing'=4 on input line 1190.
+)
+runsystem(mkdir -p build//_minted-CONC_B2)...executed.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen185
+\captionmargin@=\dimen186
+\captionwidth=\dimen187
+\caption@tempdima=\dimen188
+\caption@indent=\dimen189
+\caption@parindent=\dimen190
+\caption@hangindent=\dimen191
+Package caption Info: Standard document class detected.
+Package caption Info: french babel package is loaded.
+)
+\c@caption@flags=\count317
+\c@continuedfloat=\count318
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty
+Package: epstopdf 2020-01-24 v2.11 Conversion with epstopdf on the fly (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/background/background.sty
+Package: background 2014/03/04 v2.1 background material
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks28
+\XKV@tempa@toks=\toks29
+)
+\XKV@depth=\count319
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks30
+\pgfutil@tempdima=\dimen192
+\pgfutil@tempdimb=\dimen193
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
+ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box68
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+))
+Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks31
+\pgfkeys@temptoks=\toks32
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
+ex
+\pgfkeys@tmptoks=\toks33
+))
+\pgf@x=\dimen194
+\pgf@y=\dimen195
+\pgf@xa=\dimen196
+\pgf@ya=\dimen197
+\pgf@xb=\dimen198
+\pgf@yb=\dimen199
+\pgf@xc=\dimen256
+\pgf@yc=\dimen257
+\pgf@xd=\dimen258
+\pgf@yd=\dimen259
+\w@pgf@writea=\write5
+\r@pgf@reada=\read5
+\c@pgf@counta=\count320
+\c@pgf@countb=\count321
+\c@pgf@countc=\count322
+\c@pgf@countd=\count323
+\t@pgf@toka=\toks34
+\t@pgf@tokb=\toks35
+\t@pgf@tokc=\toks36
+\pgf@sys@id@count=\count324
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count325
+\pgfsyssoftpath@bigbuffer@items=\count326
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen260
+\pgfmath@count=\count327
+\pgfmath@box=\box69
+\pgfmath@toks=\toks37
+\pgfmath@stack@operand=\toks38
+\pgfmath@stack@operation=\toks39
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count328
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@picminx=\dimen261
+\pgf@picmaxx=\dimen262
+\pgf@picminy=\dimen263
+\pgf@picmaxy=\dimen264
+\pgf@pathminx=\dimen265
+\pgf@pathmaxx=\dimen266
+\pgf@pathminy=\dimen267
+\pgf@pathmaxy=\dimen268
+\pgf@xx=\dimen269
+\pgf@xy=\dimen270
+\pgf@yx=\dimen271
+\pgf@yy=\dimen272
+\pgf@zx=\dimen273
+\pgf@zy=\dimen274
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@path@lastx=\dimen275
+\pgf@path@lasty=\dimen276
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@shorten@end@additional=\dimen277
+\pgf@shorten@start@additional=\dimen278
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box70
+\pgf@hbox=\box71
+\pgf@layerbox@main=\box72
+\pgf@picture@serial@count=\count329
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgflinewidth=\dimen279
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@pt@x=\dimen280
+\pgf@pt@y=\dimen281
+\pgf@pt@temp=\dimen282
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowsep=\dimen283
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@max=\dimen284
+\pgf@sys@shading@range@num=\count330
+\pgf@shadingcount=\count331
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box73
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodeparttextbox=\box74
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty
+Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@nodesepstart=\dimen285
+\pgf@nodesepend=\dimen286
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty
+Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen287
+\pgffor@skip=\dimen288
+\pgffor@stack=\toks40
+\pgffor@toks=\toks41
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex
+File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@plot@mark@count=\count332
+\pgfplotmarksize=\dimen289
+)
+\tikz@lastx=\dimen290
+\tikz@lasty=\dimen291
+\tikz@lastxsaved=\dimen292
+\tikz@lastysaved=\dimen293
+\tikz@lastmovetox=\dimen294
+\tikz@lastmovetoy=\dimen295
+\tikzleveldistance=\dimen296
+\tikzsiblingdistance=\dimen297
+\tikz@figbox=\box75
+\tikz@figbox@bg=\box76
+\tikz@tempbox=\box77
+\tikz@tempbox@bg=\box78
+\tikztreelevel=\count333
+\tikznumberofchildren=\count334
+\tikznumberofcurrentchild=\count335
+\tikz@fig@count=\count336
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfmatrixcurrentrow=\count337
+\pgfmatrixcurrentcolumn=\count338
+\pgf@matrix@numberofcolumns=\count339
+)
+\tikz@expandcount=\count340
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/everypage/everypage.sty
+Package: everypage 2020/10/17 R2.0b Hooks to run on every page
+
+
+Package everypage Warning: Functionality similar to this package has recently
+(everypage)                been implemented in LaTeX. This package is now in
+(everypage)                legacy status.
+(everypage)                Please, don't use it in new documents and packages.
+
+
+Package everypage Warning: You appear to be running a version of LaTeX
+(everypage)                providing the new functionality.
+(everypage)                Doing the best to deliver the original `everypage`
+(everypage)                interface on top of it. Strict equivalence is
+(everypage)                not possible, breakage may occur.
+(everypage)                If truly needed, Use `everypage-1x` to force the
+(everypage)                loading of an older code base.
+
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/afterpage.sty
+Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
+\AP@output=\toks42
+\AP@partial=\box79
+\AP@footins=\box80
+))
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count341
+\Gm@cntv=\count342
+\c@Gm@tempcnt=\count343
+\Gm@bindingoffset=\dimen298
+\Gm@wd@mp=\dimen299
+\Gm@odd@mp=\dimen300
+\Gm@even@mp=\dimen301
+\Gm@layoutwidth=\dimen302
+\Gm@layoutheight=\dimen303
+\Gm@layouthoffset=\dimen304
+\Gm@layoutvoffset=\dimen305
+\Gm@dimlist=\toks43
+)
+
+Package geometry Warning: Over-specification in `h'-direction.
+    `width' (455.24408pt) is ignored.
+
+
+Package geometry Warning: Over-specification in `v'-direction.
+    `height' (654.41338pt) is ignored.
+
+Package hyperref Info: Option `colorlinks' set `true' on input line 63.
+\c@subsubparagraph=\count344
+\c@@secnumdepth=\count345
+(/usr/share/texlive/texmf-dist/tex/latex/glossaries-extra/glossaries-extra.sty
+Package: glossaries-extra 2021/11/22 v1.48 (NLCT)
+
+(/usr/share/texlive/texmf-dist/tex/latex/glossaries/base/glossaries.sty
+Package: glossaries 2021/11/01 v4.49 (NLCT)
+
+(/usr/share/texlive/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
+Package: mfirstuc 2021/10/15 v2.07 (NLCT)
+\@glsmfirst=\toks44
+\@glsmrest=\toks45
+)
+(/usr/share/texlive/texmf-dist/tex/latex/textcase/textcase.sty
+Package: textcase 2019/09/14 v1.00 Text only upper/lower case changing (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xfor/xfor.sty
+Package: xfor 2009/02/05 v1.05 (NLCT)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/datatool/datatool-base.sty
+Package: datatool-base 2019/09/27 v2.32 (NLCT)
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
+\@mathmargin=\skip64
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks46
+\ex@=\dimen306
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen307
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count346
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count347
+\leftroot@=\count348
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count349
+\DOTSCASE@=\count350
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box81
+\strutbox@=\box82
+\big@size=\dimen308
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count351
+\c@MaxMatrixCols=\count352
+\dotsspace@=\muskip17
+\c@parentequation=\count353
+\dspbrk@lvl=\count354
+\tag@help=\toks47
+\row@=\count355
+\column@=\count356
+\maxfields@=\count357
+\andhelp@=\toks48
+\eqnshift@=\dimen309
+\alignsep@=\dimen310
+\tagshift@=\dimen311
+\tagwidth@=\dimen312
+\totwidth@=\dimen313
+\lineht@=\dimen314
+\@envbody=\toks49
+\multlinegap=\skip65
+\multlinetaggap=\skip66
+\mathdisplay@stack=\toks50
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/substr/substr.sty
+Package: substr 2009/10/20 v1.2 Handle substrings
+\c@su@anzahl=\count358
+)
+(/usr/share/texlive/texmf-dist/tex/latex/datatool/datatool-fp.sty
+Package: datatool-fp 2019/09/27 v2.32 (NLCT)
+
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp.sty
+Package: fp 1995/04/02
+
+`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
+(/usr/share/texlive/texmf-dist/tex/latex/fp/defpattern.sty
+Package: defpattern 1994/10/12
+\actioncount=\count359
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-basic.sty
+Package: fp-basic 1996/05/13
+\FP@xs=\count360
+\FP@xia=\count361
+\FP@xib=\count362
+\FP@xfa=\count363
+\FP@xfb=\count364
+\FP@rega=\count365
+\FP@regb=\count366
+\FP@regs=\count367
+\FP@times=\count368
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-addons.sty
+Package: fp-addons 1995/03/15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-snap.sty
+Package: fp-snap 1995/04/05
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-exp.sty
+Package: fp-exp 1995/04/03
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-trigo.sty
+Package: fp-trigo 1995/04/14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-pas.sty
+Package: fp-pas 1994/08/29
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-random.sty
+Package: fp-random 1995/02/23
+\FPseed=\count369
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eqn.sty
+Package: fp-eqn 1995/04/03
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-upn.sty
+Package: fp-upn 1996/10/21
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eval.sty
+Package: fp-eval 1995/04/03
+)))
+\@dtl@toks=\toks51
+\@dtl@tmpcount=\count370
+\dtl@tmplength=\skip67
+\dtl@sortresult=\count371
+\@dtl@numgrpsepcount=\count372
+\@dtl@datatype=\count373
+\dtl@codeA=\count374
+\dtl@codeB=\count375
+\@dtl@foreach@level=\count376
+)
+(/usr/share/texlive/texmf-dist/tex/latex/glossaries/base/glossaries-compatible-
+307.sty
+Package: glossaries-compatible-307 2021/11/01 v4.49 (NLCT)
+) (/usr/share/texlive/texmf-dist/tex/latex/tracklang/tracklang.sty
+Package: tracklang 2020/06/30 v1.5 (NLCT) Track Languages
+
+(/usr/share/texlive/texmf-dist/tex/generic/tracklang/tracklang.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/glossaries-french/glossaries-french.ld
+f
+File: glossaries-french.ldf 2016/12/12 v1.1
+)
+\gls@level=\count377
+\@gls@tmpb=\toks52
+\gls@tmplen=\skip68
+\glskeylisttok=\toks53
+\glslabeltok=\toks54
+\glsshorttok=\toks55
+\glslongtok=\toks56
+
+(/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.st
+y
+Package: glossary-hypernav 2021/11/01 v4.49 (NLCT)
+) (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty
+Package: glossary-list 2021/11/01 v4.49 (NLCT)
+\glslistdottedwidth=\skip69
+) (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-long.sty
+Package: glossary-long 2021/11/01 v4.49 (NLCT)
+\glsdescwidth=\skip70
+\glspagelistwidth=\skip71
+) (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-super.sty
+Package: glossary-super 2021/11/01 v4.49 (NLCT)
+
+(/usr/share/texlive/texmf-dist/tex/latex/supertabular/supertabular.sty
+Package: supertabular 2020/02/02 v4.1g the supertabular environment
+\c@tracingst=\count378
+\ST@wd=\dimen315
+\ST@rightskip=\skip72
+\ST@leftskip=\skip73
+\ST@parfillskip=\skip74
+\ST@pageleft=\dimen316
+\ST@headht=\dimen317
+\ST@tailht=\dimen318
+\ST@pagesofar=\dimen319
+\ST@pboxht=\dimen320
+\ST@lineht=\dimen321
+\ST@prevht=\dimen322
+\ST@toadd=\dimen323
+\ST@dimen=\dimen324
+\ST@pbox=\box83
+))
+(/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
+Package: glossary-tree 2021/11/01 v4.49 (NLCT)
+\glstreeindent=\skip75
+))
+\@glsxtr@leveloffset=\count379
+\glsxtrresourcecount=\count380
+\@glsxtrnewgls@inner=\count381
+\glsshortpltok=\toks57
+\glslongpltok=\toks58
+\mglselementindex=\count382
+) (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2022/02/02 v3.17 programmable bibliographies (PK/MW)
+
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count383
+
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+\c@tabx@nest=\count384
+\c@listtotal=\count385
+\c@listcount=\count386
+\c@liststart=\count387
+\c@liststop=\count388
+\c@citecount=\count389
+\c@citetotal=\count390
+\c@multicitecount=\count391
+\c@multicitetotal=\count392
+\c@instcount=\count393
+\c@maxnames=\count394
+\c@minnames=\count395
+\c@maxitems=\count396
+\c@minitems=\count397
+\c@citecounter=\count398
+\c@maxcitecounter=\count399
+\c@savedcitecounter=\count400
+\c@uniquelist=\count401
+\c@uniquename=\count402
+\c@refsection=\count403
+\c@refsegment=\count404
+\c@maxextratitle=\count405
+\c@maxextratitleyear=\count406
+\c@maxextraname=\count407
+\c@maxextradate=\count408
+\c@maxextraalpha=\count409
+\c@abbrvpenalty=\count410
+\c@highnamepenalty=\count411
+\c@lownamepenalty=\count412
+\c@maxparens=\count413
+\c@parenlevel=\count414
+\blx@tempcnta=\count415
+\blx@tempcntb=\count416
+\blx@tempcntc=\count417
+\c@blx@maxsection=\count418
+\c@blx@maxsegment@0=\count419
+\blx@notetype=\count420
+\blx@parenlevel@text=\count421
+\blx@parenlevel@foot=\count422
+\c@blx@sectionciteorder@0=\count423
+\blx@entrysetcounter=\count424
+\blx@biblioinstance=\count425
+\labelnumberwidth=\skip76
+\labelalphawidth=\skip77
+\biblabelsep=\skip78
+\bibitemsep=\skip79
+\bibnamesep=\skip80
+\bibinitsep=\skip81
+\bibparsep=\skip82
+\bibhang=\skip83
+\blx@bcfin=\read6
+\blx@bcfout=\write6
+\blx@langwohyphens=\language8
+\c@mincomprange=\count426
+\c@maxcomprange=\count427
+\c@mincompwidth=\count428
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2022/02/02 v3.17 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'reading.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count429
+\c@savedafterword=\count430
+\c@annotator=\count431
+\c@savedannotator=\count432
+\c@author=\count433
+\c@savedauthor=\count434
+\c@bookauthor=\count435
+\c@savedbookauthor=\count436
+\c@commentator=\count437
+\c@savedcommentator=\count438
+\c@editor=\count439
+\c@savededitor=\count440
+\c@editora=\count441
+\c@savededitora=\count442
+\c@editorb=\count443
+\c@savededitorb=\count444
+\c@editorc=\count445
+\c@savededitorc=\count446
+\c@foreword=\count447
+\c@savedforeword=\count448
+\c@holder=\count449
+\c@savedholder=\count450
+\c@introduction=\count451
+\c@savedintroduction=\count452
+\c@namea=\count453
+\c@savednamea=\count454
+\c@nameb=\count455
+\c@savednameb=\count456
+\c@namec=\count457
+\c@savednamec=\count458
+\c@translator=\count459
+\c@savedtranslator=\count460
+\c@shortauthor=\count461
+\c@savedshortauthor=\count462
+\c@shorteditor=\count463
+\c@savedshorteditor=\count464
+\c@labelname=\count465
+\c@savedlabelname=\count466
+\c@institution=\count467
+\c@savedinstitution=\count468
+\c@lista=\count469
+\c@savedlista=\count470
+\c@listb=\count471
+\c@savedlistb=\count472
+\c@listc=\count473
+\c@savedlistc=\count474
+\c@listd=\count475
+\c@savedlistd=\count476
+\c@liste=\count477
+\c@savedliste=\count478
+\c@listf=\count479
+\c@savedlistf=\count480
+\c@location=\count481
+\c@savedlocation=\count482
+\c@organization=\count483
+\c@savedorganization=\count484
+\c@origlocation=\count485
+\c@savedoriglocation=\count486
+\c@origpublisher=\count487
+\c@savedorigpublisher=\count488
+\c@publisher=\count489
+\c@savedpublisher=\count490
+\c@language=\count491
+\c@savedlanguage=\count492
+\c@origlanguage=\count493
+\c@savedoriglanguage=\count494
+\c@pageref=\count495
+\c@savedpageref=\count496
+\shorthandwidth=\skip84
+\shortjournalwidth=\skip85
+\shortserieswidth=\skip86
+\shorttitlewidth=\skip87
+\shortauthorwidth=\skip88
+\shorteditorwidth=\skip89
+\locallabelnumberwidth=\skip90
+\locallabelalphawidth=\skip91
+\localshorthandwidth=\skip92
+\localshortjournalwidth=\skip93
+\localshortserieswidth=\skip94
+\localshorttitlewidth=\skip95
+\localshortauthorwidth=\skip96
+\localshorteditorwidth=\skip97
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
+\c@textcitecount=\count497
+\c@textcitetotal=\count498
+\c@textcitemaxnames=\count499
+\c@biburlbigbreakpenalty=\count500
+\c@biburlbreakpenalty=\count501
+\c@biburlnumpenalty=\count502
+\c@biburlucpenalty=\count503
+\c@biburllcpenalty=\count504
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count505
+)
+Package biblatex Info: Trying to load bibliography style 'reading'...
+Package biblatex Info: ... file 'reading.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/reading.bbx
+File: reading.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count506
+\c@bbx:relatedtotal=\count507
+))
+Package biblatex Info: Trying to load citation style 'reading'...
+Package biblatex Info: ... file 'reading.cbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/reading.cbx
+File: reading.cbx 2022/02/02 v3.17 biblatex citation style (PK/MW)
+Package biblatex Info: Trying to load citation style 'authortitle'...
+Package biblatex Info: ... file 'authortitle.cbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/authortitle.cbx
+File: authortitle.cbx 2022/02/02 v3.17 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+))
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-01-21 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count508
+\l__pdf_internal_box=\box84
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2022-01-21 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2022-01-12 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2022/02/02 v3.17 expl3 case changing code for biblatex
+))
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
+\csq@reset=\count509
+\csq@gtype=\count510
+\csq@glevel=\count511
+\csq@qlevel=\count512
+\csq@maxlvl=\count513
+\csq@tshold=\count514
+\csq@ltx@everypar=\toks59
+
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2021-02-22 v5.2l csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+)
+Package csquotes Info: Enabling multilingual quotes.
+))
+(./param/footerHeader.sty
+Package: FooterHeader 
+
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
+rs
+\f@nch@headwidth=\skip98
+\f@nch@O@elh=\skip99
+\f@nch@O@erh=\skip100
+\f@nch@O@olh=\skip101
+\f@nch@O@orh=\skip102
+\f@nch@O@elf=\skip103
+\f@nch@O@erf=\skip104
+\f@nch@O@olf=\skip105
+\f@nch@O@orf=\skip106
+))
+(./param/frontPage.sty
+Package: FrontPage 
+
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+\everycr=\toks60
+\minrowclearance=\skip107
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+
+(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box85
+)
+\tc@llx=\dimen325
+\tc@lly=\dimen326
+\tc@urx=\dimen327
+\tc@ury=\dimen328
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen329
+\adjbox@Height=\dimen330
+\adjbox@Depth=\dimen331
+\adjbox@Totalheight=\dimen332
+\adjbox@pwidth=\dimen333
+\adjbox@pheight=\dimen334
+\adjbox@pdepth=\dimen335
+\adjbox@ptotalheight=\dimen336
+
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count515
+)
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box86
+\sift@deathcycles=\count516
+\@vwid@loff=\dimen337
+\@vwid@roff=\dimen338
+)))
+\glswrite=\write7
+\glo@main@file=\write8
+\openout8 = `CONC_B2.glo'.
+
+Package glossaries Info: Writing glossary file CONC_B2.glo on input line 44.
+\glo@acronym@file=\write9
+\openout9 = `CONC_B2.acn'.
+
+Package glossaries Info: Writing glossary file CONC_B2.acn on input line 44.
+
+(./glossary.tex) (./acronyms.tex)
+runsystem(which pygmentize && touch CONC_B2.aex)...executed.
+
+runsystem(rm CONC_B2.aex)...executed.
+
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+ (build/CONC_B2.aux)
+\openout1 = `CONC_B2.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Info: Redefining \degres on input line 60.
+Package french.ldf Info: Setting StandardItemizeEnv=true for
+(french.ldf)             compatibility with enumitem package,
+(french.ldf)             reported on input line 60.
+Package french.ldf Info: Setting StandardEnumerateEnv=true for
+(french.ldf)             compatibility with enumitem package,
+(french.ldf)             reported on input line 60.
+LaTeX Info: Redefining \up on input line 60.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count517
+\scratchdimen=\dimen339
+\scratchbox=\box87
+\nofMPsegments=\count518
+\nofMParguments=\count519
+\everyMPshowfont=\toks61
+\MPscratchCnt=\count520
+\MPscratchDim=\dimen340
+\MPnumerator=\count521
+\makeMPintoPDFobject=\count522
+\everyMPtoPDFconversion=\toks62
+)
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             https://www.ctan.org/pkg/pageslts
+(lastpage)             ! on input line 60.
+Package hyperref Info: Link coloring ON on input line 60.
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count523
+)
+LaTeX Info: Redefining \ref on input line 60.
+LaTeX Info: Redefining \pageref on input line 60.
+LaTeX Info: Redefining \nameref on input line 60.
+
+(build/CONC_B2.out) (build/CONC_B2.out)
+\@outlinefile=\write10
+\openout10 = `CONC_B2.out'.
+
+Package newfloat Info: `float' package detected.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: supertabular package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(85.35826pt, 688.5567pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=688.5567pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-53.91173pt
+* \headheight=42.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=50.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+Package hyperref Warning: Option `pdfdisplaydoctitle' has already been used,
+(hyperref)                setting the option has no effect on input line 60.
+
+Package biblatex Info: Trying to load language 'french'...
+Package biblatex Info: ... file 'french.lbx' found.
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/french.lbx
+File: french.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout6 = `CONC_B2.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'CONC_B2.bbl' found.
+
+(build/CONC_B2.bbl)
+Package biblatex Info: Reference section=0 on input line 60.
+Package biblatex Info: Reference segment=0 on input line 60.
+<../../../communs/figures//logoEseo.png, id=248, 409.2891pt x 143.8173pt>
+File: ../../../communs/figures//logoEseo.png Graphic file (type png)
+<use ../../../communs/figures//logoEseo.png>
+Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
+line 62.
+(pdftex.def)             Requested size: 142.29155pt x 50.0pt.
+<../../../communs/figures//logoTeam.png, id=250, 317.185pt x 65.24374pt>
+File: ../../../communs/figures//logoTeam.png Graphic file (type png)
+<use ../../../communs/figures//logoTeam.png>
+Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
+line 62.
+(pdftex.def)             Requested size: 442.63786pt x 91.04742pt.
+ [0
+
+\openout7 = `CONC_B2.ist'.
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <build/../../../communs/fig
+ures//logoEseo.png> <build/../../../communs/figures//logoTeam.png>]
+File: ../../../communs/figures//logoTeam.png Graphic file (type png)
+<use ../../../communs/figures//logoTeam.png>
+Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
+line 74.
+(pdftex.def)             Requested size: 72.92197pt x 15.0pt.
+File: ../../../communs/figures//logoEseo.png Graphic file (type png)
+<use ../../../communs/figures//logoEseo.png>
+Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
+line 74.
+(pdftex.def)             Requested size: 42.68622pt x 15.0pt.
+ [1
+
+] (build/CONC_B2.toc
+File: ../../../communs/figures//logoTeam.png Graphic file (type png)
+<use ../../../communs/figures//logoTeam.png>
+Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
+line 49.
+(pdftex.def)             Requested size: 72.92197pt x 15.0pt.
+File: ../../../communs/figures//logoEseo.png Graphic file (type png)
+<use ../../../communs/figures//logoEseo.png>
+Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
+line 49.
+(pdftex.def)             Requested size: 42.68622pt x 15.0pt.
+ [2
+
+
+])
+\tf@toc=\write11
+\openout11 = `CONC_B2.toc'.
+
+
+(./sections/1.Introduction/introduction.tex
+File: ../../../communs/figures//logoTeam.png Graphic file (type png)
+<use ../../../communs/figures//logoTeam.png>
+Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
+line 1.
+(pdftex.def)             Requested size: 72.92197pt x 15.0pt.
+File: ../../../communs/figures//logoEseo.png Graphic file (type png)
+<use ../../../communs/figures//logoEseo.png>
+Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
+line 1.
+(pdftex.def)             Requested size: 42.68622pt x 15.0pt.
+ [3]
+(./sections/1.Introduction/1.1.objet.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--8
+
+ []
+
+) (./sections/1.Introduction/1.2.portee.tex)
+(./sections/1.Introduction/1.3.definitionsAcronymesEtAbreviations.tex
+File: ../../../communs/figures//logoTeam.png Graphic file (type png)
+<use ../../../communs/figures//logoTeam.png>
+Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
+line 1.
+(pdftex.def)             Requested size: 72.92197pt x 15.0pt.
+File: ../../../communs/figures//logoEseo.png Graphic file (type png)
+<use ../../../communs/figures//logoEseo.png>
+Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
+line 1.
+(pdftex.def)             Requested size: 42.68622pt x 15.0pt.
+ [4
+
+]
+(build/CONC_B2.acr)) (./sections/1.Introduction/1.4.vueEnsemble.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--1
+
+ []
+
+File: ../../../communs/figures//logoTeam.png Graphic file (type png)
+<use ../../../communs/figures//logoTeam.png>
+Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
+line 1.
+(pdftex.def)             Requested size: 72.92197pt x 15.0pt.
+File: ../../../communs/figures//logoEseo.png Graphic file (type png)
+<use ../../../communs/figures//logoEseo.png>
+Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
+line 1.
+(pdftex.def)             Requested size: 42.68622pt x 15.0pt.
+[5]) (./sections/1.Introduction/1.5.version.tex
+File: ../../../communs/figures//logoTeam.png Graphic file (type png)
+<use ../../../communs/figures//logoTeam.png>
+Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
+line 1.
+(pdftex.def)             Requested size: 72.92197pt x 15.0pt.
+File: ../../../communs/figures//logoEseo.png Graphic file (type png)
+<use ../../../communs/figures//logoEseo.png>
+Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
+line 1.
+(pdftex.def)             Requested size: 42.68622pt x 15.0pt.
+ [6]))
+(./sections/2.ConceptionGenerale/conceptionGenerale.tex
+File: ../../../communs/figures//logoTeam.png Graphic file (type png)
+<use ../../../communs/figures//logoTeam.png>
+Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
+line 3.
+(pdftex.def)             Requested size: 72.92197pt x 15.0pt.
+File: ../../../communs/figures//logoEseo.png Graphic file (type png)
+<use ../../../communs/figures//logoEseo.png>
+Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
+line 3.
+(pdftex.def)             Requested size: 42.68622pt x 15.0pt.
+ [7]
+(../animUML/conceptionGenerale/conceptionGenerale-macros.tex)
+<../animUML/conceptionGenerale/conceptionGenerale-context.pdf, id=372, 1685.547
+18pt x 1239.12938pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-context.pdf Graphic file
+ (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-context.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-conte
+xt.pdf  used on input line 13.
+(pdftex.def)             Requested size: 842.77153pt x 619.56317pt.
+
+(./sections/2.ConceptionGenerale/descriptionArchiCand/description_archi_candi.t
+ex)
+<../animUML/conceptionGenerale/conceptionGenerale-sequence-CU1_INIT.pdf, id=374
+, 1014.35014pt x 415.23491pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-sequence-CU1_INIT.pdf Gr
+aphic file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-sequence-CU1_INIT.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-seque
+nce-CU1_INIT.pdf  used on input line 24.
+(pdftex.def)             Requested size: 507.17383pt x 207.61694pt.
+File: ../../../communs/figures//logoTeam.png Graphic file (type png)
+<use ../../../communs/figures//logoTeam.png>
+Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
+line 28.
+(pdftex.def)             Requested size: 72.92197pt x 15.0pt.
+File: ../../../communs/figures//logoEseo.png Graphic file (type png)
+<use ../../../communs/figures//logoEseo.png>
+Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
+line 28.
+(pdftex.def)             Requested size: 42.68622pt x 15.0pt.
+ [8
+
+ <../animUML/conceptionGenerale/conceptionGenerale-context.pdf>]
+(./sections/2.ConceptionGenerale/descriptionSeq/description_CU1_INIT.tex)
+<../animUML/conceptionGenerale/conceptionGenerale-sequence-CU2_MAJ_EXPLO.pdf, i
+d=395, 510.93913pt x 385.1224pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-sequence-CU2_MAJ_EXPLO.p
+df Graphic file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-sequence-CU2_MAJ_EXPLO.pd
+f>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-seque
+nce-CU2_MAJ_EXPLO.pdf  used on input line 33.
+(pdftex.def)             Requested size: 255.46893pt x 192.56073pt.
+
+(./sections/2.ConceptionGenerale/descriptionSeq/description_CU2_MAJ_EXPLO.tex)
+<../animUML/conceptionGenerale/conceptionGenerale-sequence-CU3_LANCER_EXPLO.pdf
+, id=397, 1475.3243pt x 576.0192pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-sequence-CU3_LANCER_EXPL
+O.pdf Graphic file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-sequence-CU3_LANCER_EXPLO
+.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-seque
+nce-CU3_LANCER_EXPLO.pdf  used on input line 42.
+(pdftex.def)             Requested size: 737.66035pt x 288.0089pt.
+File: ../../../communs/figures//logoTeam.png Graphic file (type png)
+<use ../../../communs/figures//logoTeam.png>
+Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
+line 46.
+(pdftex.def)             Requested size: 72.92197pt x 15.0pt.
+File: ../../../communs/figures//logoEseo.png Graphic file (type png)
+<use ../../../communs/figures//logoEseo.png>
+Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
+line 46.
+(pdftex.def)             Requested size: 42.68622pt x 15.0pt.
+
+[9 <../animUML/conceptionGenerale/conceptionGenerale-sequence-CU1_INIT.pdf> <..
+/animUML/conceptionGenerale/conceptionGenerale-sequence-CU2_MAJ_EXPLO.pdf
+
+pdfTeX warning: pdflatex (file ../animUML/conceptionGenerale/conceptionGenerale
+-sequence-CU2_MAJ_EXPLO.pdf): PDF inclusion: multiple pdfs with page group incl
+uded in a single page
+>]
+(./sections/2.ConceptionGenerale/descriptionSeq/description_CU3_LANCER_EXPLO.te
+x)
+<../animUML/conceptionGenerale/conceptionGenerale-sequence-CU4_EXPLORER.pdf, id
+=420, 1076.61598pt x 418.24615pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-sequence-CU4_EXPLORER.pd
+f Graphic file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-sequence-CU4_EXPLORER.pdf
+>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-seque
+nce-CU4_EXPLORER.pdf  used on input line 51.
+(pdftex.def)             Requested size: 538.30669pt x 209.12256pt.
+ (./sections/2.ConceptionGenerale/descriptionSeq/description_CU4_EXPLORER.tex)
+<../animUML/conceptionGenerale/conceptionGenerale-sequence-CU5_ETEINDRE_MARCO.p
+df, id=422, 497.37675pt x 324.8974pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-sequence-CU5_ETEINDRE_MA
+RCO.pdf Graphic file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-sequence-CU5_ETEINDRE_MAR
+CO.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-seque
+nce-CU5_ETEINDRE_MARCO.pdf  used on input line 60.
+(pdftex.def)             Requested size: 248.68776pt x 162.4483pt.
+
+(./sections/2.ConceptionGenerale/descriptionSeq/description_CU5_ETEINDRE_MARCO.
+tex)
+<../animUML/conceptionGenerale/conceptionGenerale-sequence-CU6_DEPLACEMENT_MANU
+EL.pdf, id=424, 546.25662pt x 264.67241pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-sequence-CU6_DEPLACEMENT
+_MANUEL.pdf Graphic file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-sequence-CU6_DEPLACEMENT_
+MANUEL.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-seque
+nce-CU6_DEPLACEMENT_MANUEL.pdf  used on input line 69.
+(pdftex.def)             Requested size: 273.12764pt x 132.33588pt.
+File: ../../../communs/figures//logoTeam.png Graphic file (type png)
+<use ../../../communs/figures//logoTeam.png>
+Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
+line 73.
+(pdftex.def)             Requested size: 72.92197pt x 15.0pt.
+File: ../../../communs/figures//logoEseo.png Graphic file (type png)
+<use ../../../communs/figures//logoEseo.png>
+Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
+line 73.
+(pdftex.def)             Requested size: 42.68622pt x 15.0pt.
+ [10 <../animUML/conceptionGenerale/conceptionGenerale-sequence-CU3_LANCER_EXPL
+O.pdf> <../animUML/conceptionGenerale/conceptionGenerale-sequence-CU4_EXPLORER.
+pdf
+
+pdfTeX warning: pdflatex (file ../animUML/conceptionGenerale/conceptionGenerale
+-sequence-CU4_EXPLORER.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <../animUML/conceptionGenerale/conceptionGenerale-sequence-CU5_ETEINDRE_MARCO
+.pdf
+
+pdfTeX warning: pdflatex (file ../animUML/conceptionGenerale/conceptionGenerale
+-sequence-CU5_ETEINDRE_MARCO.pdf): PDF inclusion: multiple pdfs with page group
+ included in a single page
+>]
+(./sections/2.ConceptionGenerale/descriptionSeq/description_CU6_DEPLACEMENT_MAN
+UEL.tex)
+<../animUML/conceptionGenerale/conceptionGenerale-datatypes.pdf, id=460, 335.00
+156pt x 234.8775pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-datatypes.pdf Graphic fi
+le (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-datatypes.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-datat
+ypes.pdf  used on input line 81.
+(pdftex.def)             Requested size: 167.50037pt x 117.43846pt.
+File: ../../../communs/figures//logoTeam.png Graphic file (type png)
+<use ../../../communs/figures//logoTeam.png>
+Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
+line 94.
+(pdftex.def)             Requested size: 72.92197pt x 15.0pt.
+File: ../../../communs/figures//logoEseo.png Graphic file (type png)
+<use ../../../communs/figures//logoEseo.png>
+Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
+line 94.
+(pdftex.def)             Requested size: 42.68622pt x 15.0pt.
+ [11 <../animUML/conceptionGenerale/conceptionGenerale-sequence-CU6_DEPLACEMENT
+_MANUEL.pdf> <../animUML/conceptionGenerale/conceptionGenerale-datatypes.pdf
+
+pdfTeX warning: pdflatex (file ../animUML/conceptionGenerale/conceptionGenerale
+-datatypes.pdf): PDF inclusion: multiple pdfs with page group included in a sin
+gle page
+>]
+<../animUML/conceptionGenerale/conceptionGenerale-classes.pdf, id=489, 947.0381
+3pt x 976.39781pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-classes.pdf Graphic file
+ (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-classes.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
+es.pdf  used on input line 104.
+(pdftex.def)             Requested size: 473.5179pt x 488.19771pt.
+File: ../../../communs/figures//logoTeam.png Graphic file (type png)
+<use ../../../communs/figures//logoTeam.png>
+Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
+line 108.
+(pdftex.def)             Requested size: 72.92197pt x 15.0pt.
+File: ../../../communs/figures//logoEseo.png Graphic file (type png)
+<use ../../../communs/figures//logoEseo.png>
+Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
+line 108.
+(pdftex.def)             Requested size: 42.68622pt x 15.0pt.
+ [12]
+<../animUML/conceptionGenerale/conceptionGenerale-class-User.pdf, id=497, 50.43
+843pt x 41.4047pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-class-User.pdf Graphic f
+ile (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-class-User.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
+-User.pdf  used on input line 115.
+(pdftex.def)             Requested size: 25.21915pt x 20.70229pt.
+ (./sections/2.ConceptionGenerale/descriptionClass/description_User.tex)
+File: ../../../communs/figures//logoTeam.png Graphic file (type png)
+<use ../../../communs/figures//logoTeam.png>
+Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
+line 122.
+(pdftex.def)             Requested size: 72.92197pt x 15.0pt.
+File: ../../../communs/figures//logoEseo.png Graphic file (type png)
+<use ../../../communs/figures//logoEseo.png>
+Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
+line 122.
+(pdftex.def)             Requested size: 42.68622pt x 15.0pt.
+[13 <../animUML/conceptionGenerale/conceptionGenerale-classes.pdf> <../animUML/
+conceptionGenerale/conceptionGenerale-class-User.pdf
+
+pdfTeX warning: pdflatex (file ../animUML/conceptionGenerale/conceptionGenerale
+-class-User.pdf): PDF inclusion: multiple pdfs with page group included in a si
+ngle page
+>]
+<../animUML/conceptionGenerale/conceptionGenerale-class-GUIPhone.pdf, id=532, 3
+30.48468pt x 182.18062pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-class-GUIPhone.pdf Graph
+ic file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-class-GUIPhone.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
+-GUIPhone.pdf  used on input line 130.
+(pdftex.def)             Requested size: 165.24193pt x 91.09007pt.
+ (./sections/2.ConceptionGenerale/descriptionClass/description_GUIPhone.tex)
+Overfull \hbox (1.66095pt too wide) in paragraph at lines 139--139
+[]\T1/cmr/bx/n/10.95 displayScreen(screen_id : ES-creen) \T1/cmr/m/n/10.95 --- 
+Mé-thode per-me-tant l'af-fi-chage des di-vers écrans
+ []
+
+File: ../../../communs/figures//logoTeam.png Graphic file (type png)
+<use ../../../communs/figures//logoTeam.png>
+Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
+line 139.
+(pdftex.def)             Requested size: 72.92197pt x 15.0pt.
+File: ../../../communs/figures//logoEseo.png Graphic file (type png)
+<use ../../../communs/figures//logoEseo.png>
+Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
+line 139.
+(pdftex.def)             Requested size: 42.68622pt x 15.0pt.
+[14 <../animUML/conceptionGenerale/conceptionGenerale-class-GUIPhone.pdf>]
+<../animUML/conceptionGenerale/conceptionGenerale-GUIPhone-SM.pdf, id=545, 907.
+89188pt x 540.51938pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-GUIPhone-SM.pdf Graphic 
+file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-GUIPhone-SM.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-GUIPh
+one-SM.pdf  used on input line 143.
+(pdftex.def)             Requested size: 453.94482pt x 270.25902pt.
+
+(./sections/2.ConceptionGenerale/descriptionMAE/description_MAE_GUIPhone.tex)
+<../animUML/conceptionGenerale/conceptionGenerale-class-NetworkPhone.pdf, id=54
+8, 115.18031pt x 46.67438pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-class-NetworkPhone.pdf G
+raphic file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-class-NetworkPhone.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
+-NetworkPhone.pdf  used on input line 154.
+(pdftex.def)             Requested size: 57.59pt x 23.33711pt.
+
+(./sections/2.ConceptionGenerale/descriptionClass/description_NetworkPhone.tex)
+<../animUML/conceptionGenerale/conceptionGenerale-class-NetworkRobot.pdf, id=55
+0, 97.86563pt x 46.67438pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-class-NetworkRobot.pdf G
+raphic file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-class-NetworkRobot.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
+-NetworkRobot.pdf  used on input line 169.
+(pdftex.def)             Requested size: 48.93268pt x 23.33711pt.
+(./sections/2.ConceptionGenerale/descriptionClass/description_NetworkRobot.tex
+File: ../../../communs/figures//logoTeam.png Graphic file (type png)
+<use ../../../communs/figures//logoTeam.png>
+Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
+line 1.
+(pdftex.def)             Requested size: 72.92197pt x 15.0pt.
+File: ../../../communs/figures//logoEseo.png Graphic file (type png)
+<use ../../../communs/figures//logoEseo.png>
+Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
+line 1.
+(pdftex.def)             Requested size: 42.68622pt x 15.0pt.
+
+[15 <../animUML/conceptionGenerale/conceptionGenerale-GUIPhone-SM.pdf> <../anim
+UML/conceptionGenerale/conceptionGenerale-class-NetworkPhone.pdf
+
+pdfTeX warning: pdflatex (file ../animUML/conceptionGenerale/conceptionGenerale
+-class-NetworkPhone.pdf): PDF inclusion: multiple pdfs with page group included
+ in a single page
+>])
+<../animUML/conceptionGenerale/conceptionGenerale-class-Archivist.pdf, id=572, 
+178.41656pt x 46.67438pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-class-Archivist.pdf Grap
+hic file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-class-Archivist.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
+-Archivist.pdf  used on input line 184.
+(pdftex.def)             Requested size: 89.20805pt x 23.33711pt.
+ (./sections/2.ConceptionGenerale/descriptionClass/description_Archivist.tex)
+<../animUML/conceptionGenerale/conceptionGenerale-class-UIRobot.pdf, id=574, 29
+2.09125pt x 76.03406pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-class-UIRobot.pdf Graphi
+c file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-class-UIRobot.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
+-UIRobot.pdf  used on input line 199.
+(pdftex.def)             Requested size: 146.04526pt x 38.01692pt.
+ (./sections/2.ConceptionGenerale/descriptionClass/description_UIRobot.tex)
+File: ../../../communs/figures//logoTeam.png Graphic file (type png)
+<use ../../../communs/figures//logoTeam.png>
+Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
+line 208.
+(pdftex.def)             Requested size: 72.92197pt x 15.0pt.
+File: ../../../communs/figures//logoEseo.png Graphic file (type png)
+<use ../../../communs/figures//logoEseo.png>
+Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
+line 208.
+(pdftex.def)             Requested size: 42.68622pt x 15.0pt.
+
+[16 <../animUML/conceptionGenerale/conceptionGenerale-class-NetworkRobot.pdf> <
+../animUML/conceptionGenerale/conceptionGenerale-class-Archivist.pdf
+
+pdfTeX warning: pdflatex (file ../animUML/conceptionGenerale/conceptionGenerale
+-class-Archivist.pdf): PDF inclusion: multiple pdfs with page group included in
+ a single page
+> <../animUML/conceptionGenerale/conceptionGenerale-class-UIRobot.pdf
+
+pdfTeX warning: pdflatex (file ../animUML/conceptionGenerale/conceptionGenerale
+-class-UIRobot.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+>]
+<../animUML/conceptionGenerale/conceptionGenerale-class-AlgoManager.pdf, id=605
+, 188.95593pt x 56.46094pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-class-AlgoManager.pdf Gr
+aphic file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-class-AlgoManager.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
+-AlgoManager.pdf  used on input line 214.
+(pdftex.def)             Requested size: 94.47772pt x 28.2304pt.
+
+(./sections/2.ConceptionGenerale/descriptionClass/description_AlgoManager.tex)
+<../animUML/conceptionGenerale/conceptionGenerale-class-Driver.pdf, id=607, 217
+.5628pt x 94.85437pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-class-Driver.pdf Graphic
+ file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-class-Driver.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
+-Driver.pdf  used on input line 229.
+(pdftex.def)             Requested size: 108.78113pt x 47.42706pt.
+
+(./sections/2.ConceptionGenerale/descriptionClass/description_Driver.tex)
+<../animUML/conceptionGenerale/conceptionGenerale-Driver-SM.pdf, id=608, 488.57
+532pt x 460.72125pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-Driver-SM.pdf Graphic fi
+le (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-Driver-SM.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-Drive
+r-SM.pdf  used on input line 242.
+(pdftex.def)             Requested size: 244.28706pt x 230.36006pt.
+File: ../../../communs/figures//logoTeam.png Graphic file (type png)
+<use ../../../communs/figures//logoTeam.png>
+Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
+line 246.
+(pdftex.def)             Requested size: 72.92197pt x 15.0pt.
+File: ../../../communs/figures//logoEseo.png Graphic file (type png)
+<use ../../../communs/figures//logoEseo.png>
+Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
+line 246.
+(pdftex.def)             Requested size: 42.68622pt x 15.0pt.
+
+[17 <../animUML/conceptionGenerale/conceptionGenerale-class-AlgoManager.pdf> <.
+./animUML/conceptionGenerale/conceptionGenerale-class-Driver.pdf
+
+pdfTeX warning: pdflatex (file ../animUML/conceptionGenerale/conceptionGenerale
+-class-Driver.pdf): PDF inclusion: multiple pdfs with page group included in a 
+single page
+>] (./sections/2.ConceptionGenerale/descriptionMAE/description_MAE_Driver.tex)
+<../animUML/conceptionGenerale/conceptionGenerale-class-Explorer.pdf, id=631, 3
+30.48468pt x 114.4275pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-class-Explorer.pdf Graph
+ic file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-class-Explorer.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
+-Explorer.pdf  used on input line 253.
+(pdftex.def)             Requested size: 165.24193pt x 57.21361pt.
+
+(./sections/2.ConceptionGenerale/descriptionClass/description_Explorer.tex)
+<../animUML/conceptionGenerale/conceptionGenerale-class-Radar.pdf, id=633, 89.5
+8469pt x 46.67438pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-class-Radar.pdf Graphic 
+file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-class-Radar.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
+-Radar.pdf  used on input line 268.
+(pdftex.def)             Requested size: 44.79222pt x 23.33711pt.
+File: ../../../communs/figures//logoTeam.png Graphic file (type png)
+<use ../../../communs/figures//logoTeam.png>
+Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
+line 271.
+(pdftex.def)             Requested size: 72.92197pt x 15.0pt.
+File: ../../../communs/figures//logoEseo.png Graphic file (type png)
+<use ../../../communs/figures//logoEseo.png>
+Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
+line 271.
+(pdftex.def)             Requested size: 42.68622pt x 15.0pt.
+
+[18 <../animUML/conceptionGenerale/conceptionGenerale-Driver-SM.pdf> <../animUM
+L/conceptionGenerale/conceptionGenerale-class-Explorer.pdf
+
+pdfTeX warning: pdflatex (file ../animUML/conceptionGenerale/conceptionGenerale
+-class-Explorer.pdf): PDF inclusion: multiple pdfs with page group included in 
+a single page
+>] (./sections/2.ConceptionGenerale/descriptionClass/description_Radar.tex)
+<../animUML/conceptionGenerale/conceptionGenerale-class-Mapper.pdf, id=656, 94.
+10156pt x 56.46094pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-class-Mapper.pdf Graphic
+ file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-class-Mapper.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
+-Mapper.pdf  used on input line 283.
+(pdftex.def)             Requested size: 47.05066pt x 28.2304pt.
+
+(./sections/2.ConceptionGenerale/descriptionClass/description_Mapper.tex)
+<../animUML/conceptionGenerale/conceptionGenerale-class-Locator.pdf, id=658, 13
+5.50626pt x 66.2475pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-class-Locator.pdf Graphi
+c file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-class-Locator.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
+-Locator.pdf  used on input line 298.
+(pdftex.def)             Requested size: 67.75294pt x 33.12366pt.
+
+(./sections/2.ConceptionGenerale/descriptionClass/description_Locator.tex)
+<../animUML/conceptionGenerale/conceptionGenerale-class-Robot.pdf, id=660, 50.4
+3843pt x 41.4047pt>
+File: ../animUML/conceptionGenerale/conceptionGenerale-class-Robot.pdf Graphic 
+file (type pdf)
+<use ../animUML/conceptionGenerale/conceptionGenerale-class-Robot.pdf>
+Package pdftex.def Info: ../animUML/conceptionGenerale/conceptionGenerale-class
+-Robot.pdf  used on input line 313.
+(pdftex.def)             Requested size: 25.21915pt x 20.70229pt.
+File: ../../../communs/figures//logoTeam.png Graphic file (type png)
+<use ../../../communs/figures//logoTeam.png>
+Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
+line 316.
+(pdftex.def)             Requested size: 72.92197pt x 15.0pt.
+File: ../../../communs/figures//logoEseo.png Graphic file (type png)
+<use ../../../communs/figures//logoEseo.png>
+Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
+line 316.
+(pdftex.def)             Requested size: 42.68622pt x 15.0pt.
+
+[19 <../animUML/conceptionGenerale/conceptionGenerale-class-Radar.pdf> <../anim
+UML/conceptionGenerale/conceptionGenerale-class-Mapper.pdf
+
+pdfTeX warning: pdflatex (file ../animUML/conceptionGenerale/conceptionGenerale
+-class-Mapper.pdf): PDF inclusion: multiple pdfs with page group included in a 
+single page
+> <../animUML/conceptionGenerale/conceptionGenerale-class-Locator.pdf
+
+pdfTeX warning: pdflatex (file ../animUML/conceptionGenerale/conceptionGenerale
+-class-Locator.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+>] (./sections/2.ConceptionGenerale/descriptionClass/description_Robot.tex))
+(./sections/3.ConceptionDetaillee/conceptionDetaillee.tex
+(./sections/3.ConceptionDetaillee/3.1.architecturePhysique.tex)
+(./sections/3.ConceptionDetaillee/3.2.descriptionDesClasses.tex))
+(./sections/4.dictionnaireDuDomaine.tex
+File: ../../../communs/figures//logoTeam.png Graphic file (type png)
+<use ../../../communs/figures//logoTeam.png>
+Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
+line 1.
+(pdftex.def)             Requested size: 72.92197pt x 15.0pt.
+File: ../../../communs/figures//logoEseo.png Graphic file (type png)
+<use ../../../communs/figures//logoEseo.png>
+Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
+line 1.
+(pdftex.def)             Requested size: 42.68622pt x 15.0pt.
+ [20 <../animUML/conceptionGenerale/conceptionGenerale-class-Robot.pdf>] (build
+/CONC_B2.gls
+Underfull \hbox (badness 10000) in paragraph at lines 1--2
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--2
+
+ []
+
+))
+File: ../../../communs/figures//logoTeam.png Graphic file (type png)
+<use ../../../communs/figures//logoTeam.png>
+Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
+line 98.
+(pdftex.def)             Requested size: 72.92197pt x 15.0pt.
+File: ../../../communs/figures//logoEseo.png Graphic file (type png)
+<use ../../../communs/figures//logoEseo.png>
+Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
+line 98.
+(pdftex.def)             Requested size: 42.68622pt x 15.0pt.
+ [21
+
+] (build/CONC_B2.lof)
+\tf@lof=\write12
+\openout12 = `CONC_B2.lof'.
+
+ 
+AED: lastpage setting LastPage
+File: ../../../communs/figures//logoTeam.png Graphic file (type png)
+<use ../../../communs/figures//logoTeam.png>
+Package pdftex.def Info: ../../../communs/figures//logoTeam.png  used on input 
+line 100.
+(pdftex.def)             Requested size: 72.92197pt x 15.0pt.
+File: ../../../communs/figures//logoEseo.png Graphic file (type png)
+<use ../../../communs/figures//logoEseo.png>
+Package pdftex.def Info: ../../../communs/figures//logoEseo.png  used on input 
+line 100.
+(pdftex.def)             Requested size: 42.68622pt x 15.0pt.
+[22
+
+] (build/CONC_B2.aux)
+Package rerunfilecheck Info: File `CONC_B2.out' has not changed.
+(rerunfilecheck)             Checksum: 34D6033BC709C445974431235DD37E0E;8810.
+Package logreq Info: Writing requests to 'CONC_B2.run.xml'.
+\openout1 = `CONC_B2.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 46108 strings out of 480177
+ 912105 string characters out of 5893867
+ 1707378 words of memory out of 5000000
+ 63061 multiletter control sequences out of 15000+600000
+ 481241 words of font info for 52 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 121i,16n,119p,1456b,2198s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/lucas/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600
+pk> </home/lucas/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.60
+0pk> </home/lucas/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.6
+00pk> </home/lucas/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.
+600pk> </home/lucas/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728
+.600pk> </home/lucas/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm109
+5.600pk> </home/lucas/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm10
+95.600pk> </home/lucas/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1
+095.600pk> </home/lucas/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx
+1440.600pk> </home/lucas/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecb
+x2074.600pk>
+Output written on build/CONC_B2.pdf (23 pages, 416532 bytes).
+PDF statistics:
+ 1133 PDF objects out of 1200 (max. 8388607)
+ 698 compressed objects within 7 object streams
+ 125 named destinations out of 1000 (max. 500000)
+ 623 words of extra memory for PDF output out of 10000 (max. 10000000)
+

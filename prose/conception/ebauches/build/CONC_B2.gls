@@ -1,0 +1,17 @@
+\glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
+\begin{theglossary}\glossaryheader
+\glsgroupheading{C}\relax \glsresetentrylist %
+\glossentry{Entreprise cliente}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsignore{5}\delimN 
+		\setentrycounter[]{page}\glsignore{21}}}\glsgroupskip
+\glsgroupheading{M}\relax \glsresetentrylist %
+\glossentry{MARCO}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{4}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{7}}}%
+\glossentry{M_CTRL}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsignore{5}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{7}}}%
+\glossentry{M_EMB}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsignore{5}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{6\delimN 7}}}%
+\end{theglossary}\glossarypostamble

@@ -1,0 +1,4 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'build/CONC_B2.blg'
+[47] biber:340> INFO - === mer. avril 19, 2023, 16:44:21
+[55] Biber.pm:418> INFO - Reading 'build/CONC_B2.bcf'
