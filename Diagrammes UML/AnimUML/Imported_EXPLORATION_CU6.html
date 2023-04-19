@@ -56,6 +56,7 @@
 					stopMARCO()															''volonté d'extinction global du SAE
 					askMove(direction : EDirection)										''ordre de mouvement dans une direction "direction " et de type EDirection cette méthode est intimement lié au joystick
 					setConfirmationStatus()												''informe de l'etat de la connection
+					setExplorationStatus(StatusEnum: status)	
 					-displayConnectionState(connection_state : EConnectionState)		'' affichage de l'état de connection à Robot sur Phone via un logo sur l'écran l'état du logo est définie par la variable connection_state qui est du type EConnectionState
 					-stopMCTRL()														''ordre d'arret du logiciel embarquer M_CTRL
 					-displayScreen(screen_id : EScreen)									''méthode permetant l'affichage des divers écrans de PHONE le paramètre screen_id est une énumération de type EScreen
@@ -159,22 +160,8 @@
 					class: "GUIPhone",
 					isActor: false,
 					behavior: String.raw`
-/'
-						state "Sync" as Sync {
-						}
-						state "WaitInteract" as WaitInteract {
-						}
-						state "AffMetricParam" as AffMetricParam {
-						}
-						state "WaitMetricFill" as WaitMetricFill {
-						}
-						state "Manual" as Manual {
-						}
-						state "Exploration" as Exploration {
-						}
-'/
 						WaitInteract : entry /displayScreen(EScreen::MainScreen)
-						WaitInteract : moveOrder(move) /Driver.moveOrder(move)
+						WaitInteract : askMove(move) /Driver.moveOrder(move)
 						Exploration: after(t_sync)/displayMap()	
 
 						
@@ -185,22 +172,17 @@
 
 
 						WaitInteract -> AffMetricParam as "lancementDeLaCu2" : accessMetricsParams() / displayScreen(MetricsParamsScreen)
-						AffMetricParam -> WaitInteract as "TypeChoisie" :  quiter le menu d'envois 
-						AffMetricParam -> AffMetricParam as "Valeursrecu" :setEndCriteria(critere)/ Explorer.setEndCriteria(critere)
-/'
-						WaitInteract -> moveChoice as "passageEnControleManuel" : askMove(move)
-						Manual -> moveChoice : askMove(move)
-						moveChoice -> WaitInteract : [move == EMove::STOP]/moveOrder(move)
-						moveChoice -> Manual : [else] / moveOrder(move)
-'/
+						AffMetricParam -> WaitInteract as "TypeChoisie" :  exitMetricsParams()
+						AffMetricParam -> AffMetricParam as "Valeursrecu" :setEndCriteria(criteria, isEnable, value)	/ Explorer.setEndCriteria(criteria, isEnable, value)
 
+						ExplorationInit -> 	Exploration :  setExploAlgorithm(explo_algorithm)/setUsedAlgo(explo_algorithm);displayConnectionState(EConnectionState::EXPLORATING);displayScreen(EScreen::MainScreen)
 						WaitInteract -> ExplorationInit as "passe en explo" :  startExplo()/displayScreen(ExploSelectionScreen)
-						ExplorationInit -> 	Exploration :  setExploAlgorithm(explo_algorithm)/setUsedAlgo(explo_algorithm);displayConnectionState(EConnectionState::EXPLORATING)
+						
 
-						Exploration -> exploChoice : setExploInfo(status)
+						Exploration -> exploChoice : setExplorationStatus(StatusEnum)
 						
 						exploChoice --> WaitInteract : [status == StatusEnum::FINISHED]
-						exploChoice -> Exploration : [status == StatusEnum::Running]
+						exploChoice -> Exploration : [status == StatusEnum::RUNNING]
 						exploChoice -> WaitInteract : [else]
 							'[status == StatusEnum::FAILED]
 						
@@ -305,7 +287,6 @@
 						forward: [
 							"accessMetricsParams()",
 							"setEndCriteria(criteria: EEndCriteria, isEnable: Boolean, value: float)",
-							"setValueCriteria(criteria, value)",
 							"setExploAlgorithm(explo_algorithm)",
 							"startMCTRL",
 							"startExplo",
@@ -371,7 +352,9 @@
 						forward: [
 							"setExploAlgorithm(explo_algorithm)",
 							"setEndCriteria(criteria: EEndCriteria, isEnable: Boolean, value: float)",
-							"getExploInfo()",
+						],
+						reverse:[
+							"setExplorationStatus(StatusEnum: status)",	
 						],
 					},
 				},
