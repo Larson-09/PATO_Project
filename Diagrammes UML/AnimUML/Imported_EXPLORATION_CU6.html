@@ -173,7 +173,11 @@
 						state "Exploration" as Exploration {
 						}
 '/
-						state moveChoice <<choice>>
+						WaitInteract : entry /displayScreen(EScreen::MainScreen)
+						WaitInteract : moveOrder(move) /Driver.moveOrder(move)
+						Exploration: after(t_sync)/displayMap()	
+
+						
 						state exploChoice <<choice>>
 
 						[*] -> Sync as "INIT" : /displayScreen(DisconnectedScreen)
@@ -183,15 +187,15 @@
 						WaitInteract -> AffMetricParam as "lancementDeLaCu2" : accessMetricsParams() / displayScreen(MetricsParamsScreen)
 						AffMetricParam -> WaitInteract as "TypeChoisie" :  quiter le menu d'envois 
 						AffMetricParam -> AffMetricParam as "Valeursrecu" :setEndCriteria(critere)/ Explorer.setEndCriteria(critere)
-
+/'
 						WaitInteract -> moveChoice as "passageEnControleManuel" : askMove(move)
 						Manual -> moveChoice : askMove(move)
-						moveChoice -> WaitInteract : [move == EMove::STOP]
+						moveChoice -> WaitInteract : [move == EMove::STOP]/moveOrder(move)
 						moveChoice -> Manual : [else] / moveOrder(move)
+'/
 
-
-						WaitInteract -> ExplorationInit as "passe en explo" :  startExplo()/setExploAlgorithm(explo_algorithm);displayScreen(ExploSelectionScreen)
-						ExplorationInit -> 	Explore :  setExploAlgorithm(explo_algorithm)/setUsedAlgo(explo_algorithm);displayConnectionState(EConnectionState::EXPLORATING)
+						WaitInteract -> ExplorationInit as "passe en explo" :  startExplo()/displayScreen(ExploSelectionScreen)
+						ExplorationInit -> 	Exploration :  setExploAlgorithm(explo_algorithm)/setUsedAlgo(explo_algorithm);displayConnectionState(EConnectionState::EXPLORATING)
 
 						Exploration -> exploChoice : setExploInfo(status)
 						
