@@ -92,10 +92,12 @@
 
 				class Driver {
 					
-					setExploAlgorithm(explo_algorithm)
+					
 					moveOrder(direction : EDirection)
 					dodgeObstacle()
+					endDodge()
 					executeMove(move: EMove, value: Integer)
+					endMove()
 					-stopMove()
 				}
 
@@ -234,13 +236,13 @@
 
 						Move -> Dodge as "DodgeAuto": dodgeObstacle()
 						Run -> Dodge as "DodgeManuel": dodgeObstacle()
-						Dodge -> choice as "ReturnAuto": obstacleDodged()
+						Dodge -> choice as "ReturnAuto": endDodge()
 
 						choice -> Move as "choice2Idle_1" :   [log("Move")]
 						choice -> Run as "choice2Idle_2" : [else]
 
 						Run -> Standby as "FinManuel": moveOrder(STOP)
-						Move -> Standby as "FinAuto": EndMove
+						Move -> Standby as "FinAuto": endMove()
 
 
 
@@ -427,8 +429,9 @@
 					],
 					possibleMessages: {
 						forward: [
-							"setExploAlgorithm(explo_algorithm)",
-						],
+							"endMove()",
+							"endDodge()",
+					],
 						reverse: [
 							"moveFinished()",
 							"obstacleDodged()",
