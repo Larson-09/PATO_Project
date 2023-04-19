@@ -1,4 +1,8 @@
 <script>
+	// @ts-check
+	/**
+	 * @type {import("./Model.js").Model<false>}
+	 */
 	const model =
 		{
 			name: "EXPLORATION",
@@ -157,6 +161,7 @@
 					class: "GUIPhone",
 					isActor: false,
 					behavior: String.raw`
+/'
 						state "Sync" as Sync {
 						}
 						state "WaitInteract" as WaitInteract {
@@ -169,24 +174,31 @@
 						}
 						state "Exploration" as Exploration {
 						}
+'/
+						state moveChoice <<choice>>
+						state exploChoice <<choice>>
 
-						[*] -> Sync as "INIT" 
+						[*] -> Sync as "INIT"
 						Sync -> WaitInteract as "finDeLINIT" : setConfirmationStatus()
-						
+
 
 						WaitInteract -> AffMetricParam as "lancementDeLaCu2" : accessMetricsParams() / displayScreen(MetricsParamsScreen)
 						AffMetricParam -> WaitMetricFill as "TypeChoisie" : setEndCriteria(critere)
-						WaitMetricFill -> WaitInteract as "Valeursrecu" : setValueCriteria(criteria, value)	
+						WaitMetricFill -> WaitInteract as "Valeursrecu" : setValueCriteria(criteria, value)
 
-						WaitInteract -> Manual as "passageEnControleManuelL" :askMove(LEFT)	
-						WaitInteract -> Manual as "passageEnControleManuelR" :askMove(RIGHT)	
-						WaitInteract -> Manual as "passageEnControleManuelF" :askMove(FORWARD)			
-						Manual -> WaitInteract as "quite le manual" :askMove(STOP)	
+						WaitInteract -> moveChoice as "passageEnControleManuel" : askMove(move)
+						Manual -> moveChoice : askMove(move)
+						moveChoice -> WaitInteract : [move == EMove::STOP]
+						moveChoice -> Manual : [else] / moveOrder(move)
 
 
 						WaitInteract -> Exploration as "passe en explo" : setExploAlgorithm(explo_algorithm)/displayScreen(ExploSelectionScreen) startExplo()
-						Exploration -> WaitInteract as "retours en waitOK" : getExploInfo(FINISHED)  
-						Exploration -> WaitInteract as "retours en waitpasOK" : getExploInfo(FAILED) 
+						Exploration -> exploChoice : setExploInfo(status)
+						
+						exploChoice --> WaitInteract : [status == StatusEnum::FINISHED]
+						exploChoice -> Exploration : [status == StatusEnum::Running]
+						exploChoice -> WaitInteract : [else]
+							'[status == StatusEnum::FAILED]
 						
 						Exploration -> Exploration as "Boucl eTsync" : after(t_sync)/displayMap()	
 
