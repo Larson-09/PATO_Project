@@ -181,8 +181,8 @@
 
 
 						WaitInteract -> AffMetricParam as "lancementDeLaCu2" : accessMetricsParams() / displayScreen(MetricsParamsScreen)
-						AffMetricParam -> WaitMetricFill as "TypeChoisie" : setEndCriteria(critere)
-						WaitMetricFill -> WaitInteract as "Valeursrecu" : setValueCriteria(criteria, value)
+						AffMetricParam -> WaitInteract as "TypeChoisie" :  quiter le menu d'envois 
+						AffMetricParam -> AffMetricParam as "Valeursrecu" :setEndCriteria(critere)/ Explorer.setEndCriteria(critere)
 
 						WaitInteract -> moveChoice as "passageEnControleManuel" : askMove(move)
 						Manual -> moveChoice : askMove(move)
