@@ -46,86 +46,81 @@
 
 				class GUIPhone {
 					
-					respStopRequest(resp : boolean)										         ''informe l'utilisateurs que Robot va s'éteindre
-					displayMap()														         ''affichage de la carte sur l'ecran de PHONE
-					accessMetricsParams()												         ''action de l'utilisateurs visant à accéder au menu des métriques 
-					exitMetricsParams()
-					setEndCriteria(criteria: EEndCriteria, isEnable: Boolean, value: float)		''action de l'utilisateurs visant à selectionner les métriques à utiliser pour la prochaine exploration et d'entrer sa valeur
-					setExploAlgorithm(explo_algorithm)									''action de l'utilisateurs visant a sélectionner l'algorythme d'exploration
-					startExplo()														''action visant à lancer une  exploration
-					startMCTRL()														''ordre de démarage de M_CTRL
-					stopMARCO()															''volonté d'extinction global du SAE
-					setConnection()
-					askMove(direction : EDirection)										''ordre de mouvement dans une direction "direction " et de type EDirection cette méthode est intimement lié au joystick
-					setConfirmationStatus(status :EConnectionState )											''informe de l'etat de la connection
-					setExplorationStatus(StatusEnum: status)	
-					setEmergencieStop()
-					releaseEmergencieStop()
-					-displayConnectionState(connection_state : EConnectionState)		'' affichage de l'état de connection à Robot sur Phone via un logo sur l'écran l'état du logo est définie par la variable connection_state qui est du type EConnectionState
-					-stopMCTRL()														''ordre d'arret du logiciel embarquer M_CTRL
-					-displayScreen(screen_id : EScreen)									''méthode permetant l'affichage des divers écrans de PHONE le paramètre screen_id est une énumération de type EScreen
+					respStopRequest(resp : boolean)										''Informe l'utilisateurs que Robot va s'éteindre
+					displayMap()														''Affichage de la carte sur l'ecran de PHONE
+					accessMetricsParams()												''Action de l'utilisateurs visant à accéder au menu des métriques
+					exitMetricsParams()                                                 ''Sort du menu des paramètres des métriques
+					setEndCriteria(criteria: EEndCriteria, isEnable: Boolean, value: float)		''Action de l'utilisateurs visant à selectionner les métriques à utiliser pour la prochaine exploration et d'entrer sa valeur
+					setExploAlgorithm(explo_algorithm)									''Action de l'utilisateurs visant a sélectionner l'algorythme d'exploration
+					startExplo()														''Action visant à lancer une  exploration
+					startMCTRL()														''Ordre de démarage de M_CTRL
+					stopMARCO()															''Volonté d'extinction global du SAE
+					askMove(direction : EDirection)										''Ordre de mouvement dans une direction "direction " et de type EDirection cette méthode est intimement lié au joystick
+					setConfirmationStatus()												''Informe de l'etat de la connection
+					setExplorationStatus(StatusEnum: status)	                        ''Met à jour l'état de l'exploration sur PHONE en fonction du paramètre status
+					-displayConnectionState(connection_state : EConnectionState)		''Affichage de l'état de connection à Robot sur Phone via un logo sur l'écran l'état du logo est définie par la variable connection_state qui est du type EConnectionState
+					-stopMCTRL()														''Ordre d'arret du logiciel embarquer M_CTRL
+					-displayScreen(screen_id : EScreen)									''Méthode permetant l'affichage des divers écrans de PHONE le paramètre screen_id est une énumération de type EScreen
 					
 				}
 				class NetworkPhone {
-					askConnection()
+					
+					confirmConnection()													''Méthode de confirmation de connection a Robot
 				}
 				class NetworkRobot {
 
-					askConnection()
+					askConnection()                                                     ''Méthode pour demander une connexion à PHONE
 				}
 				class Archivist {
 					
-					saveExplo(explo_save : ExploSave)
+					saveExplo(explo_save : ExploSave)                                   ''Sauvegarde les données de l'exploration courante
 				}
 				class UIRobot {
 					
-					startMEMB()
-					stopMEMB()
-					setConnection()
-					displayConnectionState(connection_state : EConnectionState)
-					-standBy()
+					startMEMB()                                                         ''Démarre le logiciel MEMB
+					stopMEMB()                                                          ''Arrête le logiciel MEMB
+					displayConnectionState(connection_state : EConnectionState)         ''Affiche l'état de la connexion à PHONE sur le Robot
+					-standBy()                                                          ''Met le Robot en mode veille
 				}
 
 				class AlgoManager{
-					setUsedAlgo(explo_algorithm: EAlgo)
-					getMove(): EMove
+					setUsedAlgo(explo_algorithm: EAlgo)                                 ''Définit l'algorithme d'exploration utilisé
+					getMove(): EMove                                                    ''Retourne le prochain mouvement à effectuer selon l'algorithme
 				}
 
 				class Driver {
-					
-					
-					moveOrder(direction : EDirection)
-					dodgeObstacle()
-					endDodge()
-					executeMove(move: EMove, value: Integer)
-					endMove()
-					-stopMove()
+					moveOrder(direction : EDirection)                                   ''Donne un ordre de mouvement dans la direction indiquée
+					dodgeObstacle()                                                     ''Effectue une action pour éviter un obstacle
+					endDodge()                                                          ''Termine l'évitement d'obstacle
+					executeMove(move: EMove, value: Integer)                            ''Exécute le mouvement spécifié avec la valeur indiquée
+					endMove()                                                           ''Termine le mouvement en cours
+					-stopMove()                                                         ''Arrête le mouvement en cours
 				}
 
 				class Explorer {
-					setEndCriteria(criteria: EEndCriteria, isEnable: Boolean, value: float)
-					setExploAlgorithm(explo_algorithm)
-					getExploInfo() : StatusEnum
-					moveFinished()
-					obstacleDodged()
-					-initExploMetrics()
-					-lockMetrics()
-					-updateExploMetrics()
+					setEndCriteria(criteria: EEndCriteria, isEnable: Boolean, value: float) ''Définit les critères de fin d'exploration
+					setExploAlgorithm(explo_algorithm)                                  ''Définit l'algorithme d'exploration à utiliser
+					getExploInfo() : StatusEnum                                         ''Retourne l'état courant de l'exploration
+					moveFinished()                                                      ''Indique que le mouvement en cours est terminé
+					obstacleDodged()                                                    ''Indique que l'obstacle a été évité
+					-initExploMetrics()                                                 ''Initialise les métriques d'exploration
+					-lockMetrics()                                                      ''Verrouille les métriques d'exploration
+					-updateExploMetrics()                                               ''Met à jour les métriques d'exploration
 				}
 				class Radar {
 					
-					getInfo() : info
+					getInfo() : info                                                    ''Retourne les informations recueillies par le radar
 				}
 				class Mapper {
 					
-					getMap() : map
-					-updateMap()
+					getMap() : map                                                      ''Retourne la carte actuelle
+					-updateMap()                                                        ''Met à jour la carte avec les nouvelles informations
 				}
 				class Locator {
 					
-					initStartLocation()
-					getCoords() : Coordinate
-					-updateCoords()
+					initStartLocation()                                                 ''Initialise la position de départ
+					getCoords() : Coordinate                                            ''Retourne les coordonnées actuelles du robot
+					-updateCoords()                                                     ''Met à jour les coordonnées du robot
 				}
 				class Robot <<actor>>{
 				}
@@ -136,10 +131,11 @@
 				GUIPhone  <-->  UIRobot
 				GUIPhone  -->  Explorer
 				GUIPhone  -->  Driver
-				GUIPhone  <->  NetworkPhone
+				GUIPhone  --  NetworkPhone
 				GUIPhone  --  AlgoManager
 				AlgoManager  -->  Explorer
 				AlgoManager  -->  Driver
+				NetworkPhone  <-->  NetworkRobot
 				Explorer  <->  Driver
 				Driver  -->  Radar
 				Radar  <--  Mapper
@@ -149,39 +145,37 @@
 				Locator  --  Robot
 				Driver  -->  Locator
 				UIRobot  --  Mapper
-				UIRobot  <->  NetworkRobot
+				UIRobot  --  NetworkRobot
 			`,
 			objects: [
 				{
-					name: "user",
+					name: "User",
 					class: "User",
 					isActor: true,
 				},
 				{
-					name: "guiPhone",
+					name: "GUIPhone",
 					class: "GUIPhone",
 					isActor: false,
 					behavior: String.raw`
-
-					
-					state NormalRunning{
-						WaitInteract : askMove(move) /driver.moveOrder(move)
+						WaitInteract : entry /displayScreen(EScreen::MainScreen)
+						WaitInteract : askMove(move) /Driver.moveOrder(move)
 						Exploration: after(t_sync)/displayMap()	
 
 						
 						state exploChoice <<choice>>
-						state connectionChoise <<choice>>
 
-						[*] -> WaitInteract :/displayScreen(MainScreen)
+						[*] -> Sync as "INIT" : /displayScreen(DisconnectedScreen)
+						Sync -> WaitInteract as "finDeLINIT" : setConfirmationStatus()/displayConnectionState(EConnectionState::CONNECTED)
 
 
 						WaitInteract -> AffMetricParam as "lancementDeLaCu2" : accessMetricsParams() / displayScreen(MetricsParamsScreen)
 						AffMetricParam -> WaitInteract as "TypeChoisie" :  exitMetricsParams()
-						AffMetricParam -> AffMetricParam as "Valeursrecu" :setEndCriteria(criteria, isEnable, value)	/ explorer.setEndCriteria(criteria, isEnable, value)
+						AffMetricParam -> AffMetricParam as "Valeursrecu" :setEndCriteria(criteria, isEnable, value)	/ Explorer.setEndCriteria(criteria, isEnable, value)
 
 						ExplorationInit -> 	Exploration :  setExploAlgorithm(explo_algorithm)/setUsedAlgo(explo_algorithm);displayConnectionState(EConnectionState::EXPLORATING);displayScreen(EScreen::MainScreen)
 						WaitInteract -> ExplorationInit as "passe en explo" :  startExplo()/displayScreen(ExploSelectionScreen)
-
+						
 
 						Exploration -> exploChoice : setExplorationStatus(StatusEnum)
 						
@@ -190,54 +184,33 @@
 						exploChoice -> WaitInteract : [else]
 							'[status == StatusEnum::FAILED]
 						
-						Exploration -> Exploration as "Boucle eTsync" : after(t_sync)/displayMap()	
-						WaitInteract -> connectionChoise : setConfirmationStatus(status )
-						connectionChoise ->Exploration : [status == EXPLORATING ]
-						connectionChoise ->WaitInteract : [else]
-
-					}
-					state connectChoice <<choice>>
-
-					[*] -> notconnected :
-					notconnected  -> connectChoice :setConfirmationStatus(status )
-					connectChoice -> notconnected : [status ==NOT_CONNECTED]
-					connectChoice -> NormalRunning : [else]/displayConnectionState(EConnectionState::CONNECTED)
-
-					
-					NormalRunning -> connectChoice :setConfirmationStatus(status ) /displayScreen(DisconnectedScreen)
-					
-					NormalRunning -> EmergenciStop : setEmergencieStop()/displayScreen(LockedScreen)
-					EmergenciStop ->  NormalRunning: releaseEmergencieStop()/displayScreen(MainScreen)
-					
-			
-
-
+						Exploration -> Exploration as "Boucl eTsync" : after(t_sync)/displayMap()	
 
 						`,
 				},
 				{
-					name: "networkRobot",
+					name: "NetworkRobot",
 					class: "NetworkRobot",
 					isActor: false,
 				},
 				{
-					name: "archivist",
+					name: "Archivist",
 					class: "Archivist",
 					isActor: false,
 					stereotypes: ["entity"],
 				},
 				{
-					name: "algoManager",
+					name: "AlgoManager",
 					class: "AlgoManager",
 					isActor: false,
 				},
 				{
-					name: "explorer",
+					name: "Explorer",
 					class: "Explorer",
 					isActor: false,
 				},
 				{
-					name: "driver",
+					name: "Driver",
 					class: "Driver",
 					isActor: false,
 					behavior: String.raw`
@@ -250,9 +223,7 @@
 						}
 						state "Run" as Run {
 						}
-						state choice <<choice>>
-							
-						state manuelChoise <<choice>>
+						state "choice" as choice <<choice>>
 						Run : entry / log("Run")
 
 						[*] -> Standby as "Init" :  
@@ -266,43 +237,40 @@
 						choice -> Move as "choice2Idle_1" :   [log("Move")]
 						choice -> Run as "choice2Idle_2" : [else]
 
-						Run -> manuelChoise as "FinManuel": moveOrder(move)
+						Run -> Standby as "FinManuel": moveOrder(STOP)
 						Move -> Standby as "FinAuto": endMove()
-
-						manuelChoise -> Standby : [move == STOP] 
-						manuelChoise -> Run : [else] 
 
 
 
 					`,
 				},
 				{
-					name: "uiRobot",
+					name: "UIRobot",
 					class: "UIRobot",
 					isActor: false,
 				},
 				{
-					name: "networkPhone",
+					name: "NetworkPhone",
 					class: "NetworkPhone",
 					isActor: false,
 				},
 				{
-					name: "mapper",
+					name: "Mapper",
 					class: "Mapper",
 					isActor: false,
 				},
 				{
-					name: "radar",
+					name: "Radar",
 					class: "Radar",
 					isActor: false,
 				},
 				{
-					name: "locator",
+					name: "Locator",
 					class: "Locator",
 					isActor: false,
 				},
 				{
-					name: "robot",
+					name: "Robot",
 					class: "Robot",
 					isActor: true,
 				},
@@ -310,13 +278,12 @@
 			connectorByName: {
 				C1: {
 					ends: [
-						"user",
-						"guiPhone",
+						"User",
+						"GUIPhone",
 					],
 					possibleMessages: {
 						forward: [
 							"accessMetricsParams()",
-							"exitMetricsParams",
 							"setEndCriteria(criteria: EEndCriteria, isEnable: Boolean, value: float)",
 							"setExploAlgorithm(explo_algorithm)",
 							"startMCTRL",
@@ -329,8 +296,8 @@
 				},
 				C2: {
 					ends: [
-						"user",
-						"uiRobot",
+						"User",
+						"UIRobot",
 					],
 					possibleMessages: {
 						forward: [
@@ -340,8 +307,8 @@
 				},
 				C3: {
 					ends: [
-						"guiPhone",
-						"archivist",
+						"GUIPhone",
+						"Archivist",
 					],
 					possibleMessages: {
 						forward: [
@@ -351,13 +318,12 @@
 				},
 				C4: {
 					ends: [
-						"guiPhone",
-						"uiRobot",
+						"GUIPhone",
+						"UIRobot",
 					],
 					possibleMessages: {
 						forward: [
 							"stopMEMB",
-							"displayConnectionState(connection_state : EConnectionState),"
 						],
 						reverse: [
 							"displayMap()",
@@ -366,8 +332,8 @@
 				},
 				C5: {
 					ends: [
-						"guiPhone",
-						"mapper",
+						"GUIPhone",
+						"Mapper",
 					],
 					possibleMessages: {
 						forward: [
@@ -377,8 +343,8 @@
 				},
 				C6: {
 					ends: [
-						"guiPhone",
-						"explorer",
+						"GUIPhone",
+						"Explorer",
 					],
 					possibleMessages: {
 						forward: [
@@ -392,8 +358,8 @@
 				},
 				C7: {
 					ends: [
-						"driver",
-						"radar",
+						"Driver",
+						"Radar",
 					],
 					possibleMessages: {
 						forward: [
@@ -403,8 +369,8 @@
 				},
 				C8: {
 					ends: [
-						"radar",
-						"mapper",
+						"Radar",
+						"Mapper",
 					],
 					possibleMessages: {
 						reverse: [
@@ -414,8 +380,8 @@
 				},
 				C9: {
 					ends: [
-						"mapper",
-						"locator",
+						"Mapper",
+						"Locator",
 					],
 					possibleMessages: {
 						forward: [
@@ -425,20 +391,20 @@
 				},
 				C10: {
 					ends: [
-						"driver",
-						"robot",
+						"Driver",
+						"Robot",
 					],
 				},
 				C11: {
 					ends: [
-						"radar",
-						"robot",
+						"Radar",
+						"Robot",
 					],
 				},
 				C12: {
 					ends: [
-						"driver",
-						"locator",
+						"Driver",
+						"Locator",
 					],
 					possibleMessages: {
 						forward: [
@@ -448,14 +414,14 @@
 				},
 				C13: {
 					ends: [
-						"locator",
-						"robot",
+						"Locator",
+						"Robot",
 					],
 				},
 				C14: {
 					ends: [
-						"explorer",
-						"driver",
+						"Explorer",
+						"Driver",
 					],
 					possibleMessages: {
 						forward: [
@@ -470,8 +436,8 @@
 				},
 				C15: {
 					ends: [
-						"driver",
-						"guiPhone",
+						"Driver",
+						"GUIPhone",
 					],
 					possibleMessages: {
 						reverse: [
@@ -481,36 +447,44 @@
 				},
 				C16: {
 					ends: [
-						"guiPhone",
-						"networkPhone",
+						"GUIPhone",
+						"NetworkPhone",
 					],
 					possibleMessages: {
-						forward: [
-							"askConnection()",
-						],
 						reverse: [
-							"setConnection()",
+						"setConfirmationStatus()",
 						],
 					},
 				},
 				C17: {
 					ends: [
-						"uiRobot",
-						"networkRobot",
+						"UIRobot",
+						"NetworkRobot",
+					],
+					possibleMessages: {
+						reverse: [
+						
+						],
+					},
+				},
+				C18: {
+					ends: [
+						"NetworkPhone",
+						"NetworkRobot",
 					],
 					possibleMessages: {
 						forward: [
 							"askConnection()",
 						],
 						reverse: [
-							"setConnection()",
+							"confirmConnection()",
 						],
 					},
 				},
-				C18: {
+				C19: {
 					ends: [
-						"guiPhone",
-						"algoManager",
+						"GUIPhone",
+						"AlgoManager",
 					],
 					possibleMessages: {
 						forward: [
@@ -518,10 +492,10 @@
 						],
 					},
 				},
-				C19: {
+				C20: {
 					ends: [
-						"algoManager",
-						"explorer",
+						"AlgoManager",
+						"Explorer",
 					],
 					possibleMessages: {
 						reverse: [
@@ -531,150 +505,140 @@
 			},
 			interactions: {
 				"CU1 INIT": String.raw`
-					actor user
-					participant guiPhone
-					participant networkPhone
-					participant uiRobot
-					participant networkRobot
-					e0 : user -? uiRobot : startMEMB()													''user démarre M_EMB 
+					actor User
+					participant GUIPhone
+					participant UIRobot
+					participant NetworkPhone
+					participant NetworkRobot
+					e0 : User -? UIRobot : startMEMB()													''User démarre M_EMB 
 					accept e0
-					e2 : uiRobot -? uiRobot : standBy()
+					e2 : UIRobot -? UIRobot : standBy()
 					accept e2
-					e4 : uiRobot -? uiRobot : displayConnectionState(EConnectionState::NOT_CONNECTED)
+					e4 : UIRobot -? UIRobot : displayConnectionState(EConnectionState::NOT_CONNECTED)
 					accept e4
-
-					e6 : user -? guiPhone : startMCTRL()
+					e6 : User -? GUIPhone : startMCTRL()
 					accept e6
-					e8 : guiPhone -? guiPhone : displayScreen(EScreen::DisconnectedScreen)
+					e8 : NetworkPhone -? NetworkRobot : askConnection()
 					accept e8
-					e10 : guiPhone -? networkPhone : askConnection()
+					e10 : NetworkRobot -? NetworkPhone : confirmConnection()
 					accept e10
-					e12 : networkPhone -? guiPhone : setConnection()
+					e12 : GUIPhone -? GUIPhone : displayConnectionState(EConnectionState::CONNECTED)
 					accept e12
-					e14 : guiPhone -? guiPhone : displayScreen(EScreen::MainScreen)
+					e14 : UIRobot -? UIRobot : displayConnectionState(EConnectionState::CONNECTED)
 					accept e14
-
-					e16 : uiRobot -? networkRobot : askConnection()
-					accept e16
-					e18 : networkRobot -? uiRobot : setConnection()
-					accept e18
-					e20 : guiPhone -? guiPhone : displayConnectionState(EConnectionState::CONNECTED)
-					accept e20
-					e22 : uiRobot -? uiRobot : displayConnectionState(EConnectionState::CONNECTED)
-					accept e22
 				`,
 				"CU2 MAJ EXPLO": String.raw`
-					actor user
-					participant guiPhone
-					participant explorer
-					e0 : user -? guiPhone : accessMetricsParams()
+					actor User
+					participant GUIPhone
+					participant Explorer
+					e0 : User -? GUIPhone : accessMetricsParams()
 					accept e0
-					e2 : guiPhone -? guiPhone : displayScreen(EScreen::MetricsParamsScreen)
+					e2 : GUIPhone -? GUIPhone : displayScreen(EScreen::MetricsParamsScreen)
 					accept e2
 
-					e4 : user -? guiPhone : setEndCriteria(EEndCriteria::TIME, True, 1600)
+					e4 : User -? GUIPhone : setEndCriteria(EEndCriteria::TIME, True, 1600)
 					accept e4
 
-					e6 : guiPhone -? explorer : setEndCriteria(EEndCriteria::TIME, True, 1600)
+					e6 : GUIPhone -? Explorer : setEndCriteria(EEndCriteria::TIME, True, 1600)
 					accept e6
 
-					e8 : user -? guiPhone : setEndCriteria(EEndCriteria::PERCENTAGE, True, 80)
+					e8 : User -? GUIPhone : setEndCriteria(EEndCriteria::PERCENTAGE, True, 80)
 					accept e8
 
-					e10 : guiPhone -? explorer : setEndCriteria(EEndCriteria::PERCENTAGE, True, 80)
+					e10 : GUIPhone -? Explorer : setEndCriteria(EEndCriteria::PERCENTAGE, True, 80)
 					accept e10
 
-					e12 : user -? guiPhone : exitMetricsParams()
+					e12 : User -? GUIPhone : exitMetricsParams()
 					accept e12
 				`,
 				"CU3 LANCER EXPLO": String.raw`
-					actor user
-					participant guiPhone
-					participant uiRobot
-					participant algoManager
-					participant explorer
-					participant driver
-					participant locator
-					participant archivist
-					e0 : user -? guiPhone : startExplo()
+					actor User
+					participant GUIPhone
+					participant UIRobot
+					participant AlgoManager
+					participant Explorer
+					participant Driver
+					participant Locator
+					participant Archivist
+					e0 : User -? GUIPhone : startExplo()
 					accept e0
-					e2 : guiPhone -? guiPhone : displayScreen(EScreen::ExploAlgoScreen)
+					e2 : GUIPhone -? GUIPhone : displayScreen(EScreen::ExploAlgoScreen)
 					accept e2
-					e4 : user -? guiPhone : setExploAlgorithm(algo)
+					e4 : User -? GUIPhone : setExploAlgorithm(algo)
 					accept e4
-					e6 : guiPhone -? algoManager : setUsedAlgo(explo_algorithm)
+					e6 : GUIPhone -? AlgoManager : setUsedAlgo(explo_algorithm)
 					accept e6
-					e8 : guiPhone -? uiRobot : displayConnectionState(EConnectionState::EXPLORATING)
+					e8 : GUIPhone -? UIRobot : displayConnectionState(EConnectionState::EXPLORATING)
 					accept e8
-					e10 : driver -? locator : initStartLocation()
+					e10 : Driver -? Locator : initStartLocation()
 					accept e10
-					e12 : explorer -? explorer : initExploMetrics()
+					e12 : Explorer -? Explorer : initExploMetrics()
 					accept e12
-					ref over a, b : CU4 explorer
-					e14 : driver -? driver : stopMove()
+					ref over a, b : CU4 EXPLORER
+					e14 : Driver -? Driver : stopMove()
 					accept e14
-					e16 : guiPhone -? explorer : getExploInfo()
+					e16 : GUIPhone -? Explorer : getExploInfo()
 					accept e16
 					returning e16: Explo_info
-					e18 : guiPhone -? guiPhone : displayScreen(EScreen::CompletedExploScreen)
+					e18 : GUIPhone -? GUIPhone : displayScreen(EScreen::CompletedExploScreen)
 					accept e18
-					e20 : guiPhone -? archivist : saveExplo(explo_info)
+					e20 : GUIPhone -? Archivist : saveExplo(explo_info)
 					accept e20
 				`,
-				"CU4 explorer": String.raw`
-					participant explorer
-					participant algoManager
-					participant driver
-					participant mapper
-					participant locator
-					participant radar
-					e0 : explorer -? algoManager : getMove()
+				"CU4 EXPLORER": String.raw`
+					participant Explorer
+					participant AlgoManager
+					participant Driver
+					participant Mapper
+					participant Locator
+					participant Radar
+					e0 : Explorer -? AlgoManager : getMove()
 					accept e0
 					returning e0: move
-					e2 : explorer -? driver : executeMove(move, value)
+					e2 : Explorer -? Driver : executeMove(move, value)
 					accept e2
-					e4 : driver -? explorer : moveFinished()
+					e4 : Driver -? Explorer : moveFinished()
 					accept e4
-					e6 : driver -? radar : getInfo()
+					e6 : Driver -? Radar : getInfo()
 					accept e6
 					returning e4: info
-					e8 : mapper -? locator : getCoords()
+					e8 : Mapper -? Locator : getCoords()
 					accept e8
 					returning e8: coordinates
-					e10 : mapper -? radar : getInfo()
+					e10 : Mapper -? Radar : getInfo()
 					accept e10
 					returning e10: info
-					e12 : locator -? locator : updateCoords()
+					e12 : Locator -? Locator : updateCoords()
 					accept e12
-					e14 : explorer -? explorer : updateExploMetrics()
+					e14 : Explorer -? Explorer : updateExploMetrics()
 					accept e14
-					e16 : explorer -? explorer : lockMetrics()
+					e16 : Explorer -? Explorer : lockMetrics()
 					accept e16
 				`,
 				"CU5 ETEINDRE MARCO": String.raw`
-					actor user
-					participant guiPhone
-					participant uiRobot
-					e0 : user -? guiPhone : stopMARCO()
+					actor User
+					participant GUIPhone
+					participant UIRobot
+					e0 : User -? GUIPhone : stopMARCO()
 					accept e0
-					e2 : guiPhone -? guiPhone : displayScreen(EScreen::StopValidationScreen)
+					e2 : GUIPhone -? GUIPhone : displayScreen(EScreen::StopValidationScreen)
 					accept e2
-					e4 : user -? guiPhone : respStopRequest(resp::TRUE)
+					e4 : User -? GUIPhone : respStopRequest(resp::TRUE)
 					accept e4
-					e6 : guiPhone -? uiRobot : stopMEMB()
+					e6 : GUIPhone -? UIRobot : stopMEMB()
 					accept e6
-					e8 : guiPhone -? guiPhone : stopMCTRL()
+					e8 : GUIPhone -? GUIPhone : stopMCTRL()
 					accept e8
 				`,
 				"CU6 DEPLACEMENT MANUEL": String.raw`
-					actor user
-					participant guiPhone
-					participant driver
-					e0 : user -? guiPhone : askMove(direction: EDirection)
+					actor User
+					participant GUIPhone
+					participant Driver
+					e0 : User -? GUIPhone : askMove(direction: EDirection)
 					accept e0
-					e2 : guiPhone -? driver : moveOrder(direction: EDirection)
+					e2 : GUIPhone -? Driver : moveOrder(direction: EDirection)
 					accept e2
-					e4 : driver -? driver : executeMove(move)
+					e4 : Driver -? Driver : executeMove(move)
 					accept e4
 				`,
 			},
