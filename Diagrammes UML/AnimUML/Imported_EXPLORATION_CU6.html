@@ -56,8 +56,10 @@
 					startMCTRL()														''ordre de démarage de M_CTRL
 					stopMARCO()															''volonté d'extinction global du SAE
 					askMove(direction : EDirection)										''ordre de mouvement dans une direction "direction " et de type EDirection cette méthode est intimement lié au joystick
-					setConfirmationStatus()												''informe de l'etat de la connection
+					setConfirmationStatus(status :EConnectionState )											''informe de l'etat de la connection
 					setExplorationStatus(StatusEnum: status)	
+					setEmergencieStop()
+					releaseEmergencieStop()
 					-displayConnectionState(connection_state : EConnectionState)		'' affichage de l'état de connection à Robot sur Phone via un logo sur l'écran l'état du logo est définie par la variable connection_state qui est du type EConnectionState
 					-stopMCTRL()														''ordre d'arret du logiciel embarquer M_CTRL
 					-displayScreen(screen_id : EScreen)									''méthode permetant l'affichage des divers écrans de PHONE le paramètre screen_id est une énumération de type EScreen
@@ -163,20 +165,22 @@
 					class: "GUIPhone",
 					isActor: false,
 					behavior: String.raw`
-						WaitInteract : entry /displayScreen(EScreen::MainScreen)
-						WaitInteract : askMove(move) /Driver.moveOrder(move)
+
+					
+					state NormalRunning{
+						WaitInteract : askMove(move) /driver.moveOrder(move)
 						Exploration: after(t_sync)/displayMap()	
 
 						
 						state exploChoice <<choice>>
+						state connectionChoise <<choice>>
 
-						[*] -> Sync as "INIT" : /displayScreen(DisconnectedScreen)
-						Sync -> WaitInteract as "finDeLINIT" : setConfirmationStatus()/displayConnectionState(EConnectionState::CONNECTED)
+						[*] -> WaitInteract :/displayScreen(MainScreen)
 
 
 						WaitInteract -> AffMetricParam as "lancementDeLaCu2" : accessMetricsParams() / displayScreen(MetricsParamsScreen)
 						AffMetricParam -> WaitInteract as "TypeChoisie" :  exitMetricsParams()
-						AffMetricParam -> AffMetricParam as "Valeursrecu" :setEndCriteria(criteria, isEnable, value)	/ Explorer.setEndCriteria(criteria, isEnable, value)
+						AffMetricParam -> AffMetricParam as "Valeursrecu" :setEndCriteria(criteria, isEnable, value)	/ explorer.setEndCriteria(criteria, isEnable, value)
 
 						ExplorationInit -> 	Exploration :  setExploAlgorithm(explo_algorithm)/setUsedAlgo(explo_algorithm);displayConnectionState(EConnectionState::EXPLORATING);displayScreen(EScreen::MainScreen)
 						WaitInteract -> ExplorationInit as "passe en explo" :  startExplo()/displayScreen(ExploSelectionScreen)
@@ -189,7 +193,28 @@
 						exploChoice -> WaitInteract : [else]
 							'[status == StatusEnum::FAILED]
 						
-						Exploration -> Exploration as "Boucl eTsync" : after(t_sync)/displayMap()	
+						Exploration -> Exploration as "Boucle eTsync" : after(t_sync)/displayMap()	
+						WaitInteract -> connectionChoise : setConfirmationStatus(status )
+						connectionChoise ->Exploration : [status == EXPLORATING ]
+						connectionChoise ->WaitInteract : [else]
+
+					}
+					state connectChoice <<choice>>
+
+					[*] -> notconnected :
+					notconnected  -> connectChoice :setConfirmationStatus(status )
+					connectChoice -> notconnected : [status ==NOT_CONNECTED]
+					connectChoice -> NormalRunning : [else]/displayConnectionState(EConnectionState::CONNECTED)
+
+					
+					NormalRunning -> connectChoice :setConfirmationStatus(status ) /displayScreen(DisconnectedScreen)
+					
+					NormalRunning -> EmergenciStop : setEmergencieStop()/displayScreen(LockedScreen)
+					EmergenciStop ->  NormalRunning: releaseEmergencieStop()/displayScreen(MainScreen)
+					
+			
+
+
 
 						`,
 				},
@@ -228,7 +253,9 @@
 						}
 						state "Run" as Run {
 						}
-						state "choice" as choice <<choice>>
+						state choice <<choice>>
+							
+						state manuelChoise <<choice>>
 						Run : entry / log("Run")
 
 						[*] -> Standby as "Init" :  
@@ -242,8 +269,11 @@
 						choice -> Move as "choice2Idle_1" :   [log("Move")]
 						choice -> Run as "choice2Idle_2" : [else]
 
-						Run -> Standby as "FinManuel": moveOrder(STOP)
+						Run -> manuelChoise as "FinManuel": moveOrder(move)
 						Move -> Standby as "FinAuto": endMove()
+
+						manuelChoise -> Standby : [move == STOP] 
+						manuelChoise -> Run : [else] 
 
 
 
