@@ -5,7 +5,7 @@ include Config.mk
 MODEL_FILE=$(MODEL_PATH)/$(MODEL).$(MODEL_EXT)
 
 # Query model for active objects and interaction names
-ELEMENTS:=$(shell node au2pu.js $(MODEL_FILE) model $(MODEL) listActive=true listInteractions=true listClasses=true listEnumerations=true | sed -ne 's/ /_/g;/^ACTIVE_OBJECTS:$$/,$$p')
+ELEMENTS:=$(shell node au2pu.js $(MODEL_FILE) model $(MODEL) $(PARAMS) listActive=true listInteractions=true listClasses=true listEnumerations=true | sed -ne 's/ /_/g;/^ACTIVE_OBJECTS:$$/,$$p')
 OBJECTS=$(shell echo "$(ELEMENTS)" | sed -e 's/ /\n/g' | sed -ne '/^ACTIVE_OBJECTS:$$/,/^END$$/p' | tail -n +2 | head -n -1)
 INTERACTIONS=$(shell echo "$(ELEMENTS)" | sed -e 's/ /\n/g' | sed -ne '/^INTERACTIONS:$$/,/^END$$/p' | tail -n +2 | head -n -1)
 CLASSES=$(shell echo "$(ELEMENTS)" | sed -e 's/ /\n/g' | sed -ne '/^CLASSES:$$/,/^END$$/p' | tail -n +2 | head -n -1)
