@@ -18,15 +18,15 @@ state Ecran {
     c --> EcranNonConnecté : [Connection Perdue]
     c --> EcranPrincipal
     c --> EcranVerrouillé : [robotVerrouille]
-    EcranVerrouillé --> EcranPrincipal: Verrouillage()
-    EcranPrincipal--> EcranVerrouillé :Deverrouillage()
+    EcranVerrouillé --> EcranPrincipal: Verrouiller()
+    EcranPrincipal--> EcranVerrouillé :Deverrouiller()
     EcranPrincipal--> EcranSelectionExplo : SelectAlgo()
-    EcranSelectionExplo --> EcranPrincipal: Valide()
-    EcranSelectionExplo --> EcranPrincipal: Annule()
+    EcranSelectionExplo --> EcranPrincipal: Valider()
+    EcranSelectionExplo --> EcranPrincipal: Annuler()
     EcranPrincipal--> EcranOption :SelectOption()
-    EcranOption --> EcranPrincipal:Valide()
-    EcranOption --> EcranPrincipal:Annule()
+    EcranOption --> EcranPrincipal:Valider()
+    EcranOption --> EcranPrincipal:Annuler()
 }
-
+Ecran --> Deconnecter
 Ecran --> [*] : quitter()
 @enduml
