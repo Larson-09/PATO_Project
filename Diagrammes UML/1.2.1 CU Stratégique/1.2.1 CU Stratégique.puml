@@ -16,4 +16,6 @@ ROBOT -left- (Évaluer les algorithmes d’exploration cartographique)
 (Évaluer les algorithmes d’exploration cartographique) -.> (Lancer une exploration) : include
 (Lancer une exploration) -.> (Explorer) : include
 (Évaluer les algorithmes d’exploration cartographique) -.> (Éteindre MARCO) : include
+(Évaluer les algorithmes d’exploration cartographique) -.> (Mettre à jour les paramètres d'exploration) : include
+
 @enduml
