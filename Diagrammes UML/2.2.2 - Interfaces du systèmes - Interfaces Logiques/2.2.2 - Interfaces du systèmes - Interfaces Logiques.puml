@@ -1,7 +1,7 @@
 @startuml
 title 2.2.2 - Interfaces du systèmes
 scale 1024*768
-actor Utilisateur as U
+actor User as U
 actor ROBOT as P
 
 rectangle "<u>SàE</u>" as S{
@@ -10,7 +10,7 @@ rectangle "<u>E_Lib_MrPIZ</u>" as L{
 }
 
 
-U -right- S : demarrer() <&arrow-right>\n set_explo_algorithm(algo) <&arrow-right>\n lancer_explo() <&arrow-right>\n control_manuel() <&arrow-right>\n quitter() <&arrow-right>\n \n<&arrow-left> afficher_niveau_batterie() \n <&arrow-left> afficher_map() \n
-S-right-L : init() <&arrow-right> \n fermer()<&arrow-right> \n control_led()<&arrow-right> \n get_sensors(): position<&arrow-right> \n init_position()<&arrow-right> \n reset_sensors()<&arrow-right> \n recup_niveau_batterie(): niveau_batterie<&arrow-right> \n
+U -right- S : accessMetricsParams()<&arrow-right>\n exitMetricsParams()<&arrow-right>\n setEndCriteria(criteria: EEndCriteria, isEnable: Boolean, value: float)<&arrow-right>\n setExploAlgorithm(explo_algorithm)<&arrow-right>\n startMCTRL()<&arrow-right>\n startMEMB()<&arrow-right>\n startExplo()<&arrow-right>\n stopMARCO()<&arrow-right>\n respStopRequest(resp:boolean)<&arrow-right>\n askMove(move: EMove)<&arrow-right>\n 
+S-right-L : mrpiz_init() <&arrow-right>\n mrpiz_close()<&arrow-right>\n mrpiz_led_rgb_set(color: mrpiz_led_rgb_color_t)<&arrow-right> \n mrpiz_proxy_sensor_get(id: mirpiz_proxy_sensor_id): sensor_value<&arrow-right> \n mrpiz_battery_level(): battery_level<&arrow-right> \n
 L-right-P : deplacer(mvt) <&arrow-right> \n detect_obstacle() <&arrow-right> \n recup_position_robot() <&arrow-right> \n
 @enduml
